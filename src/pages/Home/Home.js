@@ -9,9 +9,19 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div className="hero-img">
-            <Navibar />
-        </div>
+        <Container fluid className="hero-img">
+        <Navibar />
+            <Row>
+                <Col className="mintmade-online text-white">
+                <h1>ACMADE ONLINE</h1> 
+                <hr className="hr-hero"/>
+                <h1 className="sale">Supreme Spring Sale <br /> Up to 50% off</h1> 
+                </Col>
+                <Col>
+                    
+                </Col>
+            </Row>
+        </Container>
         <Container className="spring-sale-container">
             <Row>
                 <Col className="spring-sale">
@@ -32,7 +42,7 @@ class Home extends React.Component {
                     <h2 className="text-center">Footwear</h2>
                 </Col>
             </Row>
-
+            {/* New Arrivals CONTAINER */}
         </Container>
         <Container className="spring-sale-container">
             <Row>
@@ -55,7 +65,7 @@ class Home extends React.Component {
                 </Col>
             </Row>
         </Container>
-
+        {/* Bestsellers by Category */}
         <Container className="bestsellers-category-container">
             <Row>
                 <Col className="spring-sale">
@@ -86,7 +96,28 @@ class Home extends React.Component {
             </Row>
            <Row>
                 <Col>
-                <p className="location">Algies Bay, Rodney 0920</p>
+                    <p className="location">163 Woodlands Place</p>
+                    <p className="location">Algies Bay, Rodney 0920</p>
+                </Col>
+                <Col>
+                    <p className="location">1234 Black Street,</p>
+                    <p className="location">Chatswood NSW, Australia 1234</p>
+                </Col>
+            </Row> 
+        </Container>
+        {/* Need Anything Container */}
+        <Container fluid className="need-anything">
+            <Row>
+                <Col className="need-anything-text">
+                    <h1 className="text-white  text-center">Need Anything ?</h1>
+                </Col> 
+            </Row>
+           <Row>
+                <Col>
+                    
+                </Col>
+                <Col>
+                    
                 </Col>
             </Row> 
         </Container>

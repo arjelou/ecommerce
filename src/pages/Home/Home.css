@@ -5,6 +5,19 @@
     /* width: 100vw; */
     height: 100vh;
 }
+.mintmade-online{
+    margin-top: 20%;
+    margin-left: 30px;
+}
+.sale{
+    font-size: 90px;
+    color: white;
+}
+.hr-hero{
+    background-color: white;
+    border: none;
+    height: 3px;
+}
 .spring-sale{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -31,15 +44,13 @@ col{
 .location h1{
     margin-top: 0;
 }
-/* .hoodies{
-    background-image: url('/src/assets/hoodies.png');
-    background-size: contain;
+.need-anything{
+    background-image: url('assets/need_anything.png');
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 1200px;
+    /* width: 100vw; */
+    height: 100vh;
 }
-.footwear{
-    background-image: url('/src/assets/footwear.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1200px;
-} */
+.need-anything-text{
+    font-size: 40px;
+}
