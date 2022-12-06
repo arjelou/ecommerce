@@ -77,6 +77,19 @@ class Home extends React.Component {
                 </Col>
             </Row>
         </Container>
+
+        <Container fluid className="physical-stores-container">
+            <Row>
+                <Col md="3" lg="5" className="physical-stores">
+                    <h1 className="text-white">Visit our<br /> physical stores</h1>
+                </Col> 
+            </Row>
+           <Row>
+                <Col>
+                <p className="location">Algies Bay, Rodney 0920</p>
+                </Col>
+            </Row> 
+        </Container>
         
       </>
     );

@@ -15,16 +15,23 @@
 col{
     background-color: aquamarine;
 }
-
-
-
-/* .outwear{
-    background-image: url('/src/assets/outerwear.png');
-    background-size: contain;
+.physical-stores{
+    background-image: url('assets/physical_stores.png');
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 1200px;
+    width: 100vw;
+    height: 600px;
+   
 }
-.hoodies{
+.physical-stores h1{
+    font-size: 100px;
+    margin-top: 150px;
+    margin-left: 15px;
+}
+.location h1{
+    margin-top: 0;
+}
+/* .hoodies{
     background-image: url('/src/assets/hoodies.png');
     background-size: contain;
     background-repeat: no-repeat;
