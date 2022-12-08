@@ -4,8 +4,21 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
+.promo{
+    background-color: aquamarine;
+}
 .new-arrival{
     height: 100vh;
+}
+.zoom{
+    transition: transform .05s; /* Animation */
+}
+.zoom img:hover{
+    background-color: rgb(179, 169, 169);
+    border-radius: 10px;
+    transform: scale(1.1);
+    box-shadow: 3px 2px 13px 2px;
+    cursor: pointer;
 }
 .best-sellers{
     margin-top: 90px;
