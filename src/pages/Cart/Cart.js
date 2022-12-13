@@ -8,7 +8,7 @@ export default class Cart extends React.Component {
        <>
        <div className='container'>
         <div className='row'>
-          <div className='col-lg-9 piclist'>
+          <div className='col-lg-9 piclist cart'>
             <div className='row'>
                 <table className='table'>
                     <thead>
@@ -30,7 +30,7 @@ export default class Cart extends React.Component {
                 </table>
             </div>
           </div>
-          <div className='col-lg-3 product-info'>
+          <div className='col-lg-3 product-info cart'>
             <div className='mt-3'>
                 <div className='d-flex justify-content-md-around'>
                     <h4>Summary | items count here</h4>

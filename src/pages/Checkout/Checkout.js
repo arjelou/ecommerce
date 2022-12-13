@@ -8,44 +8,23 @@ export default class Checkout extends React.Component {
        <>
        <div className='container'>
         <div className='row'>
-          <div className='col-lg-9 piclist'>
+          <div className='col-lg-9 piclist checkout'>
             <div className='row'>
                 <div className='col-lg-5'>
                     <div class="container">
                     <h2>Dynamic Tabs</h2>
   
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>Information</h3>
-      <hr />
-      <label for='name'>Name:</label>
-      <input type='text' placeholder='your name' />
-      <label for='name'>BDate:</label>
-      <input type='text' placeholder='your name' /><br />
-      <a class='btn btn-primary' role='button' data-toggle="tab" href="#menu1">Next</a>
-      
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Shipping</h3>
-      <hr />
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <a class='btn btn-primary' role='button' data-toggle="tab" href="#menu2">Next</a>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Payment</h3>
-      <hr />
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a class='btn btn-primary' role='button' data-toggle="tab" href="#home">Complete Order</a>
-    </div>
-    
-  </div>
+                    <div class="tab-content">
+                      
+                      
+                    </div>
 
                     </div>
                 </div>
             </div>
           </div>
-          <div className='col-lg-3 product-info'>
+          <div className='col-lg-3 product-info checkout'>
             <div className='mt-3'>
                 <div className='d-flex justify-content-md-around'>
                     <h4>Summary | items count here</h4>

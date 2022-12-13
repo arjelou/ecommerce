@@ -8,39 +8,43 @@
     background-color: rgb(71, 245, 187);
     height: 150px;
 }
-.new-arrival{
-    height: 100vh;
-}
-.zoom{
-    transition: transform .05s; /* Animation */
-}
+
 .zoom img:hover{
     background-color: rgb(179, 169, 169);
     border-radius: 10px;
     transform: scale(1.1);
     box-shadow: 3px 2px 13px 2px;
+    
     cursor: pointer;
 }
+.featured-products{
+    margin-top: 150px;
+}
+.new-arrival{
+    margin-top: 150px;
+}
 .best-sellers{
-    margin-top: 90px;
-    height: 100vh;
-}
-.spring-sale-category{
-    height: 100vh
-}
-
-.physical-stores{
-    background-image: url('assets/physical_stores.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 450px;
-    margin-bottom: 220px;
+    margin-top: 150px;
 }
 .footer{
     margin-top: 20px;
     background-color: rgb(158, 138, 117);
 }
 
-.fimage{
-    background-color: rgb(71, 245, 187);
-}
+/* text overlay in the image for new arrival */
+  .container-i{
+    position: relative;
+    font-family: Verdana;
+  }
+  .text-block{
+    position: absolute;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.599);
+    color: azure;
+    padding: 15px ;
+  }
+
+
+
+
+  

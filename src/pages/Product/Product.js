@@ -7,10 +7,10 @@ export default class Product extends React.Component {
        <>
        <div className='container'>
         <div className='row'>
-          <div className='col-lg-9 piclist'>
+          <div className='col-lg-9 piclist product'>
             col images
           </div>
-          <div className='col-lg-3 product-info'>
+          <div className='col-lg-3 product-info product'>
             <div className='mt-3'>
                 <div className='d-flex justify-content-md-around'>
                     <h6>Product Title</h6>

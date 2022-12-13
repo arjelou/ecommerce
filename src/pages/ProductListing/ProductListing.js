@@ -7,7 +7,7 @@ export default class ProductListing extends React.Component{
         
             <div className='container'>
                 <div className='row'>
-                    <div className='col-lg-2 mt-5'>
+                    <div className='col-lg-2 productlist'>
                         <h4>Categories</h4>
                         <p>category 1</p>
                         <p>category 2</p>
@@ -22,7 +22,7 @@ export default class ProductListing extends React.Component{
                                 <input type='range' className='form-range' min={0} max={10}/>
                             </div>
                     </div>
-                    <div className='col-lg-10 mt-5'>
+                    <div className='col-lg-10 productlist'>
                         <div className='filterbyprice d-flex justify-content-md-between'>
                             <div>
                             <label for='FilterByPrice'><strong>Refind By | Price  </strong></label>
