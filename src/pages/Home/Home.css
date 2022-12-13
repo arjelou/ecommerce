@@ -4,8 +4,9 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
-.promo{
-    background-color: aquamarine;
+.call-action{
+    background-color: rgb(71, 245, 187);
+    height: 150px;
 }
 .new-arrival{
     height: 100vh;
@@ -38,4 +39,8 @@
 .footer{
     margin-top: 20px;
     background-color: rgb(158, 138, 117);
+}
+
+.fimage{
+    background-color: rgb(71, 245, 187);
 }

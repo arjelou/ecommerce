@@ -1,43 +1,55 @@
 import React from 'react';
-import './Product.css';
+import './Cart.css';
 
-export default class Product extends React.Component {
+export default class Cart extends React.Component {
   render() {
+    const Subtotal = 120.00;
     return (
        <>
        <div className='container'>
         <div className='row'>
           <div className='col-lg-9 piclist'>
-            col images
+            <div className='row'>
+                <table className='table'>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th className='d-flex'><img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={50} />
+                            <h6 className='m-1'>Title</h6>
+                            </th>
+                            <th>${Subtotal}</th>
+                            <th>1</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
           </div>
           <div className='col-lg-3 product-info'>
             <div className='mt-3'>
                 <div className='d-flex justify-content-md-around'>
-                    <h6>Product Title</h6>
-                    <p><strong>$12.00</strong></p>
+                    <h4>Summary | items count here</h4>
                 </div>
-                <div>
-                    <select className='form-select text-center'>
-                        <option selected>Choose size</option>
-                        <option value='sm'>Small</option>
-                        <option value='md'>Medium</option>
-                        <option value='lg'>Large</option>
-                    </select>
+                <div className='justify-content-md-around'>
+                    <h6>Subtotal:${Subtotal}</h6>
+                    <h6>Shipping:</h6>
+                    <h6>Tax:</h6>
                     <hr />
                 </div>
-                <div className='d-flex justify-content-md-center mb-2'>
-                    <label>Quantity</label>
-                    <input type='number'/>
+                <div className='d-flex justify-content-md-around mb-2'>
+                    <h5><strong>Total:</strong></h5>
+                    <h5><strong>${Subtotal}</strong></h5>
                 </div>
                 <div>
                     <hr />
-                    <a href='.' className='btn btn-primary form-control' role='button'>Add to cart</a> 
+                    <a href='.' className='btn btn-primary form-control' role='button'>Checkout</a> 
                     <hr />
                 </div>
-                <div className='mb-3'>
-                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                </div>
-                    
             </div>
           </div>
         </div>

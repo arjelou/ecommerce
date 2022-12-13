@@ -1,56 +1,68 @@
 import React from "react";
 import './Home.css';
 import '../../components/Footer';
+import axios from 'axios';
 import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp,faTruckFast,faUserShield } from '@fortawesome/free-solid-svg-icons';
 
 export default class Home extends React.Component {
+    state = {
+        persons: []
+      }
+    
+      componentDidMount() {
+        axios.get(`https://fakestoreapi.com/products?limit=5`)
+          .then(res => {
+            const persons = res.data;
+            this.setState({ persons });
+          })
+      }
+
   render() {
+    const fastdelivery = <FontAwesomeIcon icon={faTruckFast} size='lg'/>
+    const highquality = <FontAwesomeIcon icon={faThumbsUp} size='lg'/>
+    const warranty = <FontAwesomeIcon icon={faUserShield} size='lg'/>
     return (
       <>
         <div className="container-fluid hero-img">
-        <Navbar />
-            <div className="d-flex ">
-            <h2>ACMADE</h2>     
+            <div className="d-flex "> 
             </div>
         </div>
-        <div className="promo d-flex justify-content-around">
-            <div className="mt-2">
-                <h4>High Quality</h4>
-                <p>Content paragraph Content paragraph Content paragraph</p>
+        <div className="call-action d-flex justify-content-md-around text-center">
+            <div className="mt-5">
+                <h4>{highquality}</h4>
+                <h6>High Quality</h6>
             </div>
-            <div className="mt-2">
-                <h4>Fast Delivery</h4>
-                <p>Content paragraph Content paragraph Content paragraph</p>
+            <div className="mt-5">
+                <h4>{fastdelivery}</h4>
+                <h6>Fast Delivery</h6>
             </div>
-            <div className="mt-2">
-                <h4>Best Warranty</h4>
-                <p>Content paragraph Content paragraph Content paragraph</p>
+            <div className="mt-5">
+                <h4>{warranty}</h4>
+                <h6>Best Warranty</h6>
             </div>
         </div>
         <div className="container spring-sale-category">
             <div>
                 <div className="spring-sale-text mt-5">
-                    <h2 className="text-center spring-sale-text">Spring Sale Per Category</h2>
+                    <h2 className="text-center spring-sale-text mb-5">Spring Sale</h2>
                 </div>
             </div>
-            <div className="d-flex justify-content-md-center mt-5 zoom">
-                <div md="3" lg="4" className="outwear">
+            <div className="row">
+              <div className="col d-flex justify-content-md-center gap-4 zoom">
+              {this.state.persons.map(person => 
+                        <div md="3" lg="4" className="outwear fimage">
+                            <img alt="outwear" src={person.image} height={250} className="mb-2"/>
+                            <span className="d-block">{person.price}</span>
+                        </div>
+                    )}
+
+                {/* <div md="3" lg="4" className="outwear">
                     <img alt="outwear" src={require('./assets/outerwear.png')} width={250} className="mb-2 img-fluid"/>
                     <h2 className="text-center bottom-center">Outerwear</h2>
-                </div>
-                <div md="3" lg="4" className="hoodies">
-                <img alt="hoodies" src={require('./assets/hoodies.png')} width={250} className="mb-2 img-fluid"/>
-                    <h2 className="text-center bottom-center">Hoodies</h2>
-                </div>
-                <div md="3" lg="4" className="footwear">
-                <img alt="footwear" src={require('./assets/footwear.png')} width={250} className="mb-2 img-fluid"/>
-                    <h2 className="text-center bottom-center">Footwear</h2>
-                </div>
-                <div md="3" lg="4" className="footwear">
-                <img alt="footwear" src={require('./assets/outerwear.png')} width={250} className="mb-2 img-fluid"/>
-                    <h2 className="text-center bottom-center">Footwear</h2>
-                </div>
+                </div> */}
+              </div>
             </div>
             {/* New Arrivals div */}
         </div>

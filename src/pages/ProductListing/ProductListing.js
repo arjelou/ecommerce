@@ -1,14 +1,12 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
 import './ProductListing.css';
 
 export default class ProductListing extends React.Component{
     render() {
         return (
-            <>
+        
             <div className='container'>
                 <div className='row'>
-                    <Navbar />
                     <div className='col-lg-2 mt-5'>
                         <h4>Categories</h4>
                         <p>category 1</p>
@@ -149,7 +147,7 @@ export default class ProductListing extends React.Component{
                     </div>
                 </div>
             </div>
-            </>
+            
           )
         }
     }
