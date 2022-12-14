@@ -9,3 +9,9 @@ a{
 li{
     list-style-type: none;
 }
+.active-link{
+    color:#0275d8;
+}
+.unactive-link{
+    color: rgb(253, 255, 254);
+}

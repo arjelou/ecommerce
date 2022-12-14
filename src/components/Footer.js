@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BsFacebook,BsInstagram,BsYoutube } from 'react-icons/bs';
 export default class Footer extends React.Component {
   render() {
    
@@ -24,13 +24,11 @@ export default class Footer extends React.Component {
                                </ul>
                             </div>
                     </div>
-                    <div className="col">
-                        <h6>Social</h6>
-                        <ul>
-                            <li><a href=".">Facebook</a></li>
-                            <li><a href=".">Instagram</a></li>
-                            <li> <a href=".">YouTube</a></li> 
-                        </ul>
+                    <div className="col d-flex gap-3">
+                        <h5>Social</h5>
+                        <a href="."><BsFacebook size={30}/></a>
+                           <a href="."><BsInstagram size={30}/></a>
+                             <a href="."><BsYoutube size={30}/></a>
                     </div>
                 </div>
                 <div className="container">
