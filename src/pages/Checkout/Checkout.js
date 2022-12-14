@@ -9,33 +9,46 @@ export default class Checkout extends React.Component {
        <div className='container'>
         <div className='row'>
           <div className='col-lg-9 piclist checkout'>
-            <div className='row'>
-                <div className='col-lg-5'>
-                    <div class="container">
-                    <h2>Dynamic Tabs</h2>
-                      <div className='container'>
-                      <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">.home.
-                            This is some placeholder content the Home tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation..</div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">.profule..</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">..contact.</div>
-                          </div>
-
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-                                </li>
-                        </ul>
-                      </div>
+          <form className='g-3'>
+            <h6>Customer Information</h6>
+              <div class="col-auto form-floating mb-3">
+                 <input type="email" class="form-control" id="floatingInput" placeholder='adakd'/>
+                   <label for="floatingInput">Email address</label>
+              </div>
+                <hr />
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">First Name</label>
+                  </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">Last Name</label>
+                  </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">Company (optional)</label>
+                  </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">Address</label>
                     </div>
-                </div>
-            </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">Appartment (optional)</label>
+                  </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">Country</label>
+                  </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">State</label>
+                  </div>
+                  <div class="col-auto form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                    <label for="floatingInput">Zip Code</label>
+                  </div>
+              </form>
           </div>
           <div className='col-lg-3 product-info checkout'>
             <div className='mt-3'>
