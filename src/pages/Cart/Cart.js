@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Cart.css';
 
 export default class Cart extends React.Component {
@@ -47,7 +48,7 @@ export default class Cart extends React.Component {
                 </div>
                 <div>
                     <hr />
-                    <a href='.' className='btn btn-primary form-control' role='button'>Checkout</a> 
+                    <NavLink to='/checkout' className='btn btn-primary form-control'>Checkout</NavLink>
                     <hr />
                 </div>
             </div>

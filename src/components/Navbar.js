@@ -16,9 +16,9 @@ export default class Navbar extends React.Component {
                     <div className='d-flex'>
                         <NavLink to='/'><a className='navbar-brand text-white' href='.'>ACMADE</a></NavLink>
                     </div>
-                    <NavLink className={({isActive}) => isActive ? "active-link-underline navbar" : "unactive-link"} to='/productlisting'> Shop</NavLink>
-                    <NavLink className='text-white m-2'>New Arrival</NavLink>                   
-                    <NavLink className='text-white'>Bestsellers</NavLink>                   
+                    <NavLink className={({isActive}) => isActive ? "active-link-underline navbar" : "unactive-link"} to='/productlisting'>New Arrival</NavLink>
+                    <NavLink className='text-white m-2'>Bestsellers</NavLink>                   
+                    {/* <NavLink className='text-white'>Bestsellers</NavLink>                    */}
 
                     <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
                         <span className='navbar-toggler-icon'></span>

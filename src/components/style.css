@@ -18,6 +18,6 @@ li{
 .active-link-underline{
     color: white;
     text-decoration-line: underline;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 4px;
     text-decoration-color: #0275d8;
 }

@@ -1,8 +1,23 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusCircle,faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 import './Product.css';
 
 export default class Product extends React.Component {
+  constructor(){
+    super();
+    this.state = {qty: 0}
+  }
+
+  AddButton = () =>{
+      this.qty = 1
+    }
+
+    
+  
   render() {
+    const addButton = <FontAwesomeIcon icon={faPlusCircle} size='xl' title='add'/>
+    const minusButton = <FontAwesomeIcon icon={faMinusCircle} size='xl' title='add'/>
     return (
        <>
        <div className='container'>
@@ -13,8 +28,8 @@ export default class Product extends React.Component {
           <div className='col-lg-3 product-info product'>
             <div className='mt-3'>
                 <div className='d-flex justify-content-md-around'>
-                    <h6>Product Title</h6>
-                    <p><strong>$12.00</strong></p>
+                    <h4>Product Title</h4>
+                    <h4><strong>$12.00</strong></h4>
                 </div>
                 <div>
                     <select className='form-select text-center'>
@@ -25,9 +40,11 @@ export default class Product extends React.Component {
                     </select>
                     <hr />
                 </div>
-                <div className='d-flex justify-content-md-center mb-2'>
-                    <label>Quantity</label>
-                    <input type='number'/>
+                <div className='d-flex justify-content-md-between mb-2'>
+                    <h5>Quantity</h5>
+                    <button className='btn btn-primary'>{minusButton}</button>
+                    <h4>{this.state.qty}</h4>
+                    <button type='button' onClick={this.AddButton()} className='btn btn-primary'>{addButton}</button>
                 </div>
                 <div>
                     <hr />

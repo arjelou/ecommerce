@@ -5,13 +5,12 @@ export default class Footer extends React.Component {
    
     return (
         <>
-            <div className="container mb-2footer">
+            <div className="container mb-2 footer">
                 <div className="row justify-content-md-between mt-3">
                     <div className="col">
                         <h2>ACMADE</h2>
                     </div>
                     <div className="col">
-                        
                             <div className="list-category">
                                <ul>
                                 <h5>Category</h5>
