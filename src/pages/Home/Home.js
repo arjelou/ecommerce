@@ -29,18 +29,26 @@ export default class Home extends React.Component {
             <div className="d-flex "> 
             </div>
         </div>
-        <div className="call-action d-flex justify-content-md-around text-center">
-            <div className="mt-5">
-                <h4>{highquality}</h4>
-                <h6>High Quality</h6>
-            </div>
-            <div className="mt-5">
-                <h4>{fastdelivery}</h4>
-                <h6>Fast Delivery</h6>
-            </div>
-            <div className="mt-5">
-                <h4>{warranty}</h4>
-                <h6>Best Warranty</h6>
+        <div className="container-fluid">
+            <div className="row call-action d-flex justify-content-md-around text-center">
+                <div className="col-lg-4 col-md-auto mt-2 mb-2">
+                    <h4>{highquality}</h4>
+                    <h6>High Quality</h6>
+                    <span>It is made with good materials and craftsmanship, 
+                        and is designed to be durable and reliable.</span>
+                </div>
+                <div className="col-lg-4 col-md-auto mt-2 mb-2">
+                    <h4>{fastdelivery}</h4>
+                    <h6>Fast Delivery</h6>
+                    <span>To ensure that your parcel is delivered quickly, 
+                        it is important to choose a reputable shipping company and to carefully address and package the item.</span>
+                </div>
+                <div className="col-lg-4 col-md-auto mt-2 mb-2">
+                    <h4>{warranty}</h4>
+                    <h6>Best Warranty</h6>
+                    <span>A good warranty should cover all 
+                        defects in materials and workmanship, and should provide for repairs or replacements at no cost to the consumer.</span>
+                </div>
             </div>
         </div>
         <div className="container featured-products">
@@ -61,27 +69,25 @@ export default class Home extends React.Component {
             </div>
         </div>
          {/* New Arrivals div */}
-        <div className="container new-arrival">
-            <div className="d-flex">
+        <div className="container d-flex new-arrival">
                 <div className="container-i">
-                    <img alt="collection" src={require('./assets/pantsuit_collection.png')} width={450} className="img-fluid"/>
+                    <img alt="pantsuit_collection" src={require('./assets/pantsuit_collection.png')} width={450} className="img-fluid"/>
                         <div className="text-block">
                             <h3>The Pantsuit divlection</h3>
                         </div>
                 </div>
                 <div className="container-i">
-                    <img alt="collection" src={require('./assets/sharp_sweet_menswear.png')} width={450} className="img-fluid"/>
+                    <img alt="sharp_sweet_menswear" src={require('./assets/sharp_sweet_menswear.png')} width={450} className="img-fluid"/>
                         <div className="text-block">
                             <h3>Sharp Sweet Menswear</h3>
                         </div>
                 </div>
                 <div className="container-i">
-                    <img alt="collection" src={require('./assets/adventures_awai_accessories.png')} width={450} className="img-fluid"/>
+                    <img alt="dventures_awai_accessories" src={require('./assets/adventures_awai_accessories.png')} width={450} className="img-fluid"/>
                         <div className="text-block">
                             <h3>Adventures Accessories</h3>
                         </div>
                 </div>
-            </div>
         </div>
         {/* Bestsellers by Category */}
         <div className="container best-sellers">
@@ -105,6 +111,7 @@ export default class Home extends React.Component {
                 </div>
             </div>
         </div>
+        
        
         {/* Footer */}
         <div className="d-flex footer justify-content-md-center">

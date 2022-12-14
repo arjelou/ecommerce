@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 export default class Signup extends React.Component {
   render(){
     return (
@@ -18,10 +18,14 @@ export default class Signup extends React.Component {
                                         <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com" />
                                         <label for="floatingInput">Password</label>
                                     </div>
+                                    <div class="col-auto form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                                        <label for="floatingInput">Retype Password</label>
+                                    </div>
                                     <div>
                                         <button className='btn btn-success form-control p-3'>Continue</button>
                                     </div>
-                                    <span>Already have an account? <a href='.' className='text-decoration-none'>Log in</a></span>
+                                    <span>Already have an account? <a href='.' className='text-decoration-none'><NavLink to='/login'><strong>Log in</strong></NavLink></a></span>
                                     <hr />
                                 <div>
                                     <button className='btn btn-outline-secondary form-control p-3'>Continue with Google</button>

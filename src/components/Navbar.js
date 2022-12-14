@@ -10,11 +10,16 @@ export default class Navbar extends React.Component {
     const cart = <FontAwesomeIcon icon={faShoppingCart} size='xl' title='Cart item'/>
     const wishlist = <FontAwesomeIcon icon={faHeart} size='xl' title='Wishlist item'/>
     return (
-        
             <div className='navbar-container container-fluid'>
             <nav className='navbar navbar-expand-md'>
                 <div className='container-fluid'>
-                    <a className='navbar-brand text-white' href='.'>ACMADE</a>
+                    <div className='d-flex'>
+                        <NavLink to='/'><a className='navbar-brand text-white' href='.'>ACMADE</a></NavLink>
+                    </div>
+                    <NavLink className={({isActive}) => isActive ? "active-link-underline navbar" : "unactive-link"} to='/productlisting'> Shop</NavLink>
+                    <NavLink className='text-white m-2'>New Arrival</NavLink>                   
+                    <NavLink className='text-white'>Bestsellers</NavLink>                   
+
                     <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
                         <span className='navbar-toggler-icon'></span>
                     </button>

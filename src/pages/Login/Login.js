@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Login.css';
 
 export default class Login extends React.Component {
@@ -22,7 +23,7 @@ export default class Login extends React.Component {
                                 <div>
                                     <button className='btn btn-success form-control p-3'>Continue</button>
                                 </div>
-                                <span>Don't have an account? <a href='.' className='text-decoration-none'>Sign up</a></span>
+                                <span>Don't have an account? <a href='.' className='text-decoration-none'><NavLink to='/signup'><strong>Sign up</strong></NavLink></a></span>
                                 <hr />
                             <div>
                                 <button className='btn btn-outline-secondary form-control p-3'>Continue with Google</button>
