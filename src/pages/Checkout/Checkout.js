@@ -8,49 +8,136 @@ export default class Checkout extends React.Component {
        <>
        <div className='container'>
         <div className='row'>
-          <div className='col-lg-9 piclist checkout'>
-          <form className='g-3'>
-            <h6>Customer Information</h6>
-              <div class="col-auto form-floating mb-3">
-                 <input type="email" class="form-control" id="floatingInput" placeholder='adakd'/>
-                   <label for="floatingInput">Email address</label>
-              </div>
+          <div className='col-lg-8 piclist checkout'>
+          <div className="container">
+          <h5 className='mt-3'>Customer Information</h5>
+              <div className="row">
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                </div>
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                </div>
                 <hr />
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                <h5>Shipping</h5>
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
                     <label for="floatingInput">First Name</label>
                   </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                </div>
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
                     <label for="floatingInput">Last Name</label>
                   </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                    <label for="floatingInput">Company (optional)</label>
-                  </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
                     <label for="floatingInput">Address</label>
-                    </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                    <label for="floatingInput">Appartment (optional)</label>
                   </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                    <label for="floatingInput">Country</label>
-                  </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
                     <label for="floatingInput">State</label>
                   </div>
-                  <div class="col-auto form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                </div>
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Phone number</label>
+                  </div>
+                </div>
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">Gender</label>
+                  </div>
+                </div>
+                <div className="col-md">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                    />
                     <label for="floatingInput">Zip Code</label>
                   </div>
-              </form>
+                </div>
+              </div>
+              <hr />
+              <div className="row mb-3">
+                <h5>Payment Method</h5>
+                <div className="col-md ">
+                  <button className="btn btn-outline-primary m-1">GCash</button>
+                  <button className="btn btn-outline-primary m-1">
+                    PayPal
+                  </button>
+                  <button className="btn btn-outline-primary m-1">Visa</button>
+                  <button className="btn btn-outline-primary m-1">
+                    Coinsph
+                  </button>
+                  <button className="btn btn-success payment">
+                    Complete order
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className='col-lg-3 product-info checkout'>
+          <div className='col-lg-4 product-info checkout'>
             <div className='mt-3'>
                 <div className='d-flex justify-content-md-around'>
                     <h4>Summary | items count here</h4>
