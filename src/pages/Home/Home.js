@@ -26,7 +26,14 @@ export default class Home extends React.Component {
     return (
       <>
         <div className="container-fluid hero-img">
-            <div className="d-flex "> 
+            <div className="container"> 
+                <div className="row">
+                    <div className="col-md heading-info">
+                            <h1 className="call-to-action">Up to 50% Off <br /> Adventures Accessories</h1>
+                            <span className="text-white">On selected items only</span><br />
+                            <button className="btn btn-success mt-4 button">DETAILS</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div className="container-fluid">

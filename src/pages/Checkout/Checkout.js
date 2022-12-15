@@ -87,7 +87,7 @@ export default class Checkout extends React.Component {
                 <div className="col-md">
                   <div class="form-floating mb-3">
                     <input
-                      type="email"
+                      type="number"
                       class="form-control"
                       id="floatingInput"
                       placeholder="name@example.com"
@@ -130,7 +130,7 @@ export default class Checkout extends React.Component {
                   <button className="btn btn-outline-primary m-1">
                     Coinsph
                   </button>
-                  <button className="btn btn-success payment">
+                  <button className="btn btn-success payment-button">
                     Complete order
                   </button>
                 </div>
