@@ -119,7 +119,6 @@ export default class Home extends React.Component {
             </div>
         </div>
         
-       
         {/* Footer */}
         <div className="d-flex footer justify-content-md-center">
             <Footer />
