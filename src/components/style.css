@@ -1,6 +1,15 @@
-.navbar-container{
-    background-color: rgb(0, 0, 0);
-    position: fixed;
+.sticky-div {
+    background-color: #FEFEFE;
+    position: sticky;
+    top: 0px;
+    padding-top: 15px;
+}
+input[type=text]{
+    width: 50%;
+}
+.navigationBar{
+    margin-left: 10xp;
+    margin-right: 10px;
 }
 a{
     text-decoration: none;
@@ -10,14 +19,40 @@ li{
     list-style-type: none;
 }
 .active-link{
-    color:#0275d8;
+    color:#13181B;
+}
+.active-link:hover{
+    color:#13181B;
 }
 .unactive-link{
-    color: rgb(253, 255, 254);
+    color: #69727E;
+}
+.unactive-link:hover{
+    color: #13181B;
 }
 .active-link-underline{
-    color: white;
-    text-decoration-line: underline;
+    color: rgb(195, 22, 22);
+    /* text-decoration-line: underline;
     text-decoration-thickness: 4px;
-    text-decoration-color: #0275d8;
+    text-decoration-color: #0275d8; */
 }
+.active-category-btn{
+    background-color: #13181B;
+    color: #FEFEFE;
+    padding: 7px;
+
+}
+.active-category-btn:hover{
+    color: #FEFEFE;
+    padding: 7px;
+
+}
+.unactive-category-btn{
+    padding: 7px;
+    color: #69727E;
+}
+.unactive-category-btn:hover{
+    color: #13181B;
+    padding: 7px;
+}
+
