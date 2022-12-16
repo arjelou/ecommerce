@@ -47,6 +47,17 @@
     color: azure;
     padding: 15px ;
   }
+  .heading-info{
+    margin-top: 45vh;
+  }
+  .call-to-action{
+    color: aliceblue;
+    font-size: 100px;
+    
+  }
+  .button{
+    padding: 10px;
+  }
 
 
 
