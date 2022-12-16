@@ -1,39 +1,72 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser,faShoppingCart,faHeart } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import { BsCart2,BsPerson } from 'react-icons/bs';
 import './style.css';
 
 export default class Navbar extends React.Component {
   render() {
-    const userprofile = <FontAwesomeIcon icon={faUser} size='xl' title='Login'/>
-    const cart = <FontAwesomeIcon icon={faShoppingCart} size='xl' title='Cart item'/>
-    const wishlist = <FontAwesomeIcon icon={faHeart} size='xl' title='Wishlist item'/>
     return (
-            <div className='navbar-container container-fluid'>
-            <nav className='navbar navbar-expand-md'>
-                <div className='container-fluid'>
-                    <div className='d-flex'>
-                        <NavLink to='/'><a className='navbar-brand text-white' href='.'>ACMADE</a></NavLink>
-                    </div>
-                    <NavLink className={({isActive}) => isActive ? "active-link-underline navbar" : "unactive-link"} to='/productlisting'>New Arrival</NavLink>
-                    <NavLink className='text-white m-2'>Bestsellers</NavLink>                   
-                    {/* <NavLink className='text-white'>Bestsellers</NavLink>                    */}
-
-                    <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-                        <span className='navbar-toggler-icon'></span>
-                    </button>
-                    <div className='collapse navbar-collapse justify-content-md-end gap-3' id='navbarSupportedContent'>
-                        <form className='d-flex' role='search'>
-                            <input type='text' className='form-control me-1' placeholder='40% off'/>
-                        </form>
-                        <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/cart'>{cart}</NavLink>
-                        <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/'>{wishlist}</NavLink>
-                        <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/login'>{userprofile}</NavLink>
+    <>
+        <div className="container sticky-div">
+            <div className="row">
+                <div className="col-lg-12 col-md-6 col-sm-6 col-xm-12">
+                    <div className="d-flex justify-content-md-between">
+                        <h5>GRE'</h5>
+                        <input
+                            type="text"
+                            className="p-2"
+                            placeholder="search"
+                        />
+                        <div className="d-flex gap-1">
+                            <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/cart'><BsCart2 size={35} title='Cart' /></NavLink>
+                            <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/login'><BsPerson size={35} title='Login' /></NavLink>
+                        </div>
                     </div>
                 </div>
-            </nav>
             </div>
+            {/* target for toggl */}
+            <div className="row">
+            <div className="col">
+                <nav className="navbar navbar-expand-lg">
+                <div className="container">
+                    <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar"
+                    aria-controls="offcanvasDarkNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >
+                    <span>Categories</span>
+                    </button>
+                    <div
+                    className="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasDarkNavbar"
+                    >
+                    <ul className="navbar-nav me-auto  mb-lg-0 justify-content-end gap-1">
+                        {/* <li className="nav-item">
+                        <a
+                            className="nav-link active"
+                            aria-current="page"
+                            href="."
+                        >
+                            Cat1
+                        </a>
+                        </li> */}
+                        <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/productlisting'>PROMO</NavLink>
+                        <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/cart'>CATEGORY</NavLink>
+                        <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/product'>CATEGORY</NavLink>
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+          </div>
+        </div>
+        
+    </>
       
       )
     }
