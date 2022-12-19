@@ -6,7 +6,6 @@ import './style.css';
 export default class Navbar extends React.Component {
   render() {
     return (
-    <>
         <div className="container sticky-div">
             <div className="row">
                 <div className="col-lg-12 col-md-6 col-sm-6 col-xm-12">
@@ -65,9 +64,6 @@ export default class Navbar extends React.Component {
             </div>
           </div>
         </div>
-        
-    </>
-      
       )
     }
   }

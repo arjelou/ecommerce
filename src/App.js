@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home/Home';
+import Index from './pages/Home/index';
 import ProductListing from './pages/ProductListing/ProductListing';
 import Product from './pages/Product/Product';
 import Cart from './pages/Cart/Cart';
@@ -12,10 +12,11 @@ import Signup from './pages/Signup/Signup';
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <>   
+    <Navbar />
+    
       <Routes>
-        <Route path='/'  element={<Home />} />
+        <Route path=''  element={<Index />} />
         <Route path='productListing'  element={<ProductListing />} />
         <Route path='product'  element={<Product />} />
         <Route path='cart'  element={<Cart />} />
