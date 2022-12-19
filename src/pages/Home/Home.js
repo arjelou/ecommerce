@@ -3,9 +3,6 @@ import './Home.css';
 import '../../components/Footer';
 import axios from 'axios';
 import Footer from "../../components/Footer";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp,faTruckFast,faUserShield } from '@fortawesome/free-solid-svg-icons';
-
 export default class Home extends React.Component {
     state = {
         persons: []
@@ -20,104 +17,191 @@ export default class Home extends React.Component {
       }
 
   render() {
-    const fastdelivery = <FontAwesomeIcon icon={faTruckFast} size='lg'/>
-    const highquality = <FontAwesomeIcon icon={faThumbsUp} size='lg'/>
-    const warranty = <FontAwesomeIcon icon={faUserShield} size='lg'/>
+    
     return (
-      <>
-        <div className="container-fluid hero-img">
-            <div className="container"> 
-                <div className="row">
-                    <div className="col-md heading-info">
-                            <h1 className="call-to-action">Up to 50% Off <br /> Adventures Accessories</h1>
-                            <span className="text-white">On selected items only</span><br />
-                            <button className="btn btn-success mt-4 button">DETAILS</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="container-fluid">
-            <div className="row call-action d-flex justify-content-md-around text-center">
-                <div className="col-lg-4 col-md-auto mt-2 mb-2">
-                    <h4>{highquality}</h4>
-                    <h6>High Quality</h6>
-                    <span>It is made with good materials and craftsmanship, 
-                        and is designed to be durable and reliable.</span>
-                </div>
-                <div className="col-lg-4 col-md-auto mt-2 mb-2">
-                    <h4>{fastdelivery}</h4>
-                    <h6>Fast Delivery</h6>
-                    <span>To ensure that your parcel is delivered quickly, 
-                        it is important to choose a reputable shipping company and to carefully address and package the item.</span>
-                </div>
-                <div className="col-lg-4 col-md-auto mt-2 mb-2">
-                    <h4>{warranty}</h4>
-                    <h6>Best Warranty</h6>
-                    <span>A good warranty should cover all 
-                        defects in materials and workmanship, and should provide for repairs or replacements at no cost to the consumer.</span>
-                </div>
-            </div>
-        </div>
-        <div className="container featured-products">
-            <div className="row">
-                <div className="col spring-sale-text">
-                    <h2 className="text-center spring-sale-text mb-5">Featured Products</h2>
-                </div>
-            </div>
-            <div className="row">
-              <div className="d-flex justify-content-md-center gap-4 zoom">
-              {this.state.persons.map(person => 
-                        <div md="4" lg="4" className="outwear fimage">
-                            <img alt="outwear" src={person.image} height={250} className="image-fluid"/>
-                            <span className="d-flex"><strong>Price:</strong>{person.price}</span>
-                        </div>
-                    )}
+      <div>
+        <div className="container">
+    <div classNa   me="row">
+        <div className="col text-center">
+          <h3>Carousel Area</h3>
+          {/* start carousel */}
+          <div
+            id="carouselExampleInterval"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active" data-bs-interval="1000">
+                <img src="https://cdn.pixabay.com/photo/2015/10/16/13/47/premium-991220_960_720.jpg" className="d-block w-100" alt="..." />
+              </div>
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src="https://cdn.pixabay.com/photo/2017/06/21/23/10/tshirt-2429016_960_720.jpg"
+                  className="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div className="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/10/16/13/47/premium-991220_960_720.jpg"
+                  className="d-block w-100"
+                  alt="..."
+                />
               </div>
             </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
+          {/* end carousel */}
         </div>
-         {/* New Arrivals div */}
-        <div className="container d-flex new-arrival">
-                <div className="container-i">
-                    <img alt="pantsuit_collection" src={require('./assets/pantsuit_collection.png')} width={450} className="img-fluid"/>
-                        <div className="text-block">
-                            <h3>The Pantsuit divlection</h3>
-                        </div>
+      </div>
+      <hr />
+      {/* BIGGEST DEALS */}
+      <div className="row">
+        <div className="col text-center">
+          <h3>BIGGEST DEALS</h3>
+          <div className="cards-list d-flex gap-4">
+            <div className="card">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/08/17/08/20/online-shopping-2650383_960_720.jpg"
+                alt=""
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h4 className="card-title">Card Title</h4>
+                <p className="card-text"> Card text</p>
+                <div className="d-flex gap-2">
+                  <a href="." className="btn btn-outline-success">
+                    Add to card
+                  </a>
+                  <a href="." className="btn btn-outline-success">
+                    Wishlist
+                  </a>
                 </div>
-                <div className="container-i">
-                    <img alt="sharp_sweet_menswear" src={require('./assets/sharp_sweet_menswear.png')} width={450} className="img-fluid"/>
-                        <div className="text-block">
-                            <h3>Sharp Sweet Menswear</h3>
-                        </div>
-                </div>
-                <div className="container-i">
-                    <img alt="dventures_awai_accessories" src={require('./assets/adventures_awai_accessories.png')} width={450} className="img-fluid"/>
-                        <div className="text-block">
-                            <h3>Adventures Accessories</h3>
-                        </div>
-                </div>
-        </div>
-        {/* Bestsellers by Category */}
-        <div className="container best-sellers">
-            <div>
-                <div className="spring-sale">
-                    <h2 className="text-center spring-sale-text mb-5">Bestsellers by Category</h2>
-                </div>
+              </div>
             </div>
-            <div className="d-flex justify-content-md-center">
-                <div className="dresses">
-                    <img alt="dresses" src={require('./assets/dresses.png')} width={350} className="mb-2 img-fluid"/>
-                    <h3 className="text-center">Dresses</h3>
+
+            <div className="card">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/06/21/23/10/tshirt-2429016_960_720.jpg"
+                alt=""
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h4 className="card-title">Card Title</h4>
+                <p className="card-text"> Card text</p>
+                <div className="d-flex gap-2">
+                  <a href="." className="btn btn-outline-success">
+                    Add to card
+                  </a>
+                  <a href="." className="btn btn-outline-success">
+                    Wishlist
+                  </a>
                 </div>
-                <div className="knitwear">
-                <img alt="knitwear" src={require('./assets/knitwear.png')} width={350} className="mb-2 img-fluid"/>
-                    <h3 className="text-center">Knitwear</h3>
-                </div>
-                <div className="crop_tops">
-                <img alt="crop_tops" src={require('./assets/crop_tops.png')} width={350} className="mb-2 img-fluid"/>
-                    <h3 className="text-center">Crop Tops</h3>
-                </div>
+              </div>
             </div>
+
+            <div className="card">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/08/17/08/20/online-shopping-2650383_960_720.jpg"
+                alt=""
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h4 className="card-title">Card Title</h4>
+                <p className="card-text"> Card text</p>
+                <div className="d-flex gap-2">
+                  <a href="." className="btn btn-outline-success">
+                    Add to card
+                  </a>
+                  <a href="." className="btn btn-outline-success">
+                    Wishlist
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="card">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/08/17/08/20/online-shopping-2650383_960_720.jpg"
+                alt=""
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h4 className="card-title">Card Title</h4>
+                <p className="card-text"> Card text</p>
+                <div className="d-flex gap-2">
+                  <a href="." className="btn btn-outline-success">
+                    Add to card
+                  </a>
+                  <a href="." className="btn btn-outline-success">
+                    Wishlist
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="card">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/08/17/08/20/online-shopping-2650383_960_720.jpg"
+                alt=""
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h4 className="card-title">Card Title</h4>
+                <p className="card-text"> Card text</p>
+                <div className="d-flex gap-2">
+                  <a href="." className="btn btn-outline-success">
+                    Add to card
+                  </a>
+                  <a href="." className="btn btn-outline-success">
+                    Wishlist
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      {/* BESTSELLERS */}
+      <hr />
+      <div className="row">
+        <div className="col text-center">
+          <h3>BESTSELLERS</h3>
+          <h6>Carousel here</h6>
+        </div>
+      </div>
+      <hr />
+      {/* ADDITIONAL PROMOTIONS HERE */}
+      <div className="row">
+        <div className="col text-center">
+          <h3>CALL TO ACTION IMAGE HERE</h3>
+        </div>
+      </div>
+    </div>
         
        
         {/* Footer */}
@@ -125,7 +209,7 @@ export default class Home extends React.Component {
             <Footer />
         </div>
         
-      </>
+      </div>
     );
   }
 }
