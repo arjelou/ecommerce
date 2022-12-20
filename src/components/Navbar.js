@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsCart,BsPerson,BsGift } from 'react-icons/bs';
+import acmadelog from '../../src/assets/acmade-logo.png'
 import './style.css';
 
 export default class Navbar extends React.Component {
@@ -17,7 +18,7 @@ export default class Navbar extends React.Component {
             <div className="row">
                 <div className="col-lg-12 col-md-6 col-sm-6 col-xm-12">
                     <div className="d-flex justify-content-md-between">
-                        <NavLink to='/'><h5>GRE'</h5></NavLink>
+                       <NavLink to='/'><img src={acmadelog} alt='acmadeLogo' width={100} className='logoHeader'/></NavLink>
                         <input
                             type="text"
                             className="p-2 search"
