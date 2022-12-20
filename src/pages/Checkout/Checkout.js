@@ -10,112 +10,24 @@ export default class Checkout extends React.Component {
         <div className='row'>
           <div className='col-lg-8 piclist checkout'>
           <div className="container">
-          <h5 className='mt-3'>Customer Information</h5>
               <div className="row">
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Email address</label>
-                  </div>
-                </div>
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Email address</label>
-                  </div>
-                </div>
-                <hr />
-                <h5>Shipping</h5>
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">First Name</label>
-                  </div>
-                </div>
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Last Name</label>
-                  </div>
-                </div>
+                <form>
+                <h6 className='mt-3 d-flex'>Customer Information</h6>
+                  <label for="email">Email Address</label>
+                  <input type="email" class="checkout-form" id="email" name="email" placeholder='john@example.com'/>
+                  <h6 className='mt-3'>Shipping Information</h6>
+                  <label for="fname">First Name</label>
+                  <input type="text" class="checkout-form" id="fname" name="fname"/>
+                  <label for="lname">Last Name</label>
+                  <input type="text" class="checkout-form" id="lname" name="lname"/>
+                  <label for="fname">Address</label>
+                  <input type="text" class="checkout-form" id="fname" name="fname" placeholder='street # district city state'/>
+
+                </form>
               </div>
               <div className="row">
                 <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Address</label>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">State</label>
-                  </div>
-                </div>
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Phone number</label>
-                  </div>
-                </div>
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Gender</label>
-                  </div>
-                </div>
-                <div className="col-md">
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Zip Code</label>
-                  </div>
+                  
                 </div>
               </div>
               <hr />
@@ -130,36 +42,24 @@ export default class Checkout extends React.Component {
                   <button className="btn btn-outline-primary m-1">
                     Coinsph
                   </button>
-                  <button className="btn btn-success payment-button">
-                    Complete order
-                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div className='col-lg-4 product-info checkout'>
+          <div className='col-lg-4'>
             <div className='mt-3'>
-                <div className='d-flex justify-content-md-around'>
-                    <h4>Summary | items count here</h4>
-                </div>
-                <div className='justify-content-md-around'>
-                    <h6>Subtotal:${Subtotal}</h6>
-                    <h6>Shipping:</h6>
-                    <h6>Tax:</h6>
-                    <hr />
-                </div>
-                <div className='d-flex justify-content-md-around mb-2'>
-                    <h5><strong>Total:</strong></h5>
-                    <h5><strong>${Subtotal}</strong></h5>
-                </div>
-                <div>
-                    <hr />
-                    <label>Gift card or discound code</label>
-                    <form className='d-flex gap-1'>
-                      <input type='text' className='form-control' />
-                      <button className='btn btn-primary'>Apply</button>
+                <div className=''>
+                    <form className=''> 
+                      <h6>Apply Promo Code</h6>
+                        <input type='text' placeholder='enter promo code!' className='promoCode'/>
+                        <button className='btnpromoCode'>Apply</button>
+                        <h5>Order Summary</h5>
+                        <h6>Actual Amount: ${Subtotal}</h6>
+                        <h6>Shipping Charges:</h6>
+                        <h6>Tax:</h6>
+                        <h5 className='mb-4 mt-4'><strong>Amount to Pay: ${Subtotal}</strong></h5>
+                        <button className='btncompleteOrdder'>COMPLETE ORDER</button>
                     </form>
-                    <hr />
                 </div>
             </div>
           </div>

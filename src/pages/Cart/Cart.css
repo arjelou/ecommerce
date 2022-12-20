@@ -1,9 +1,27 @@
 .cart{
-    margin-top: 100px;
+    margin-top: 20px;
 }
-.piclist{
-    background-color: beige;
+.btn-proceedToCheckout{
+    margin-top: 7px;
+    /* width: 195px; */
+    background-color: black;
+    padding: 10px;
+    color: white;
+    display: block;
+    text-align: center;
+    font-weight: bold;
 }
-.product-info{
-    background-color: bisque;
+.btn-proceedToCheckout:hover{
+    color: white;   
 }
+.btn-cartRemove{
+    color: rgb(107, 107, 107);
+    margin-left: 30px;
+}
+.btn-cartRemove:hover{
+    color: red;
+}
+.qty{
+    width: 70px;
+}
+

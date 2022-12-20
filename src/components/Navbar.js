@@ -1,23 +1,30 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BsCart2,BsPerson } from 'react-icons/bs';
+import { BsCart,BsPerson,BsGift } from 'react-icons/bs';
 import './style.css';
 
 export default class Navbar extends React.Component {
   render() {
     return (
+    <>    
         <div className="container sticky-div">
+        <div className='row'>
+            <div className='col d-flex'>
+                <h6 className='bg-dark p-2 text-white mb-4'><BsGift size={20} color='red' /> Pick Any Product at P199</h6>
+                <h6 className='p-2'>SHOP NOW</h6>
+            </div>
+        </div>
             <div className="row">
                 <div className="col-lg-12 col-md-6 col-sm-6 col-xm-12">
                     <div className="d-flex justify-content-md-between">
-                        <h5>GRE'</h5>
+                        <NavLink to='/'><h5>GRE'</h5></NavLink>
                         <input
                             type="text"
-                            className="p-2"
+                            className="p-2 search"
                             placeholder="search"
                         />
                         <div className="d-flex gap-1">
-                            <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/cart'><BsCart2 size={35} title='Cart' /></NavLink>
+                            <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/cart'><BsCart size={35} title='Cart' /></NavLink>
                             <NavLink className={({isActive}) => isActive ? "active-link" : "unactive-link"} to='/login'><BsPerson size={35} title='Login' /></NavLink>
                         </div>
                     </div>
@@ -64,6 +71,7 @@ export default class Navbar extends React.Component {
             </div>
           </div>
         </div>
+    </>
       )
     }
   }
