@@ -1,9 +1,18 @@
 .product{
-    margin-top: 100px;
+    margin-top: 20px;
 }
-.piclist{
-    background-color: beige;
+.btn-addToCart{
+    margin-top: 7px;
+    width: 195px;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    display: block;
+    text-align: center;
 }
-.product-info{
-    background-color: bisque;
+.btn-addToCart:hover{
+   
+    color: white;
+    
 }
+

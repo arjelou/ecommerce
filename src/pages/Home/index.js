@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import Footer from "../../components/Footer";
 import pic from './assets/dresses.png';
 
 
@@ -8,7 +9,15 @@ export default class index extends React.Component {
         return (
             <>
                 <div className='container'>
+                    <div className='row text-center'>
+                        <div className='col-lg-12'>
+                            <img className='img-banner image-fluid' src={pic} alt='imacarousel' height={200}/>
+                        </div>
+                    </div>
+
+
                     <div className='row d-flex justify-content-md-center gap-2'>
+                    <h3 className='mt-5 mb-3 text-center'>BIGGEST DEALS</h3>
                         <div className='col-lg-1 card-image'>
                             <img src={pic} alt='hello' width={180}/>
                                 <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
@@ -81,6 +90,11 @@ export default class index extends React.Component {
                                     <p className='card-image-content'>P 890.90</p>
                             <button className='btn btn-primary form-control'>Add to Cart</button>
                         </div>
+                    </div>
+                {/* BESTSELLERS CONTAINER */}
+                    <div className='container'>
+                       <h3 className='mt-5 mb-3 text-center'>BESTSELLERS</h3>
+                        <div className='row f-flex justify-content-md-center gap-2'>
                         <div className='col-lg-1 card-image'>
                             <img src={pic} alt='hello' width={180}/>
                                 <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
@@ -118,10 +132,18 @@ export default class index extends React.Component {
                                     <p className='card-image-content'>P 890.90</p>
                             <button className='btn btn-primary form-control'>Add to Cart</button>
                         </div>
-                        
+                        </div>
+                    </div>
+                    <div className='container mt-5 mb-5'>
+                        <div className='row text-center'>
+                            <div className='col'>
+                                <img className='explore-more image-fluid' src={pic} height={300} alt='banner-fooer'/>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+                <hr />
+                <Footer />
             </>
           )
         }
