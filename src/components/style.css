@@ -16,7 +16,7 @@
     outline: none;
 }
 .search:focus {
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid #2B3A55
   }
   
 .navigationBar{
@@ -31,26 +31,26 @@ li{
     list-style-type: none;
 }
 .active-link{
-    color:#13181B;
+    color:#2B3A55
 }
 .active-link:hover{
-    color:#13181B;
+    color:#2B3A55
 }
 .unactive-link{
     color: #69727E;
 }
 .unactive-link:hover{
-    color: #13181B;
+    color: #2B3A55
 }
 
 .active-category-btn{
-    background-color: #13181B;
-    color: #FEFEFE;
+    background-color: #2B3A55;
+    color: #F2E5E5;
     padding: 7px;
 
 }
 .active-category-btn:hover{
-    color: #FEFEFE;
+    color: #F2E5E5;
     padding: 7px;
 
 }
@@ -61,5 +61,20 @@ li{
 .unactive-category-btn:hover{
     color: #13181B;
     padding: 7px;
+}
+.priceat199{
+    background-color: #2B3A55;
+    color: #F2E5E5;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.priceat199Icon{
+    color: #CE7777;
+}
+.shopnow{
+    color: #CE7777;
+    padding: 10px;
+    font-weight: bold;
 }
 

@@ -45,6 +45,30 @@ export default class Cart extends React.Component {
                             <th><input type='number' className='qty' /></th>
                             <th><a href='.' className='btn-cartRemove'><BsCartX  size={25}/></a></th>
                         </tr>
+                        <tr>
+                            <th className='d-flex'><img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={50} />
+                            <h6 className='m-1'>Gala Bed Chiropractic Spring Mattress</h6>
+                            </th>
+                            <th>${Subtotal}</th>
+                            <th><input type='number' className='qty' /></th>
+                            <th><a href='.' className='btn-cartRemove'><BsCartX  size={25}/></a></th>
+                        </tr>
+                        <tr>
+                            <th className='d-flex'><img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={50} />
+                            <h6 className='m-1'>Gala Bed Chiropractic Spring Mattress</h6>
+                            </th>
+                            <th>${Subtotal}</th>
+                            <th><input type='number' className='qty' /></th>
+                            <th><a href='.' className='btn-cartRemove'><BsCartX  size={25}/></a></th>
+                        </tr>
+                        <tr>
+                            <th className='d-flex'><img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={50} />
+                            <h6 className='m-1'>Gala Bed Chiropractic Spring Mattress</h6>
+                            </th>
+                            <th>${Subtotal}</th>
+                            <th><input type='number' className='qty' /></th>
+                            <th><a href='.' className='btn-cartRemove'><BsCartX  size={25}/></a></th>
+                        </tr>
                     </tbody>
                 </table>
             </div>

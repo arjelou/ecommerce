@@ -3,25 +3,25 @@
 }
 .btn-proceedToCheckout{
     margin-top: 7px;
-    /* width: 195px; */
-    background-color: black;
+    background-color: #2B3A55;
     padding: 10px;
-    color: white;
+    color: #F2E5E5;
     display: block;
     text-align: center;
     font-weight: bold;
 }
 .btn-proceedToCheckout:hover{
-    color: white;   
+    color: #F2E5E5;  
 }
 .btn-cartRemove{
     color: rgb(107, 107, 107);
     margin-left: 30px;
 }
 .btn-cartRemove:hover{
-    color: red;
+    color: #CE7777;
 }
 .qty{
     width: 70px;
 }
+
 

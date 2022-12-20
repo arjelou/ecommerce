@@ -22,7 +22,7 @@ export default class Product extends React.Component {
                     <h4><strong>P112.00</strong></h4>
                 </div>
                 <div className='d-block'>
-                    <select className='p-1'>
+                    <select className='choose-size'>
                         <option selected>Choose size</option>
                         <option value='sm'>SMALL</option>
                         <option value='md'>MEDIUM</option>
@@ -30,7 +30,7 @@ export default class Product extends React.Component {
                         <option value='lg'>XLARGE</option>
                         <option value='lg'>XXLARGE</option>
                     </select><br />
-                    <input type='number' className='p-1 mt-2' placeholder='Ente Quantity'/>
+                    <input type='number' className='enter-qty' placeholder='Ente Quantity'/>
                     <a href='.' className='btn-addToCart' role='button'><strong><BsCart2 size={30}/> ADD TO CART</strong></a> 
                 </div>
                 <div className='mb-3 mt-3'>

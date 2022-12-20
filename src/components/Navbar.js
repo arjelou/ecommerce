@@ -10,8 +10,8 @@ export default class Navbar extends React.Component {
         <div className="container sticky-div">
         <div className='row'>
             <div className='col d-flex'>
-                <h6 className='bg-dark p-2 text-white mb-4'><BsGift size={20} color='red' /> Pick Any Product at P199</h6>
-                <h6 className='p-2'>SHOP NOW</h6>
+                <h6 className='priceat199'><BsGift size={20} className='priceat199Icon'/> Pick Any Product at P199</h6>
+                <h6 className='shopnow'>SHOP NOW</h6>
             </div>
         </div>
             <div className="row">
