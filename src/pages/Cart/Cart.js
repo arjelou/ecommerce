@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Cart.css';
 import { BsCartX } from 'react-icons/bs';
+import Footer from '../../components/Footer';
 
 export default class Cart extends React.Component {
   render() {
@@ -107,6 +108,8 @@ export default class Cart extends React.Component {
         </div>
         </div>
        </div>
+       <hr />
+        <Footer />
        </>
       )
   }

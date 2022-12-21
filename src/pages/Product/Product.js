@@ -1,8 +1,7 @@
 import React from 'react';
 import './Product.css';
-import { BsCart2 } from 'react-icons/bs';
 import pic from '../../pages/Home/assets/dresses.png';
-
+import Footer from '../../components/Footer';
 export default class Product extends React.Component {
   
   render() {
@@ -31,7 +30,7 @@ export default class Product extends React.Component {
                         <option value='lg'>XXLARGE</option>
                     </select><br />
                     <input type='number' className='enter-qty' placeholder='Ente Quantity'/>
-                    <a href='.' className='btn-addToCart' role='button'><strong><BsCart2 size={30}/> ADD TO CART</strong></a> 
+                    <a href='.' className='btn-addToCart' role='button'><strong>ADD TO CART</strong></a> 
                 </div>
                 <div className='mb-3 mt-3'>
                     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
@@ -61,6 +60,8 @@ export default class Product extends React.Component {
         </div>
         </div>
        </div>
+       <hr />
+        <Footer />
        </>
       )
   }

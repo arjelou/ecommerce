@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsCart,BsPerson,BsGift } from 'react-icons/bs';
-import acmadelog from '../../src/assets/acmade-logo.png'
+import acmadelog from '../../src/assets/acmade.png'
 import './style.css';
 
 export default class Navbar extends React.Component {
@@ -11,14 +11,14 @@ export default class Navbar extends React.Component {
         <div className="container sticky-div">
         <div className='row'>
             <div className='col d-flex'>
-                <h6 className='priceat199'><BsGift size={20} className='priceat199Icon'/> Pick Any Product at P199</h6>
-                <h6 className='shopnow'>SHOP NOW</h6>
+                <p className='priceat199'><BsGift size={20} className='priceat199Icon'/> Pick Any Product at P199</p>
+                <hp className='shopnow'>SHOP NOW</hp>
             </div>
         </div>
             <div className="row">
                 <div className="col-lg-12 col-md-6 col-sm-6 col-xm-12">
-                    <div className="d-flex justify-content-md-between">
-                       <NavLink to='/'><img src={acmadelog} alt='acmadeLogo' width={100} className='logoHeader'/></NavLink>
+                    <div className="d-flex justify-content-md-between mt-3">
+                       <NavLink to='/'><img src={acmadelog} alt='acmadeLogo' width={110} className='logoHeader'/></NavLink>
                         <input
                             type="text"
                             className="p-2 search"

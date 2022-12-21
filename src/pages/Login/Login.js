@@ -7,7 +7,7 @@ export default class Login extends React.Component {
     return (
         <>
             <div className="container">
-                <div className='row justify-content-md-center'>
+                <div className='row justify-content-md-center mb-5'>
                     <div className='col-lg-4 col-md-auto login'>
                         <h2 className='text-center mb-4'><strong>Welcome back</strong></h2>
                         <div className='container'>

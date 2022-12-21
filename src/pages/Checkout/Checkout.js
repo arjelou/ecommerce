@@ -1,5 +1,6 @@
 import React from 'react';
 import './Checkout.css';
+import Footer from '../../components/Footer';
 
 export default class Checkout extends React.Component {
   render() {
@@ -34,14 +35,10 @@ export default class Checkout extends React.Component {
               <div className="row mb-3">
                 <h5>Payment Method</h5>
                 <div className="col-md ">
-                  <button className="btn btn-outline-primary m-1">GCash</button>
-                  <button className="btn btn-outline-primary m-1">
-                    PayPal
-                  </button>
-                  <button className="btn btn-outline-primary m-1">Visa</button>
-                  <button className="btn btn-outline-primary m-1">
-                    Coinsph
-                  </button>
+                  <button className="btnPayment">GCash</button>
+                  <button className="btnPayment"> PayPal</button>
+                  <button className="btnPayment">Visa</button>
+                  <button className="btnPayment">Coinsph</button>
                 </div>
               </div>
             </div>
@@ -85,6 +82,8 @@ export default class Checkout extends React.Component {
         </div>
         </div>
        </div>
+       <hr />
+        <Footer />
        </>
       )
   }
