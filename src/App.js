@@ -8,13 +8,13 @@ import Cart from './pages/Cart/Cart';
 import Checkout from './pages/Checkout/Checkout';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
+import Dashboard from './pages/Dashboard/dashboard';
 
 
 function App() {
   return (
     <>   
     <Navbar />
-    
       <Routes>
         <Route path=''  element={<Index />} />
         <Route path='productListing'  element={<ProductListing />} />
@@ -23,6 +23,7 @@ function App() {
         <Route path='checkout'  element={<Checkout />} />
         <Route path='login'  element={<Login />} />
         <Route path='signup'  element={<Signup />} />
+        <Route path='dashboard' element={<Dashboard />} />
       </Routes>
     </>
   );

@@ -8,7 +8,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
     <>    
-        <div className="container sticky-div">
+        <div className="container-fluid sticky-div">
         <div className='row'>
             <div className='col d-flex'>
                 <p className='priceat199'><BsGift size={20} className='priceat199Icon'/> Pick Any Product at P199</p>
