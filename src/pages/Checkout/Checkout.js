@@ -13,9 +13,13 @@ export default class Checkout extends React.Component {
           <div className="container">
               <div className="row">
                 <form>
-                <h6 className='mt-3 d-flex'>Customer Information</h6>
+                <h6 className='mt-3'>Customer Information</h6>
+                  
                   <label for="email">Email Address</label>
                   <input type="email" class="checkout-form" id="email" name="email" placeholder='john@example.com'/>
+                  <label for="number">Phone Number</label>
+                  <input type="number" class="checkout-form" id="number" name="number" placeholder='0955-XXX-XXXX' min={11}/>
+                  
                   <h6 className='mt-3'>Shipping Information</h6>
                   <label for="fname">First Name</label>
                   <input type="text" class="checkout-form" id="fname" name="fname"/>
@@ -25,21 +29,40 @@ export default class Checkout extends React.Component {
                   <input type="text" class="checkout-form" id="fname" name="fname" placeholder='street # district city state'/>
 
                 </form>
-              </div>
-              <div className="row">
-                <div className="col-md">
-                  
-                </div>
-              </div>
-              <hr />
-              <div className="row mb-3">
+              </div>            
+              <div className="row mb-3 mt-3">
                 <h5>Payment Method</h5>
                 <div className="col-md ">
-                  <button className="btnPayment">GCash</button>
+                  <button className="btnPayment" >GCash</button>
                   <button className="btnPayment"> PayPal</button>
-                  <button className="btnPayment">Visa</button>
+                  <button className="btnPayment" data-bs-toggle="modal" data-bs-target="#exampleModal">Visa</button>
                   <button className="btnPayment">Coinsph</button>
                 </div>
+                {/* modal */}
+                  <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h1 className="modal-title fs-5" id="exampleModalLabel">Visa</h1>
+                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                          <form>
+                            <label>Card Number</label>
+                            <input type="number" className="form-control" placeholder="card number"/>
+                            <label className='mt-2'>Expired date</label>
+                            <input type="date" className="form-control" placeholder="card number"/>
+                            <label className='mt-2'>CVV</label>
+                            <input type="text" className="form-control" placeholder="card number"/>
+                          </form>
+                        </div>
+                        <div className="modal-footer">
+                          <button type="button" className="btncompleteOrdder">COMPLETE ORDER</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {/* end modal */}
               </div>
             </div>
           </div>

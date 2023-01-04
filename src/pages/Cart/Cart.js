@@ -75,7 +75,7 @@ export default class Cart extends React.Component {
             </div>
           </div>
           <div className='col-lg-4'>
-            <div className='mt-3'>
+            <div className='checkOutDiv'>
                 <div className='d-flex justify-content-md-between'>
                     <h6>Cart Summary (0)</h6>
                 </div>
