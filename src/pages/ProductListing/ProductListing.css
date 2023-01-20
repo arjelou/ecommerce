@@ -24,4 +24,31 @@
   opacity: 2;
   cursor: pointer;
   }
-  
+
+  /* new css  */
+.CardCainter{
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 20px;
+}
+  .catalogue{
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  .catalogue1{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .catalogueName{
+    position: relative;
+    font-size: 20px;
+  }
+  .BestSellers{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+  }
+ 

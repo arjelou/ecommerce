@@ -7,7 +7,7 @@ export default class Product extends React.Component {
   render() {
     return (
        <>
-       <div className='container'>
+       <div className='container mt-5'>
         <div className='row'>
           <div className='col-lg-8 d-flex gap-3'>
             <img src={pic} alt='produc-img' height={500}/>
@@ -16,22 +16,15 @@ export default class Product extends React.Component {
           </div>
           <div className='col-lg-4  product'>
             <div className='mt-3'>
-                <div className=''>
-                    <h4>Gala Bed Chiropractic Spring Mattress</h4>
-                    <h4><strong>P112.00</strong></h4>
-                </div>
-                <div className='d-block'>
-                    <select className='choose-size'>
-                        <option selected>Choose size</option>
-                        <option value='sm'>SMALL</option>
-                        <option value='md'>MEDIUM</option>
-                        <option value='lg'>LARGE</option>
-                        <option value='lg'>XLARGE</option>
-                        <option value='lg'>XXLARGE</option>
-                    </select><br />
-                    <input type='number' className='enter-qty' placeholder='Ente Quantity'/>
-                    <a href='.' className='btn-addToCart' role='button'><strong>ADD TO CART</strong></a> 
-                </div>
+                    <form>
+                      <h4>Gala Bed Chiropractic Spring Mattress</h4>
+                      <button className='btn-addToCart'><strong>FREE SAMPLE</strong></button> 
+                      <br />
+                      <span className=''>You can sent message here!</span>
+                      <input type='email' className='enter-qty' placeholder='yourcompany@example.com'/>
+                      <textarea type='text' className='enter-qty' placeholder='Message' />
+                      <button type='submit' className='btn-addToCart'>Send Inquiry</button>
+                    </form>
                 <div className='mb-3 mt-3'>
                     <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
                 </div>

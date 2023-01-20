@@ -50,27 +50,31 @@ li{
 }
 
 .active-category-btn{
-    background-color: #2B3A55;
-    color: #F2E5E5;
-    padding: 7px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-
+    
+    padding: 10px;
+    border-bottom: 2px solid #2B3A55;
+    color: #2B3A55;
+    font-weight: bold; 
+    margin: 10px;
+   
 }
 .active-category-btn:hover{
-    color: #F2E5E5;
-    padding: 7px;
-
+    padding: 10px;
+    color: #2B3A55;
+    font-weight: bold; 
 }
 .unactive-category-btn{
-    padding: 7px;
-    color: #69727E;
+    padding: 10px;
+    color: #2B3A55;
+    font-weight: bold; 
+    margin: 10px;
 }
 .unactive-category-btn:hover{
-    color: #13181B;
-    padding: 7px;
+    color: #2B3A55;
+    font-weight: bold; 
+    
 }
-.priceat199{
+/* .priceat199{
     background-color: #2B3A55;
     color: #F2E5E5;
     padding: 5px;
@@ -84,6 +88,25 @@ li{
     color: #CE7777;
     padding: 5px;
     font-weight: bold;
+} */
+.navbar{
+    float: right;
 }
+.getStarted{
+    padding: 10px;
+    background-color: #2B3A55;
+    color: #F2E5E5;
+    border-radius: 5px;
+    margin: 15px;
+}
+.getStarted:hover{
+    padding: 10px;
+    color: #F2E5E5;
+}
+.logoHeader{
+    padding: 10px;
+    margin: 15px;
+}
+
 
 

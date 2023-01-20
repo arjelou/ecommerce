@@ -3,7 +3,7 @@
 }
 .btn-addToCart{
     margin-top: 7px;
-    width: 195px;
+    width: 395px;
     background-color: #2B3A55;
     padding: 10px;
     color: #F2E5E5;
@@ -18,8 +18,8 @@
     padding: 5px;
 }
 .enter-qty{
-    width: 195px;
+    width: 395px;
     margin-top: 5px;
-    padding: 4px;
+    padding: 10px;
 }
 

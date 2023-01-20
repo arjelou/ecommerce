@@ -1,146 +1,290 @@
 import React from 'react';
+import axios from 'axios';
 import './ProductListing.css';
 import pic from '../../pages/Home/assets/dresses.png'
 import Footer from '../../components/Footer';
 
 export default class ProductListing extends React.Component{
-    render() {
-        return (
-            <>
-                <div className='container'>
-                    <div className='row text-center'>
-                        <div className='col-lg-12'>
-                            <img className='img-banner image-fluid' src={pic} alt='imacarousel' height={200}/>
-                        </div>
-                    </div>
-
-
-                    <div className='row d-flex justify-content-md-center gap-2'>
-                    <h3 className='mt-5 mb-3 text-center'>BIGGEST DEALS</h3>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                    </div>
-                {/* BESTSELLERS CONTAINER */}
-                    <div className='container'>
-                       <h3 className='mt-5 mb-3 text-center'>BESTSELLERS</h3>
-                        <div className='row f-flex justify-content-md-center gap-2'>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        <div className='col-lg-1 card-image'>
-                            <img src={pic} alt='hello' width={180}/>
-                                <h6 className='card-image-title'>Gala Bed Chiropractic Spring Mattress</h6>
-                                    <p className='card-image-content'>P 890.90</p>
-                            <button className='btn btn-primary form-control'>Add to Cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div className='container mt-5 mb-5'>
-                        <div className='row text-center'>
-                            <div className='col'>
-                                <img className='explore-more image-fluid' src={pic} height={300} alt='banner-fooer'/>
-                            </div>
-                        </div>
+    state = {
+        persons: [
+          
+        ]
+      }
+    
+      componentDidMount() {
+        axios.get(`http://localhost:4000/`)
+          .then(res => {
+            const persons = res.data;
+            this.setState({ persons });
+            console.log(this.state.persons);
+          })
+      }
+    
+render() {
+    return (
+    <>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-md-12'>
+                    <div className='CardCainter text-center'>
+                        <h2 className=''>Your Collection</h2>
                     </div>
                 </div>
+            </div>
+            {/* Pick Your Style */}
+            <div className='row'>
+                <div className='col-md-12'>
+                    <h2 className='mt-5'>Pick Your Style</h2>
+                    <div className='CardCainter text-center'>
+                        <div className='card-body'>
+                            <div className='row'>
+                                <div className='col-md-4 d-flex gap-2'>
+                                    <button className='btn btn-primary'>Clothing</button>
+                                    <button className='btn btn-primary'>Home Furnishing</button>
+                                </div>
+                            </div>
+                            <div className='row d-flex justify-content-md-center gap-5'>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-1 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={180} className='catalogue'/>
+                                             <p className='card-image-title mt-2'>Dress</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>  
+        {/* Best Sellers */}
+        <div className='row'>
+                <div className='col-md-12 col-lg-12'>
+                    <h2 className='mt-5'>Best Sellers</h2>
+                    <div className='CardCainter text-center'>
+                        <div className='card-body'>
+                            <div className='row'>
+                                <div className='col-md-4 d-flex gap-2'>
+                                    <button className='btn btn-primary'>Clothing</button>
+                                    <button className='btn btn-primary'>Home Furnishing</button>
+                                </div>
+                            </div>
+                            <div className='row d-flex justify-content-md-start gap-5'>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='col-md-2 mt-5'>
+                                    <div className='cardContainer'>
+                                        <a href='.' className='catalogueLink'>
+                                            <img src={pic} alt='hello' width={200} className='catalogue1'/>
+                                             <p className='card-image-title'>Dress Title</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div> 
+        </div>
+
                 <hr />
                 <Footer />
             </>
