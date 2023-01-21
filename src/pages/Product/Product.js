@@ -1,7 +1,6 @@
 import React from 'react';
 import './Product.css';
 import pic from '../../pages/Home/assets/dresses.png';
-import Footer from '../../components/Footer';
 export default class Product extends React.Component {
   
   render() {
@@ -18,7 +17,7 @@ export default class Product extends React.Component {
             <div className='mt-3'>
                     <form>
                       <h4>Gala Bed Chiropractic Spring Mattress</h4>
-                      <button className='btn-addToCart'><strong>FREE SAMPLE</strong></button> 
+                      <button className='btn-addToCart'>GET YOUR FREE SAMPLE</button> 
                       <br />
                       <span className=''>You can sent message here!</span>
                       <input type='email' className='enter-qty' placeholder='yourcompany@example.com'/>
@@ -32,29 +31,7 @@ export default class Product extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row mt-5'>
-        <hr />
-        <h5 className='mb-4'>Related Products</h5>
-        <div className='col'>
-        <div className='d-flex gap-3 related-products'>
-            <div>
-            <img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={200} />
-            </div>
-            <div>
-            <img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={200} />
-            </div>
-            <div>
-            <img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={200} />
-            </div>
-            <div>
-            <img src='https://cdn.pixabay.com/photo/2015/01/06/16/14/woman-590490_960_720.jpg' alt='profile' width={200} />
-            </div>
-        </div>
-        </div>
-        </div>
        </div>
-       <hr />
-        <Footer />
        </>
       )
   }

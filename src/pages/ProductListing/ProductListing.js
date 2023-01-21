@@ -3,6 +3,7 @@ import axios from 'axios';
 import './ProductListing.css';
 import pic from '../../pages/Home/assets/dresses.png'
 import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
 
 export default class ProductListing extends React.Component{
     state = {
@@ -23,6 +24,7 @@ export default class ProductListing extends React.Component{
 render() {
     return (
     <>
+    <Navbar />
         <div className='container'>
             <div className='row'>
                 <div className='col-md-12'>

@@ -3,23 +3,29 @@
 }
 .btn-addToCart{
     margin-top: 7px;
-    width: 395px;
+    width: 100%;
+    padding: 18px 10px;
     background-color: #2B3A55;
-    padding: 10px;
     color: #F2E5E5;
-    display: block;
-    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: none;
 }
 .btn-addToCart:hover{
     color: #F2E5E5;
 }
-.choose-size{
-    width: 195px;
-    padding: 5px;
-}
+
 .enter-qty{
-    width: 395px;
-    margin-top: 5px;
-    padding: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 3px solid #ccc;;
+    outline: none;
+}
+.enter-qty:focus{
+    border: 3px solid #2B3A55;
 }
 

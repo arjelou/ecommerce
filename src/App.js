@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes,Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Index from './pages/Home/index';
 import ProductListing from './pages/ProductListing/ProductListing';
 import Product from './pages/Product/Product';
@@ -14,7 +14,7 @@ import Dashboard from './pages/Dashboard/dashboard';
 function App() {
   return (
     <>   
-    <Navbar />
+    {/* <Navbar /> */}
       <Routes>
         <Route path=''  element={<Index />} />
         <Route path='productListing'  element={<ProductListing />} />
