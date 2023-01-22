@@ -9,7 +9,7 @@ export default class Login extends React.Component {
             <div className="container">
                 <div className='row justify-content-md-center mb-5'>
                     <div className='col-lg-4 col-md-auto login'>
-                        <h2 className='text-center mb-4'><strong>Welcome back</strong></h2>
+                        <h2 className='text-center mb-4'><strong>Login to your account</strong></h2>
                         <div className='container'>
                             <form className='col'>
                                 <label for='email'>Email or Username</label>
