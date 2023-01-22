@@ -6,13 +6,21 @@ export default class dashboard extends React.Component  {
  constructor(props) {
     super(props);
     this.state = {
-      data: ''
+      product_list: [],
     }
  
  }
 
-
-
+componentDidMount() {
+  fetch('http://localhost:4001/products')
+  .then((res) => res.json())
+  .then((response) => {
+    console.log(response);
+    this.setState({ 
+      product_list: [...response]
+    })
+  })
+}
  render() {
      return (
 <>
@@ -22,10 +30,11 @@ export default class dashboard extends React.Component  {
     <Navbar />
   </div>
   <div className="row gap-1 mt-5">
+  
     <div className="col bg-primary">
     <h2>500</h2>
     <h4>Customer</h4>
-    </div>
+   </div>
     <div className="col bg-primary">
     <h2>500</h2>
     <h4>Design</h4>
@@ -55,17 +64,24 @@ export default class dashboard extends React.Component  {
       <th scope="col">SKU</th>
       <th scope="col">Categories</th>
     </tr>
-  </thead>
+  </thead> 
   <tbody class="table-group-divider">
-    <tr>
-      <th scope="row">1</th>
-      <td>Gre Jacket</td>
-      <td>120.00</td>
-      <td>1452562</td>
-      <td>cat1</td>
-    </tr>
-  
     
+    {
+      this.state.product_list.map((product,index) =>{
+        return (
+          <>
+          <tr key={index}>
+          <th scope="row">{product.id}</th>
+          <td><a href='.'>{product.product_name}</a></td>
+          <td>{product.product_price}.00</td>
+          <td>{product.product_sku}</td>
+          <td>{product.product_category}</td>
+          </tr>
+          </>
+        )
+      })
+    }
   </tbody>
 </table>
 </div>

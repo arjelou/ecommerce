@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../src/global.css';
 
 export default class addNewModal extends React.Component {
     constructor(props) {
@@ -21,12 +22,13 @@ render() {
             <div className="modal-body">
                 <form>
                     <label>Product Name</label>
-                    <input type="text" className="form-control" placeholder="Product Name"/>
-                    <label className='mt-2'>Regular Price</label>
-                    <input type="number" className="form-control" placeholder="Regular Price"/>
-                    <label className='mt-2'>SKU</label>
-                    <input type="text" className="form-control" placeholder="SKU"/>
-                    <select className="form-select mt-2">
+                    <input type="text" className="inpuInactive" placeholder="Product Name"/>
+                    <label className=''>Regular Price</label>
+                    <input type="number" className="inpuInactive" placeholder="Regular Price"/>
+                    <label className=''>SKU</label>
+                    <input type="text" className="inpuInactive" placeholder="SKU"/>
+                    <label className=''>Category</label>
+                    <select className="inpuInactive">
                         <option selected>Select Category</option>
                         <option value="">Cat 1</option>
                         <option value="">Cat 2</option>
@@ -34,7 +36,7 @@ render() {
                 </form>
             </div>
             <div className="modal-footer">
-                <button type="button" className="btncompleteOrdder">ADD NEW</button>
+                <button type="button" className="btnDefault">ADD NEW</button>
             </div>
             </div>
         </div>
