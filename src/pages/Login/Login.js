@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Login.css';
 
 export default class Login extends React.Component {
   render(){
@@ -13,14 +12,14 @@ export default class Login extends React.Component {
                         <div className='container'>
                             <form className='col'>
                                 <label for='email'>Email or Username</label>
-                                <input type='email' id='email' placeholder='john@example.com' className='inputField'/>
+                                <input type='email' id='email' placeholder='john@example.com' className='inpuInactive'/>
                                 <label for='password'>Password</label>
-                                <input type='password' id='password' placeholder='*********' className='inputField'/>
-                                <button className='btnLogin'>Continue</button>
+                                <input type='password' id='password' placeholder='*********' className='inpuInactive'/>
+                                <button className='btnDefault'>Continue</button>
                                 <span>Don't have an account? <a href='.' className='text-decoration-none'><NavLink to='/signup'><strong>Sign up</strong></NavLink></a></span>
                                 <hr />
-                                <button className='btnLoginWithGoogle'>Continue with Google</button>
-                                <button className='btnLoginWithFacebook'>Continue with Facebook</button>
+                                <button className='loginOR mb-2'>Continue with Google</button>
+                                <button className='loginOR'>Continue with Facebook</button>
                             </form>
                         </div>
                     </div>

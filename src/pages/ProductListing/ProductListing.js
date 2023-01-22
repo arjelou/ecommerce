@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import './ProductListing.css';
 import pic from '../../pages/Home/assets/dresses.png'
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
@@ -41,8 +40,8 @@ render() {
                         <div className='card-body'>
                             <div className='row'>
                                 <div className='col-md-4 d-flex gap-2'>
-                                    <button className='btn btn-primary'>Clothing</button>
-                                    <button className='btn btn-primary'>Home Furnishing</button>
+                                    <button className='btnSelection'>Clothing</button>
+                                    <button className='btnSelection'>Home Furnishing</button>
                                 </div>
                             </div>
                             <div className='row d-flex justify-content-md-center gap-5'>
@@ -187,8 +186,8 @@ render() {
                         <div className='card-body'>
                             <div className='row'>
                                 <div className='col-md-4 d-flex gap-2'>
-                                    <button className='btn btn-primary'>Clothing</button>
-                                    <button className='btn btn-primary'>Home Furnishing</button>
+                                    <button className='btnSelection'>Clothing</button>
+                                    <button className='btnSelection'>Home Furnishing</button>
                                 </div>
                             </div>
                             <div className='row d-flex justify-content-md-start gap-5'>

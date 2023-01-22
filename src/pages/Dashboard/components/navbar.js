@@ -43,7 +43,7 @@ export default class navbaer extends React.Component  {
                 </a>
                 <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href=".">All Design</a></li>
-                  <li><a className="dropdown-item" href="." data-bs-toggle="modal" data-bs-target="#exampleModal">Add New</a></li>
+                  <li><a className="dropdown-item" href="." data-bs-toggle="modal" data-bs-target="#addNewModal">Add New</a></li>
                   <li><a className="dropdown-item" href=".">Categories</a></li>
                 </ul>
               </li>
@@ -55,6 +55,7 @@ export default class navbaer extends React.Component  {
           </div>
         </div>
       </nav>
+      
       <AddNewModal />
     </>  
       

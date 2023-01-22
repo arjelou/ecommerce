@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../src/global.css';
+import '../../../global.css';
 
 export default class addNewModal extends React.Component {
     constructor(props) {
@@ -12,11 +12,11 @@ export default class addNewModal extends React.Component {
 render() {
     return (
 <>
-    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
             <div className="modal-header">
-                <h1 className="modal-title fs-5" id="exampleModalLabel">Add New Design</h1>
+                <h1 className="modal-title fs-5" id="addNewModalLabel">Add New Design</h1>
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
@@ -36,7 +36,7 @@ render() {
                 </form>
             </div>
             <div className="modal-footer">
-                <button type="button" className="btnDefault">ADD NEW</button>
+                <button type="button" className="btnDefault">ADD NEW DESIGN</button>
             </div>
             </div>
         </div>

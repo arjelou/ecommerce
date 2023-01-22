@@ -34,3 +34,24 @@
 .inpuInactive:focus{
     border: 3px solid #2B3A55;
 }
+.btnSelection{
+    background-color: white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 2px solid #2B3A55;
+    font-weight: bold;
+    color: #69727E;
+    outline: none;
+}
+.btnSelection:hover{
+    background-color: #2B3A55;
+    color: #ccc;
+}
+
+/* SIGN UP IMPORTANT */
+.important{
+    color: red;
+    font-weight: bold;
+}
