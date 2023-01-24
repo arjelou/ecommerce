@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import Footer from "../../components/Footer";
 import pic from './assets/dresses.png';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/mainNavbar';
 
 
 export default class index extends React.Component {

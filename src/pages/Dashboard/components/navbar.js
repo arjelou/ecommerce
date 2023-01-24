@@ -6,7 +6,7 @@ import AddNewModalCreateCustomer from './addNewModalCreateCustomer';
 
 import '../../../global.css';
 
-export default class navbaer extends React.Component  {
+export default class navbar extends React.Component  {
  constructor(props) {
     super(props);
     this.state = {
