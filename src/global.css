@@ -55,3 +55,56 @@
     color: red;
     font-weight: bold;
 }
+
+/* dashboard navigation */
+.active-category-btn{
+    
+    padding: 10px;
+    border-bottom: 2px solid #2B3A55;
+    color: #2B3A55;
+    font-weight: bold; 
+    margin: 10px;
+   
+}
+.active-category-btn:hover{
+    padding: 10px;
+    color: #2B3A55;
+    font-weight: bold; 
+}
+.unactive-category-btn{
+    padding: 10px;
+    color: #2B3A55;
+    font-weight: bold; 
+    margin: 10px;
+}
+.unactive-category-btn:hover{
+    color: #2B3A55;
+    font-weight: bold; 
+    
+}
+/* dashboard navigation for dropdown menu */
+.active_category_dropdown{
+    display: block;;
+    padding: 5px;
+    text-align: center;
+    background-color: #2B3A55;
+    color: #F2E5E5;
+}
+.active_category_dropdown:hover{
+    display: block;;
+    padding: 5px;
+    text-align: center;
+    color: #F2E5E5;
+}
+.unactive_category_dropdown{
+    display: block;;
+    padding: 5px;
+    text-align: center;
+}
+.unactive_category_dropdown:hover{
+    display: block;;
+    padding: 5px;
+    text-align: center;
+    background-color: #F2E5E5;
+    color: #2B3A55;
+}

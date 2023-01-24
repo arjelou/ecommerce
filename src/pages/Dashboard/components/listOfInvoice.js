@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class allDesigns extends React.Component  {
+export default class listOfInvoice extends React.Component  {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,18 +23,17 @@ export default class allDesigns extends React.Component  {
             <>
              <div className="col">
       <div className='d-flex justify-content-md-between gap-2'>
-        <h5>All Design</h5>
-        <button type="button" className='btnSelection' data-bs-toggle="modal" data-bs-target="#addNewModal">Add New</button>
+        <h5>List Of Invoice</h5>
+        <button type="button" className='btnSelection' data-bs-toggle="modal" data-bs-target="#addNewModalCreateInvoice">Create Invoice</button>
       </div>
                 <div class="table-responsive">
     <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Product Name</th>
-      <th scope="col">Regular Price</th>
-      <th scope="col">SKU</th>
-      <th scope="col">Categories</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Count</th>
     </tr>
   </thead> 
   <tbody class="table-group-divider">
@@ -48,7 +47,6 @@ export default class allDesigns extends React.Component  {
           <td><a href='.'>{product.product_name}</a></td>
           <td>{product.product_price}.00</td>
           <td>{product.product_sku}</td>
-          <td>{product.product_category}</td>
           </tr>
           </>
         )

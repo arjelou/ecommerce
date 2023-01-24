@@ -1,5 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import AddNewModal from './addNewModal';
+import AddNewModalCreateInvoice from './addNewModalCreateInvoice';
+import AddNewModalCreateCustomer from './addNewModalCreateCustomer';
+
+import '../../../global.css';
 
 export default class navbaer extends React.Component  {
  constructor(props) {
@@ -21,33 +26,40 @@ export default class navbaer extends React.Component  {
           </button>
           <div className="offcanvas offcanvas-end" tabIndex="1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <ul className="navbar-nav justify-content-start">
-            <li className="nav-item">
+            <li className="nav-item unactive-category-btn">
                 <a className="nav-link active" aria-current="page" href=".">Dashboard</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href=".">Customer</a>
+              <li className="nav-item dropdown unactive-category-btn">
+                <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Customer
+                </a>
+                <ul className="dropdown-menu">
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/listofcustomers'>List of Customer</NavLink>
+                  <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateCustomer">Create Customer</NavLink>
+                </ul>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown unactive-category-btn">
                 <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Sales
                 </a>
                 <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href=".">List of Invoice</a></li>
-                  <li><a className="dropdown-item" href=".">Create Estimates</a></li>
-                  <li><a className="dropdown-item" href=".">Create Invoice</a></li>
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/listofinvoice'>List of Invoice</NavLink>
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/listofestimates'>List of Estimates</NavLink>
+                  <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateInvoice">Create Invoice</NavLink>
+                  <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateEstimates">Create Estimates</NavLink>
+
                 </ul>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown unactive-category-btn">
                 <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Producs
                 </a>
                 <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href=".">All Design</a></li>
-                  <li><a className="dropdown-item" href="." data-bs-toggle="modal" data-bs-target="#addNewModal">Add New</a></li>
-                  <li><a className="dropdown-item" href=".">Categories</a></li>
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/alldesigns'>All Design</NavLink>
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Categories</NavLink>
                 </ul>
               </li>
-              <li className="list-group-item d-flex align-items-start">
+              <li className="list-group-item d-flex align-items-start unactive-category-btn">
                 <a className="nav-link me-auto" aria-current="page" href=".">Notification</a>
                 <span className="badge bg-primary rounded-pill">2</span>
               </li>
@@ -57,6 +69,8 @@ export default class navbaer extends React.Component  {
       </nav>
       
       <AddNewModal />
+      <AddNewModalCreateInvoice />
+      <AddNewModalCreateCustomer />
     </>  
       
 )}

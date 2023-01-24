@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class allDesigns extends React.Component  {
+export default class listOfCustomers extends React.Component  {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,8 +23,8 @@ export default class allDesigns extends React.Component  {
             <>
              <div className="col">
       <div className='d-flex justify-content-md-between gap-2'>
-        <h5>All Design</h5>
-        <button type="button" className='btnSelection' data-bs-toggle="modal" data-bs-target="#addNewModal">Add New</button>
+        <h5>List Of Customers</h5>
+        <button type="button" className='btnSelection' data-bs-toggle="modal" data-bs-target="#addNewModalCreateCustomer">Add New</button>
       </div>
                 <div class="table-responsive">
     <table class="table">

@@ -2,9 +2,12 @@ import React from 'react';
 import Navbar from './components/navbar';
 import AddNewModal from './components/addNewModal';
 import '../../global.css';
-import AllDesigns from './components/categories';
 import AddNewModalCategory from './components/addNewModalCategory';
+import AddNewModalCreateInvoice from './components/addNewModalCreateInvoice';
+import AddNewModalCreateEstimate from './components/addNewModalCreateEstimate';
+import AddNewModalCreateCustomer from './components/addNewModalCreateCustomer'; 
 
+import { Outlet } from 'react-router-dom';
 
 export default class dashboard extends React.Component  {
  constructor(props) {
@@ -42,13 +45,16 @@ export default class dashboard extends React.Component  {
     <h4>Sales</h4>
     </div>
   </div>
-  <div className="row gap-1 mt-5">
-      {/* All DESIGN COMPONENT */}
-      <AllDesigns />
+    <div className="row gap-1 mt-5">
+    {/* This is how to render the nested routes using nested routes */}
+      <Outlet />
     </div>
   </div>
 <AddNewModal />
 <AddNewModalCategory />
+<AddNewModalCreateInvoice />
+<AddNewModalCreateEstimate />
+<AddNewModalCreateCustomer />
 </>
   )
  }
