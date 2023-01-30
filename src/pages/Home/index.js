@@ -2,15 +2,16 @@ import React from 'react';
 import './Home.css';
 import Footer from "../../components/Footer";
 import pic from './assets/dresses.png';
-import Navbar from '../../components/mainNavbar';
+import Pickyourstyle from '../../components/pickyourstyle';
 
 
 export default class index extends React.Component {
     render() {
         return (
             <>
-            <Navbar />
-                <div className='container'>
+            {/* <Navbar /> */}
+            <Pickyourstyle />
+                {/* <div className='container'>
                     <div className='row text-center'>
                         <div className='col-lg-12'>
                             <img className='img-banner image-fluid' src={pic} alt='imacarousel' height={200}/>
@@ -142,7 +143,7 @@ export default class index extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+               
                 <hr />
                 <Footer />
             </>

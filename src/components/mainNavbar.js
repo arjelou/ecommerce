@@ -42,7 +42,7 @@ export default class mainNavbar extends React.Component  {
                   Design
                 </a>
                 <ul className="dropdown-menu">
-                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dada'>All Design</NavLink>
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/alldesign'>All Design</NavLink>
                   <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/asasa'>Uniforms</NavLink>
                   <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/asas'>Gre Brand</NavLink>
 
