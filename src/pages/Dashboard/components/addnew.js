@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../global.css';
 import axios from 'axios';
 
-export default class addNewModal extends React.Component {
+export default class addnew extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,6 +11,7 @@ export default class addNewModal extends React.Component {
     }
 
 addProduct = (e) => {
+    e.preventDefault();
     alert(e.target.pname.value)
     axios.post('http://localhost:4001/addnew', {
         pname: e.target.pname.value,
@@ -31,9 +32,9 @@ addProduct = (e) => {
 render() {
     return (
 <>
-    <div className="modal fade" id="addNewModal" tabIndex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+    
     <form onSubmit={this.addProduct}>
-        <div className="modal-dialog modal-dialog-centered">
+        <div className="">
             <div className="modal-content">
             <div className="modal-header">
                 <h1 className="modal-title fs-5" id="addNewModalLabel">Add New Design</h1>
@@ -60,10 +61,6 @@ render() {
             </div>
         </div>
         </form>  
-    </div> 
-
-   
-              
 </>
 )}
 }

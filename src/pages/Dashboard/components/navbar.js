@@ -57,6 +57,8 @@ export default class navbar extends React.Component  {
                 <ul className="dropdown-menu">
                   <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/alldesigns'>All Design</NavLink>
                   <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Categories</NavLink>
+                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/add-new-product'>Add New</NavLink>
+
                 </ul>
               </li>
               <li className="list-group-item d-flex align-items-start unactive-category-btn">
