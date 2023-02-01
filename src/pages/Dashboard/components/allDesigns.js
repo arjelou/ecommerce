@@ -4,16 +4,16 @@ export default class allDesigns extends React.Component  {
     constructor(props) {
         super(props);
         this.state = {
-            product: [],
+            productList: [],
         }
     }
 
     componentDidMount() {
-        fetch('http://localhost:4001/getproduct')
+        fetch('http://localhost:4002/')
         .then((res) => res.json())
         .then((response) => {
           this.setState({ 
-            product: [...response]
+            productList: [...response]
           })
         })
       }
@@ -40,15 +40,15 @@ export default class allDesigns extends React.Component  {
   <tbody className="table-group-divider">
     
     {
-      this.state.product.map((product,index) =>{
+      this.state.productList.map((product,index) =>{
         return (
           <>
           <tr key={index}>
           <th scope="row">{product.id}</th>
           <td><a href='.'>{product.product_name}</a></td>
           <td>{product.product_price}.00</td>
-          <td>{product.product_category}</td>
-          <td>{product.product_detail}</td>
+          <td>{product.product_caterogy}</td>
+          <td>{product.product_description}</td>
           </tr>
           </>
         )
