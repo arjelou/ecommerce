@@ -38,9 +38,9 @@ render() {
                 </div>
                 <div className="modal-body">
                     <label>Product Name</label>
-                    <input type="text" className="inpuInactive" name='dname' id='pname' placeholder="Product Name"/>
+                    <input type="text" className="inpuInactive" name='dname' placeholder="Product Name"/>
                     <label className=''>Regular Price</label>
-                    <input type="number" className="inpuInactive" name='dprice' id='pprice' placeholder="Regular Price"/>
+                    <input type="number" className="inpuInactive" name='dprice' placeholder="Regular Price"/>
                     <label className=''>Category</label>
                     <select className="inpuInactive" name='dcategory'>
                         <option defaultValue="helo"></option>
@@ -49,7 +49,7 @@ render() {
                         <option value="cat3">Cat 3</option>
                     </select>
                     <label className=''>Product Details</label>
-                    <textarea type="text" className="textareaInputs" name='ddescription' id='pdetail' placeholder="Product Details" /> 
+                    <textarea type="text" className="textareaInputs" name='ddescription' placeholder="Product Details" /> 
                 </div>
                 <div className="modal-footer">
                     <button type="submit" className="btnDefault" rows="3">ADD NEW DESIGN</button>

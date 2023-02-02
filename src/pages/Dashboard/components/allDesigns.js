@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+
 export default class allDesigns extends React.Component  {
   constructor(props) {
       super(props);
@@ -33,17 +34,26 @@ export default class allDesigns extends React.Component  {
           ...this.state.product
         }
       )
-        // this.setState({
-        //   productList: [
-        //     // ...this.state.productList
-        //     ...response
-        //   ]
-        // })
       });
-  } else{
-    
+  } else{ 
   }
 }
+
+
+selectProduct(product,price,category,description,index,e) {
+
+  // let sID,stask;/
+  document.getElementById("new-todo-id").value = index;
+  document.getElementById("new-todo-input").value = product;
+  document.getElementById("new-todo-input1").value = price;
+  document.getElementById("new-todo-input2").value = category;
+  document.getElementById("new-todo-input3").value = description;
+
+  document.getElementById("new-todo-input").value = stask;
+  const sID = product.id;
+  const stask = document.getElementById("new-todo-input").value;
+}
+
 
 render() {
 return (
@@ -75,9 +85,14 @@ return (
                   <td>{product.product_price}.00</td>
                   <td>{product.product_category}</td>
                   <td>{product.product_description}</td>
-                  <button>Update</button>
-                  <button onClick={(e) => this.deleteRow(product.id, e)}>Delete</button>
-                
+                  <button className='btnSelection' data-bs-toggle="modal" data-bs-target="#updateNewModal" onClick={(e) => this.selectProduct(
+                    product.product_name,
+                    product.product_price,
+                    product.product_category,
+                    product.product_description,
+                    product.id,
+                    e)}>Update</button>
+                  <button className='btnSelection' onClick={(e) => this.deleteRow(product.id, e)}>Delete</button>
                   </tr>
                   </>
                 )

@@ -124,3 +124,16 @@
     background-color: #F2E5E5;
     color: #2B3A55;
 }
+
+/* UPDATA MODAL IDS */
+.updateID{
+    border-style: none;
+    font-weight: bold;
+    margin-left: 20px;
+    width: 34px;
+    height: 34px;
+    color: #F2E5E5;
+    text-align: center;
+    background-color: #2B3A55;
+    border-radius: 50%;
+}
