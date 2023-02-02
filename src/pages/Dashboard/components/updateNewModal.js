@@ -9,23 +9,28 @@ export default class updateNewModal extends React.Component {
             product: [],
         }
     }
-    updateProduct = (index) =>{
-        const id = index;
-        const task =  document.getElementById("new-todo-input").value;
-        const updatedTask = { task };
+    updateProduct = (id,e) =>{
+        const productID =  document.getElementById("new-todo-id").value;
+        const productName =  document.getElementById("new-todo-input").value;
+        const productPrice =  document.getElementById("new-todo-input1").value;
+        const productCategory =  document.getElementById("new-todo-input2").value;
+        const productDescription =  document.getElementById("new-todo-input3").value;
 
-
-        axios.put(`http://localhost:4002/update/${id}` , updatedTask)
+        axios.put(`http://localhost:4002/update/${productID}` , {
+            productID,
+            productName,
+            productPrice,
+            productCategory,
+            productDescription
+        })
           .then(response => {
-            const updatedIndex = this.state.tasks.findIndex(task => task.id === id);
-            this.state.tasks[updatedIndex].task = task;
             this.setState({
               tasks: [
-                ...this.state.tasks
+                ...response
               ]
             })
-          });
-      }
+        });
+    }
 
 render() {
     return (

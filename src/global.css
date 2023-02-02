@@ -137,3 +137,8 @@
     background-color: #2B3A55;
     border-radius: 50%;
 }
+
+/* All Design Icons edit and remove/delete */
+.dashboardIcon{
+    cursor: pointer;
+}
