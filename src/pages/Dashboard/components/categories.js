@@ -36,6 +36,14 @@ export default class categories extends React.Component  {
   }
 }
 
+//SELECT a category TO BE UPDATE
+
+selectCategory(product,description,id,e) {
+  document.getElementById("new-update-id").value = id;
+  document.getElementById("new-update-input-cname").value = product;
+    document.getElementById("new-update-input-cdescription").value = description;
+}
+
     render() {
         return (
             <>
@@ -62,7 +70,11 @@ export default class categories extends React.Component  {
           <th scope="row">{product.id}</th>
           <td>{product.product_category}</td>
           <td>{product.category_description}</td>
-          <BsPencilSquare size={40} title='Edit' className='dashboardIcon'/>
+          <BsPencilSquare size={40} title='Edit' className='dashboardIcon' data-bs-toggle="modal" data-bs-target="#updateNewModalCategory" onClick={(e) => this.selectCategory(
+                    product.product_category,
+                    product.category_description,
+                    product.id,
+                    e)} />
           <BsDashSquare size={40} title='Remove' color='red' onClick={(e) => this.deleteCategory(product.id, e)} className='dashboardIcon'/>
           </tr>
           </>

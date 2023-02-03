@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './components/navbar';
 import AddNewModal from './components/addNewModal';
 import UpdateNewModal from './components/updateNewModal';
+import UpdateNewModalCategory from './components/updateNewModalCategory';
+
 
 import '../../global.css';
 import AddNewModalCategory from './components/addNewModalCategory';
@@ -59,6 +61,7 @@ export default class dashboard extends React.Component  {
 <AddNewModalCreateEstimate />
 <AddNewModalCreateCustomer />
 <UpdateNewModal />
+<UpdateNewModalCategory />
 </>
   )
  }
