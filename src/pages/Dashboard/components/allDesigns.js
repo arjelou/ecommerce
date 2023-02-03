@@ -27,9 +27,6 @@ export default class allDesigns extends React.Component  {
     if (confirmDelete){
       axios.delete(`http://localhost:4002/product/${id}`)
       .then((response) => {
-        // const updatedIndex = this.state.product.findIndex(product => product.id === id);
-        // // get index of updated entry on array
-        // this.state.product[updatedIndex].deletedAt = new Date().toISOString();
       return(
         {
           ...this.state.product
@@ -40,7 +37,7 @@ export default class allDesigns extends React.Component  {
   }
 }
 
-
+//Update product
 selectProduct(product,price,category,description,index,e) {
   document.getElementById("new-todo-id").value = index;
     document.getElementById("new-todo-input").value = product;

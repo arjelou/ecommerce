@@ -7,8 +7,20 @@ export default class addNewModal extends React.Component {
         super(props);
         this.state = {
             product: [],
+            category: []
         }
     }
+//GET ALL THE CATEGORY AND DISPLAY VALUES ON THE SELECTED VALUES
+componentDidMount() {
+    fetch('http://localhost:4002/category')
+    .then((res) => res.json())
+    .then((response) => {
+        console.log(response);
+        this.setState({ 
+        category: [...response]
+        })
+    })
+}
 
 addProduct = (e) => {
     axios.post('http://localhost:4002/addnew', {
@@ -43,10 +55,15 @@ render() {
                     <input type="number" className="inpuInactive" name='dprice' placeholder="Regular Price"/>
                     <label className=''>Category</label>
                     <select className="inpuInactive" name='dcategory'>
-                        <option defaultValue="helo"></option>
-                            <option value="cat1">Cat 1</option>
-                        <option value="cat2">Cat 2</option>
-                        <option value="cat3">Cat 3</option>
+                        {
+                            this.state.category.map((category, inder) => {
+                                return (
+                                    <>
+                                    <option value={category.product_category}>{category.product_category}</option>
+                                    </>
+                                )
+                            })
+                        }
                     </select>
                     <label className=''>Product Details</label>
                     <textarea type="text" className="textareaInputs" name='ddescription' placeholder="Product Details" /> 

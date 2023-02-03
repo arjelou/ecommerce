@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../global.css';
+import axios from 'axios';
 
 export default class addNewModalCategory extends React.Component {
     constructor(props) {
@@ -8,11 +9,25 @@ export default class addNewModalCategory extends React.Component {
             props: {},
         }
     }
+    addCategory = (e) => {
+        axios.post('http://localhost:4002/add-new-category', {
+            cname: e.target.cname.value,
+            cdescription: e.target.cdescription.value,
+            }, 
+            alert('NEW CATEGORY ADDED SUCCESSFULY!'
+            ))
+            .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })
+       
+    }    
 
 render() {
     return (
 <>
     <div className="modal fade" id="addNewModalCategory" tabindex="-1" aria-labelledby="addNewModalCategoryLabel" aria-hidden="true">
+    <form onSubmit={this.addCategory}>
         <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
             <div className="modal-header">
@@ -20,19 +35,20 @@ render() {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-                <form>
+              
                     <label>Category Name</label>
-                    <input type="text" className="inpuInactive" placeholder="Category Name"/>
+                    <input type="text" className="inpuInactive" name='cname' placeholder="Category Name"/>
                     <label className=''>Description</label>
-                    <textarea type="text" className="inpuInactive" placeholder="Description"/>
-                </form>
+                    <textarea type="text" className="inpuInactive" name='cdescription' placeholder="Description"/>
+               
             </div>
             <div className="modal-footer">
-                <button type="button" className="btnDefault">ADD NEW CATEGORY</button>
+                <button type="submit" className="btnDefault">ADD NEW CATEGORY</button>
             </div>
             </div>
         </div>
-    </div>             
+    </form>
+</div>             
 </>
 )}
 }
