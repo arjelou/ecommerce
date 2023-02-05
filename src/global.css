@@ -142,3 +142,13 @@
 .dashboardIcon{
     cursor: pointer;
 }
+
+/* THE FORMIK CSS */
+.input-error{
+    border-color: red;
+}
+.error{
+    margin-top: 0px;
+    color: red;
+    font-size: 12px;
+}

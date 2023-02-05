@@ -19,6 +19,10 @@ componentDidMount() {
     })
 }
 
+CollectID = (e,id)=>{
+alert('Collect', id)
+}
+
 render() {
     return (
 <>
@@ -33,13 +37,15 @@ render() {
                 this.state.productList.map((product,index) =>{
                     return (
                     <>
-                        <li className='list containerImage'>
+                        <li className='list containerImage' onClick={(e) => this.CollectID(
+                                product.id
+                            )}>
                             <a href=".">
-                                <div class="card-group gap-5">
+                                <div className="card-group gap-5">
                                     <div className="text-center">
-                                        <img src="https://via.placeholder.com/110" class="card-img-center rounded-pill" alt="..." />
+                                        <img src="https://via.placeholder.com/110" className="card-img-center rounded-pill" alt="..." />
                                         <div className="card-body">
-                                        <h6 className="card-title">{product.product_name}</h6>
+                                        <h6 className="card-title"  key={index}>{product.product_name}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -61,11 +67,11 @@ render() {
                 this.state.productList.map((product,index) =>{
                     return (
                     <>
-                        <li className='list containerImage'>
+                        <li className='list containerImage' key={index}>
                             <a href=".">
-                                <div class="card-group gap-5">
+                                <div className="card-group gap-5">
                                     <div className="text-center">
-                                        <img src="https://via.placeholder.com/150x200" class="card-img-top" alt="..." />
+                                        <img src="https://via.placeholder.com/150x200" className="card-img-top" alt="..." />
                                         <div className="card-body">
                                         <h6 className="card-title">{product.product_name}</h6>
                                         </div>
