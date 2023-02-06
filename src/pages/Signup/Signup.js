@@ -1,15 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useFormik } from 'formik';
-import UsersSchema from '../../schemas/usersSchema';
+import Users from '../../schemas/usersSchema';
 
 
-const onSubmit = (values, actions) => {
-    alert(values.email)
-}
+const onSubmit = (values, actions) =>{
+    alert(values.email);
 
-const Signup = () =>{
-const {values, handleChange, handleBlur, handleSubmit, errors, touched} = useFormik({
+  }
+  
+const SignupNew = () =>{   
+const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik({
     initialValues: {
         email: '',
         company: '',
@@ -18,11 +19,10 @@ const {values, handleChange, handleBlur, handleSubmit, errors, touched} = useFor
         password: '',
         confirmpassword: ''
     },
-    validationSchema: UsersSchema,
-    onSubmit
+    validationSchema: Users,
+    onSubmit,
     
 });    
- 
  
     return (
     <>
@@ -31,24 +31,25 @@ const {values, handleChange, handleBlur, handleSubmit, errors, touched} = useFor
                          <div className='col-lg-4 col-md-auto login'>
                              <h2 className='text-center mb-4'><strong>Create your account</strong></h2>
                              <div className='container'>
-                             <form className='col' onSubmit={handleSubmit}>
-                                 <label for='email'>Email Address <span className='important'>*</span></label>
+                             <form  className='col' onSubmit={handleSubmit}>
+                                 <label htmlFor='email'>Email Address <span className='important'>*</span></label>
                                  <input 
                                  type='email'
-                                 name='email' 
                                  id='email' 
+                                 name='email'
                                  value={values.email}
                                  onChange={handleChange}
                                  onBlur={handleBlur} 
                                  placeholder='john@example.com' 
-                                 className='inpuInactive'
+                                 className={errors.email && touched.email ? 'inpuInactive input-error' : 'inpuInactive' }
 
                                  />
-                                 <label for='company'>Company (optional)</label>
+                                 {errors.email && touched.email && <p className='error'>{errors.email}</p>}
+                                 <label htmlFor='company'>Company (optional)</label>
                                  <input 
                                  type='text' 
-                                 name='company'
                                  id='company' 
+                                 name='company'
                                  value={values.company}
                                  onChange={handleChange}
                                  onBlur={handleBlur} 
@@ -56,54 +57,62 @@ const {values, handleChange, handleBlur, handleSubmit, errors, touched} = useFor
                                  className='inpuInactive'
 
                                  />
-                                 <label for='totalEmployee'>Total Employee (optional)</label>
+                                 <label htmlFor='totalEmployee'>Total Employee (optional)</label>
                                  <input 
                                  type='number'
-                                 name='totalEmployee' 
                                  id='totalEmployee'
+                                 name='totalEmployee'
                                  value={values.totalEmployee} 
                                  onChange={handleChange}
                                  onBlur={handleBlur} 
                                  placeholder='500' 
-                                 className='inpuInactive'
-                                    
+                                 className={errors.totalEmployee && touched.totalEmployee ? 'inpuInactive input-error' : 'inpuInactive' }
+                                                                     
                                  />
-                                 <label for='zipcode'>Zip Code <span className='important'>*</span></label>
+                                 {errors.totalEmployee && touched.totalEmployee && <p className='error'>{errors.totalEmployee}</p>}
+
+                                 <label htmlFor='zipcode'>Zip Code <span className='important'>*</span></label>
                                  <input 
                                  type='text'
-                                 name='zipcode' 
                                  id='zipcode' 
+                                 name='zipcode'
                                  value={values.zipcode}
                                  onChange={handleChange}
                                  onBlur={handleBlur} 
                                  placeholder='Davao del Sur, 8000' 
-                                 className='inpuInactive'
+                                 className={errors.zipcode && touched.zipcode ? 'inpuInactive input-error' : 'inpuInactive' }
 
                                  />
-                                 <label for='password'>Password <span className='important'>*</span></label>
+                                 {errors.zipcode && touched.zipcode && <p className='error'>{errors.zipcode}</p>}
+
+                                 <label htmlFor='password'>Password <span className='important'>*</span></label>
                                  <input 
                                  type='password' 
+                                 id='password'
                                  name='password' 
-                                 id='password' 
                                  value={values.password}
                                  onChange={handleChange}
                                  onBlur={handleBlur} 
                                  placeholder='*********' 
-                                 className='inpuInactive'
+                                 className={errors.password && touched.password ? 'inpuInactive input-error' : 'inpuInactive' }
 
                                  />
-                                 <label for='confirmpassword'>Confirm Password <span className='important'>*</span></label>
+                                 {errors.password && touched.password && <p className='error'>{errors.password}</p>}
+
+                                 <label htmlFor='confirmpassword'>Confirm Password <span className='important'>*</span></label>
                                  <input 
                                  type='password' 
-                                 name='confirmpassword'
                                  id='confirmpassword' 
+                                 name='confirmpassword'
                                  value={values.confirmpassword}
                                  onChange={handleChange}
                                  onBlur={handleBlur} 
                                  placeholder='*********' 
-                                 className='inpuInactive'
+                                 className={errors.confirmpassword && touched.confirmpassword ? 'inpuInactive input-error' : 'inpuInactive' }
 
                                  />
+                                 {errors.confirmpassword && touched.confirmpassword && <p className='error'>{errors.confirmpassword}</p>}
+
                                  <button className='btnDefault' type='submit'>Continue</button>
                                  <span>Already have an account? <a href='.' className='text-decoration-none'><NavLink to='/login'><strong>Log in</strong></NavLink></a></span>
                                  <hr />
@@ -118,7 +127,7 @@ const {values, handleChange, handleBlur, handleSubmit, errors, touched} = useFor
   )
 }
 
-export default Signup;
+export default SignupNew;
 
 
 
