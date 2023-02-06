@@ -34,13 +34,13 @@ const onSubmit =(values, actions) => {
                     cname: values.cname,
                     cdescription: values.cdescription,
                     }, 
-                    alert('NEW CATEGORY ADDED SUCCESSFULY!'
-                    ))
+                    alert('NEW CATEGORY ADDED SUCCESSFULY!')
+                    )
                     .then(res => {
                     console.log(res);
                     console.log(res.data);
                 })
-                actions.resetForm()
+              
 }
 
 const AddNewCategory = () => {
@@ -64,7 +64,7 @@ const {values, handleBlur, handleChange,handleSubmit,touched,errors} = useFormik
             <div className="modal-content">
             <div className="modal-header">
                 <h1 className="modal-title fs-5" id="addNewModalCategoryLabel">Add New Category</h1>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" refresh></button>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
                     <label htmlFor='cname'>Category Name</label>
@@ -73,12 +73,12 @@ const {values, handleBlur, handleChange,handleSubmit,touched,errors} = useFormik
                     name='cname' 
                     id='cname' 
                     placeholder="Category Name"
-                    value={values.Category}
+                    value={values.cname}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={errors.cname  && touched.cname ? 'input-error inpuInactive' : 'inpuInactive'}
                     />
-                    {errors.cname && touched.cname && <span className='error'>{errors.cname}</span>}
+                    {/* {errors.cname && touched.cname && <span className='error' htmlFor='cname'>{errors.cname}</span>} */}
                     <br />
                     <label htmlFor='cdescription'>Description</label>
                     <textarea 
@@ -93,7 +93,7 @@ const {values, handleBlur, handleChange,handleSubmit,touched,errors} = useFormik
                     />
             </div>
             <div className="modal-footer">
-                <button type="submit" className="btnDefault">ADD NEW CATEGORY</button>
+                <button type="submit" className="btnDefault" >ADD NEW CATEGORY</button>
             </div>
             </div>
         </div>
