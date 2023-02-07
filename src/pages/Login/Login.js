@@ -10,27 +10,29 @@ const onSubmit = (values,actions) => {
     axios.post('http://localhost:4002/login', {
         email: values.email,
         password: values.password,
-        }
-        )
+        })
         .then(res => {
-        console.log(res);
-        console.log(res.data);
+        if(res.data === ''){
+            alert('Username or password incorrect!')
+        } if(res.data.email === 'arjelou.jelou@gmail.com'){
+            alert('You are administrator')
+            window.location.href = '/dashboard'
+        }else{
+            alert('You are logged in successfully')
+            window.location.href = '/'
+        }
     })
 }
 
-
 const Login = () => {
 const {values, handleChange, handleBlur, handleSubmit,errors, touched} = useFormik({
-    
     initialValues: {
         email: '',
         password: '',
     },
     validationSchema: loginSchema,
     onSubmit,
-
 })
-
 
 return (
 <>
