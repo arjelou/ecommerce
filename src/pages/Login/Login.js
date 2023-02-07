@@ -14,7 +14,8 @@ const onSubmit = (values,actions) => {
         .then(res => {
         if(res.data === ''){
             alert('Username or password incorrect!')
-        } if(res.data.email === 'arjelou.jelou@gmail.com'){
+            actions.resetForm();
+        }else if(res.data.email === 'arjelou.jelou@gmail.com'){
             alert('You are administrator')
             window.location.href = '/dashboard'
         }else{
