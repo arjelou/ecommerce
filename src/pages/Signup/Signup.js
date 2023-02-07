@@ -2,13 +2,30 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useFormik } from 'formik';
 import Users from '../../schemas/usersSchema';
+import axios from 'axios';
+
+
 
 
 const onSubmit = (values, actions) =>{
-    alert(values.email);
+    
+    axios.post('http://localhost:4002/signup', {
+        email: values.email,
+        company: values.company,
+        totalEmployee: values.totalEmployee,
+        zipcode: values.zipcode,
+        password: values.password,
+        confirmpassword: values.confirmpassword,
+        }, 
+        alert('THANK YOU FOR SIGN UP, ENJOY...',
+        actions.resetForm(),
+        ))
+        .then(res => {
+        console.log(res);
+        console.log(res.data);
+    })
 
   }
-  
 const SignupNew = () =>{   
 const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik({
     initialValues: {
