@@ -12,14 +12,19 @@ const onSubmit = (values,actions) => {
         password: values.password,
         })
         .then(res => {
+            console.log(res);
         if(res.data === ''){
-            alert('Username or password incorrect!')
+            alert('NO account exist!')
             actions.resetForm();
-        }else if(res.data.email === 'arjelou.jelou@gmail.com'){
-            alert('You are administrator')
+        }
+        else if(res.data.email === 'arjelou.jelou@gmail.com')
+        {
+            alert('Your are adminstrator!')
             window.location.href = '/dashboard'
-        }else{
+        }
+        else{
             alert('You are logged in successfully')
+            
             window.location.href = '/'
         }
     })
