@@ -5,26 +5,23 @@ import loginSchema from '../../schemas/loginSchema';
 import axios from 'axios';
 
 
-
 const onSubmit = (values,actions) => {
     axios.post('http://localhost:4002/login', {
         email: values.email,
         password: values.password,
         })
         .then(res => {
-            console.log(res);
         if(res.data === ''){
-            alert('NO account exist!')
+            alert('Incorrect username or password!')
             actions.resetForm();
         }
-        else if(res.data.email === 'arjelou.jelou@gmail.com')
+        else if(res.data === 'arjelou.jelou@gmail.com')
         {
-            alert('Your are adminstrator!')
+            alert('You are logged in as administrator!')
             window.location.href = '/dashboard'
         }
         else{
             alert('You are logged in successfully')
-            
             window.location.href = '/'
         }
     })
