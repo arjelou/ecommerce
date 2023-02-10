@@ -17,7 +17,7 @@ export default class mainNavbar extends React.Component  {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-div container-fluid">
         <div className="container">
-          <a className="navbar-brand" href=".">ACMADE MAGSIGE Main</a>
+          <a className="navbar-brand" href=".">ACMADE MAGSIGE</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
