@@ -1,8 +1,8 @@
 import React from 'react';
-import './Home.css';
-import Footer from "../../components/Footer";
-import pic from './assets/dresses.png';
-import Pickyourstyle from '../../components/pickyourstyle';
+// import './Home.css';
+import Footer from "../components/Footer";
+import pic from '../pages/Home/assets/dresses.png';
+import Pickyourstyle from '../components/pickyourstyle';
 
 
 export default class index extends React.Component {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useFormik } from 'formik';
-import Users from '../../schemas/usersSchema';
+import Users from '../schemas/usersSchema';
 import axios from 'axios';
 
 

@@ -1,13 +1,13 @@
 import './App.css';
 import { Routes,Route } from 'react-router-dom';
-import Index from './pages/Home/index';
+import Index from '../src/pages/index';
 import ProductListing from './pages/ProductListing/ProductListing';
 import Product from './pages/Product/Product';
 import Pickyourstyle from './components/pickyourstyle';
 import Cart from './pages/Cart/Cart';
 import Checkout from './pages/Checkout/Checkout';
-import Login from './pages/Login/Login';
-import Signup from './pages/Signup/Signup';
+import Login from '../src/pages/Login';
+import Signup from '../src/pages/Signup';
 import Dashboard from './pages/Dashboard/dashboard';
 import Categories from './pages/Dashboard/components/categories';
 import AllDesigns from './pages/Dashboard/components/allDesigns';
