@@ -14,6 +14,7 @@ import AllDesigns from './pages/Dashboard/components/allDesigns';
 import ListOfInvoice from './pages/Dashboard/components/listOfInvoice';
 import ListOfEstimates from './pages/Dashboard/components/listOfEstimates';
 import ListOfCustomers from './pages/Dashboard/components/listOfCustomers';
+import Notification from './pages/Dashboard/components/notification';
 // import AddNewModal from './pages/Dashboard/components/addNewModal';
 
 
@@ -36,6 +37,8 @@ function App() {
           <Route path='listofinvoice' element={<ListOfInvoice />} />
           <Route path='listofestimates' element={<ListOfEstimates />} />
           <Route path='listofcustomers' element={<ListOfCustomers />} />
+          <Route path='notification' element={<Notification />} />
+
           {/* <Route path='add-new-product' element={<AddNewModal />} /> */}
           
         </Route>

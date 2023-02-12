@@ -11,11 +11,13 @@ const onSubmit = (values,actions) => {
         password: values.password,
         })
         .then(res => {
+            const userID = document.cookie = res.data.id > 0 ? `user = ${res.data.id}` : "";
+            console.log(userID);
         if(res.data === ''){
             alert('Incorrect username or password!')
             actions.resetForm();
         }
-        else if(res.data === 'arjelou.jelou@gmail.com')
+        else if(res.data.email === 'arjelou.jelou@gmail.com')
         {
             alert('You are logged in as administrator!')
             window.location.href = '/dashboard'

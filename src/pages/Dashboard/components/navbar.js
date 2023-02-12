@@ -14,6 +14,17 @@ export default class navbar extends React.Component  {
     }
  
  }
+ componentDidMount() {
+  fetch('http://localhost:4002/allnotification')
+  .then((res) => res.json())
+  .then((response) => {
+    const notiList = response.length
+    console.log('Response: ', notiList);
+    // this.setState({ 
+    //   productList: [...response]
+    // })
+  })
+}
 
  render() {
      return (
@@ -63,8 +74,14 @@ export default class navbar extends React.Component  {
                 </ul>
               </li>
               <li className="list-group-item d-flex align-items-start unactive-category-btn">
-                <a className="nav-link me-auto" aria-current="page" href=".">Notification</a>
-                <span className="badge bg-primary rounded-pill">2</span>
+                {/* <a className="nav-link me-auto" aria-current="page" href=".">Notification</a> */}
+                <NavLink className='nav-link' to='/dashboard/notification'>Notification</NavLink>
+                <span className="badge bg-primary rounded-pill">2
+{
+this.state.notiList
+}    
+                </span>
+
               </li>
             </ul>
           </div>
