@@ -52,6 +52,9 @@ export default class mainNavbar extends React.Component  {
                   <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Agriculture</NavLink>
                 </ul>
               </li>
+              <li className="nav-item dropdown unactive-category-btn">
+                <NavLink className='nav-link' to='/inquiries'>Inquiries</NavLink>
+              </li>
             </ul>
           </div>
           <div>

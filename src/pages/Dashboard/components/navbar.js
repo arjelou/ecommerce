@@ -19,10 +19,7 @@ export default class navbar extends React.Component  {
   .then((res) => res.json())
   .then((response) => {
     const notiList = response.length
-    console.log('Response: ', notiList);
-    // this.setState({ 
-    //   productList: [...response]
-    // })
+    this.setState({data: notiList})
   })
 }
 
@@ -76,12 +73,7 @@ export default class navbar extends React.Component  {
               <li className="list-group-item d-flex align-items-start unactive-category-btn">
                 {/* <a className="nav-link me-auto" aria-current="page" href=".">Notification</a> */}
                 <NavLink className='nav-link' to='/dashboard/notification'>Notification</NavLink>
-                <span className="badge bg-primary rounded-pill">2
-{
-this.state.notiList
-}    
-                </span>
-
+                <span className="badge bg-primary rounded-pill">{this.state.data}</span>
               </li>
             </ul>
           </div>

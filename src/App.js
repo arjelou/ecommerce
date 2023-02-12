@@ -15,6 +15,7 @@ import ListOfInvoice from './pages/Dashboard/components/listOfInvoice';
 import ListOfEstimates from './pages/Dashboard/components/listOfEstimates';
 import ListOfCustomers from './pages/Dashboard/components/listOfCustomers';
 import Notification from './pages/Dashboard/components/notification';
+import Inquiries from './components/inquiries';
 // import AddNewModal from './pages/Dashboard/components/addNewModal';
 
 
@@ -31,6 +32,8 @@ function App() {
         <Route path='checkout'  element={<Checkout />} />
         <Route path='login'  element={<Login />} />
         <Route path='signup'  element={<Signup />} />
+        <Route path='inquiries'  element={<Inquiries />} />
+
         <Route path='dashboard' element={<Dashboard />}>
           <Route path='categories' element={<Categories />} />
           <Route path='alldesigns' element={<AllDesigns />} />
