@@ -10,12 +10,13 @@ export default class inquiries extends React.Component  {
   }
 
   componentDidMount() {
-    fetch('http://localhost:4002/allnotification')
+    const usersId = document.cookie.split(';')[0].split('=')[1];
+    console.log(usersId);
+
+    fetch(`http://localhost:4002/allnotification?id=${usersId}`)
     .then((res) => res.json())
     .then((response) => {
-        const usersId = document.cookie.split(';')[0].split('=')[1];
-        console.log('Cookie from Inquires',usersId);
-      this.setState({ 
+        this.setState({ 
         productList: [...response]
       })
     })
@@ -54,10 +55,20 @@ return (
           </thead> 
           <tbody className="table-group-divider">
             {
+              
               this.state.productList.map((product,index,usersId) =>{
+
+                if(usersId === product.id){
+                  console.log(usersId);
+                  console.log(true)
+                }else{
+                  console.log(false)
+                }
+
+                
                 return (
                   <>
-                  <tr key={this.index}>
+                  <tr key={index}>
                   <th scope="row">{product.id}</th>
                   <td>{product.design}</td>
                   <td>{product.quantity}</td>
