@@ -8,6 +8,7 @@ import axios from 'axios';
 const onSubmit = (values, actions) =>{
     
     axios.post('http://localhost:4002/signup', {
+        fullname: values.fullname,
         email: values.email,
         company: values.company,
         totalEmployee: values.totalEmployee,
@@ -17,7 +18,7 @@ const onSubmit = (values, actions) =>{
         }, 
         alert('THANK YOU FOR SIGN UP, ENJOY...',
         actions.resetForm(),
-        window.location.href = '/'
+        window.location.href = '/login'
         ))
         .then(res => {
         console.log(res);
@@ -28,6 +29,7 @@ const onSubmit = (values, actions) =>{
 const SignupNew = () =>{   
 const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik({
     initialValues: {
+        fullname: '',
         email: '',
         company: '',
         totalEmployee: '',
@@ -48,6 +50,19 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                 <h2 className='text-center mb-4'><strong>Create your account</strong></h2>
                 <div className='container'>
                 <form  className='col' onSubmit={handleSubmit}>
+                    <label htmlFor='fullname'>Full Name <span className='important'>*</span></label>
+                    <input 
+                    type='text'
+                    id='fullname' 
+                    name='fullname'
+                    value={values.fullname}
+                    onChange={handleChange}
+                    onBlur={handleBlur} 
+                    placeholder='John Smith' 
+                    className={errors.fullname && touched.fullname ? 'inpuInactive input-error' : 'inpuInactive' }
+
+                    />
+                    {errors.fullname && touched.fullname && <p className='error'>{errors.fullname}</p>}
                     <label htmlFor='email'>Email Address <span className='important'>*</span></label>
                     <input 
                     type='email'

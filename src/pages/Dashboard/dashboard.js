@@ -9,8 +9,6 @@ import AddNewModalCreateInvoice from './components/addNewModalCreateInvoice';
 import AddNewModalCreateEstimate from './components/addNewModalCreateEstimate';
 import AddNewModalCreateCustomer from './components/addNewModalCreateCustomer'; 
 // import DashboardAuth from './dashboardAuth';
-
-
 import { Outlet } from 'react-router-dom';
 
 export default class dashboard extends React.Component  {
@@ -19,13 +17,11 @@ export default class dashboard extends React.Component  {
     this.state = {
       product_list: [],
     }
- 
  }
 
  render() {
      return (
 <>
-   
 <div className="container">
   <div className='row'>
     <Navbar />

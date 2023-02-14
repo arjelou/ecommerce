@@ -26,6 +26,8 @@ logoutUserProfile = () =>{
   const logoutUser = window.confirm('Are you sure you want to log out?')
 if(logoutUser) {
   document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
   window.location.href = '/'
 }else {}
 }
@@ -85,8 +87,8 @@ if(logoutUser) {
                <BsPerson size={30} />
               </a>
               <ul className="dropdown-menu">
-                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/alldesigns'>Username</NavLink>
-                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Settings</NavLink>
+                <NavLink className='unactive_category_dropdown'>{document.cookie.split(';')[1].split('=')[1]}</NavLink>
+                <NavLink className='unactive_category_dropdown'>Settings</NavLink>
                 <NavLink className='unactive_category_dropdown' onClick={this.logoutUserProfile}>Log out</NavLink>
               </ul>
           </li>

@@ -4,15 +4,14 @@ import { NavLink } from 'react-router-dom';
 import loginSchema from '../schemas/loginSchema';
 import axios from 'axios';
 
-
 const onSubmit = (values,actions) => {
     axios.post('http://localhost:4002/login', {
         email: values.email,
         password: values.password,
         })
         .then(res => {
-            const userID = document.cookie = res.data.id > 0 ? `user = ${res.data.id}` : "";
-            console.log(userID);
+            document.cookie = res.data.id > 0 ? `user = ${res.data.id}` : "";
+            document.cookie = res.data.id > 0 ? `email = ${res.data.fullname}` : "";
         if(res.data === ''){
             alert('Incorrect username or password!')
             actions.resetForm();
