@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import pic from '../../pages/Home/assets/dresses.png';
 export default class Product extends React.Component {
 constructor(props) {
   super(props);
@@ -50,8 +49,8 @@ render() {
       <div className='container mt-5'>
         <div className='row'>
           <div className='col-lg-8 d-flex gap-3'>
-            <img src={pic} alt='produc-img' height={500}/>
-            <img src={pic} alt='produc-img' height={200}/>
+            <img src='.' alt='produc-img' height={500}/>
+            <img src='.' alt='produc-img' height={200}/>
             
           </div>
           <div className='col-lg-4  product'>

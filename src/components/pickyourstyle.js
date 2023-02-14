@@ -1,5 +1,4 @@
 import React from 'react';
-import MainNavbar from './mainNavbar';
 
 export default class pickyourstyle extends React.Component{
 constructor(props) {
@@ -26,7 +25,6 @@ alert('Collect', id)
 render() {
     return (
 <>
-<MainNavbar />
 <div className="container">
     <div className="row">
         <div className='col'>

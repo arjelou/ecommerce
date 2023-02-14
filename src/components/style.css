@@ -108,6 +108,23 @@ li{
     background-color: #2B3A55;
     color: #F2E5E5;
 }
+.signup_btn{
+    border-style: groove;
+    border-radius: 5px;
+    padding: 10px 20px ;
+    font-weight: bold;
+}
+.signup_btn:hover{
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #2B3A55;
+    color: #F2E5E5;
+    border-radius: 5px;
+}
+.canvas{
+    border-style: none;
+    background-color: white;
+}
 
 
 

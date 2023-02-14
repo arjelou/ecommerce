@@ -1,16 +1,18 @@
 import React from 'react';
-import Footer from "../components/Footer";
-import Pickyourstyle from '../components/pickyourstyle';
-import MainNavbar from '../components/mainNavbar';
+import Footer from "../../components/Footer";
+import Pickyourstyle from '../../components/pickyourstyle';
+import UNavbar from '../../components/uNavbar';
+import { Outlet } from 'react-router-dom';
+import InquiriesCanvas from './inquiriesCanvas';
 
-
-export default class index extends React.Component {
+export default class home extends React.Component {
     render() {
         return (
             <>
-            <MainNavbar />
+            <UNavbar />
+            <Outlet />
+              <InquiriesCanvas />
             <Pickyourstyle />
-                
                 {/* BESTSELLERS CONTAINER */}
                     <div className='container'>
                        <h3 className='mt-5 mb-3 text-center'>BESTSELLERS</h3>

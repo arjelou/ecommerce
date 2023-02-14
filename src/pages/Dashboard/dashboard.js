@@ -3,13 +3,12 @@ import Navbar from './components/navbar';
 import AddNewModal from './components/addNewModal';
 import UpdateNewModal from './components/updateNewModal';
 import UpdateNewModalCategory from './components/updateNewModalCategory';
-
-
 import '../../global.css';
 import AddNewModalCategory from './components/addNewModalCategory';
 import AddNewModalCreateInvoice from './components/addNewModalCreateInvoice';
 import AddNewModalCreateEstimate from './components/addNewModalCreateEstimate';
 import AddNewModalCreateCustomer from './components/addNewModalCreateCustomer'; 
+// import DashboardAuth from './dashboardAuth';
 
 
 import { Outlet } from 'react-router-dom';

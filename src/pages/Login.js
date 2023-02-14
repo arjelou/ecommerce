@@ -24,7 +24,7 @@ const onSubmit = (values,actions) => {
         }
         else{
             alert('You are logged in successfully')
-            window.location.href = '/'
+            window.location.href = '/designs'
         }
     })
 }

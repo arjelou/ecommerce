@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BsPerson } from 'react-icons/bs';
+import { BsPerson} from 'react-icons/bs';
 import './style.css';
 
-export default class mainNavbar extends React.Component  {
+export default class uNavbar extends React.Component  {
  constructor(props) {
     super(props);
     this.state = {
@@ -11,13 +11,21 @@ export default class mainNavbar extends React.Component  {
     }
  }
 
+logoutUserProfile = () =>{
+  const logoutUser = window.confirm('Are you sure you want to log out?')
+  if(logoutUser) {
+    document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    window.location.href = '/'
+  }else {}
+}
+
  render() {
      return (
   <>
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-div container-fluid">
         <div className="container">
-          <a className="navbar-brand" href=".">ACMADE MAGSIGE</a>
+          <a className="navbar-brand" href="/designs">ACMADE MAGSIGE</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -42,12 +50,21 @@ export default class mainNavbar extends React.Component  {
                   <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Agriculture</NavLink>
                 </ul>
               </li>
+              <li className="nav-item unactive-category-btn">
+                <button class="nav-link canvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">Inquiries</button>
+              </li>
             </ul>
           </div>
-          <div>
-            <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/login'><BsPerson size={30} title='Login' /></NavLink>
-            <NavLink className='signup_btn' to='/signup'>Sign up</NavLink>
-          </div>
+          <li className="nav-item dropdown unactive-category-btn">
+              <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <BsPerson size={30} />
+              </a>
+              <ul className="dropdown-menu">
+                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/alldesigns'>Username</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Settings</NavLink>
+                <NavLink className='unactive_category_dropdown' onClick={this.logoutUserProfile}>Log out</NavLink>
+              </ul>
+          </li>
         </div>
         
       </nav>

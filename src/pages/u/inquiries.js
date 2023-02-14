@@ -1,5 +1,4 @@
 import React from 'react';
-import MainNavbar from './mainNavbar';
 
 export default class inquiries extends React.Component  {
   constructor(props) {
@@ -12,14 +11,21 @@ export default class inquiries extends React.Component  {
   componentDidMount() {
     const usersId = document.cookie.split(';')[0].split('=')[1];
     console.log(usersId);
+    
+    // if(usersId === null) {
+    //   alert('Please login first!');
+    //   window.location.href = '/login';
 
-    fetch(`http://localhost:4002/allnotification?id=${usersId}`)
-    .then((res) => res.json())
-    .then((response) => {
-        this.setState({ 
-        productList: [...response]
-      })
-    })
+    // }else{
+
+    //   fetch(`http://localhost:4002/allnotification?id=${usersId}`)
+    //   .then((res) => res.json())
+    //   .then((response) => {
+    //       this.setState({ 
+    //       productList: [...response]
+    //     })
+    //   })
+    // }
   }
 
 
@@ -35,7 +41,6 @@ export default class inquiries extends React.Component  {
 render() {
 return (
 <>
-<MainNavbar />
 <div className='container'>
     <div className='row'>
     <div className="col">
@@ -55,7 +60,6 @@ return (
           </thead> 
           <tbody className="table-group-divider">
             {
-              
               this.state.productList.map((product,index,usersId) =>{
 
                 if(usersId === product.id){
@@ -64,8 +68,6 @@ return (
                 }else{
                   console.log(false)
                 }
-
-                
                 return (
                   <>
                   <tr key={index}>
