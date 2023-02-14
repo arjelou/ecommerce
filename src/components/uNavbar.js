@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BsPerson} from 'react-icons/bs';
+// import { BsPerson} from 'react-icons/bs';
 import './style.css';
 
 export default class uNavbar extends React.Component  {
@@ -58,7 +58,8 @@ logoutUserProfile = () =>{
           </div>
           <li className="nav-item dropdown unactive-category-btn">
               <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               <BsPerson size={30} />
+               {/* <BsPerson size={30} /> */}
+               {document.cookie.split(';')[1].split('=')[1]}
               </a>
               <ul className="dropdown-menu">
                 <NavLink className='unactive_category_dropdown'>{document.cookie.split(';')[1].split('=')[1]}</NavLink>

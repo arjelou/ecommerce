@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import AddNewModal from './addNewModal';
 import AddNewModalCreateInvoice from './addNewModalCreateInvoice';
 import AddNewModalCreateCustomer from './addNewModalCreateCustomer';
-import { BsPerson} from 'react-icons/bs';
+// import { BsPerson} from 'react-icons/bs';
 import '../../../global.css';
 
 export default class navbar extends React.Component  {
@@ -84,7 +84,8 @@ if(logoutUser) {
           </div>
           <li className="nav-item dropdown unactive-category-btn">
               <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               <BsPerson size={30} />
+               {/* <BsPerson size={30} /> */}
+               {document.cookie.split(';')[1].split('=')[1]}
               </a>
               <ul className="dropdown-menu">
                 <NavLink className='unactive_category_dropdown'>{document.cookie.split(';')[1].split('=')[1]}</NavLink>

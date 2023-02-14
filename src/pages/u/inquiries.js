@@ -28,16 +28,6 @@ export default class inquiries extends React.Component  {
     // }
   }
 
-
-//Update product
-// selectProduct(product,price,category,description,index,e) {
-//   document.getElementById("new-todo-id").value = index;
-//     document.getElementById("new-todo-input").value = product;
-//       document.getElementById("new-todo-input1").value = price;
-//     document.getElementById("new-todo-input2").value = category;
-//   document.getElementById("new-todo-input3").value = description;
-// }
-
 render() {
 return (
 <>

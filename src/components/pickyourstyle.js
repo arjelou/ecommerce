@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class pickyourstyle extends React.Component{
 constructor(props) {
@@ -18,8 +19,18 @@ componentDidMount() {
     })
 }
 
-CollectID = (e,id)=>{
-alert('Collect', id)
+collectId(e){
+    const productId = e
+    alert(productId);
+    // window.location.href = '/product'
+    axios.get('http://localhost:4002/',{
+
+        id: productId
+    },window.location.href = '/product')
+    .then((response) =>{
+        console.log(response);
+    });
+
 }
 
 render() {
@@ -35,20 +46,18 @@ render() {
                 this.state.productList.map((product,index) =>{
                     return (
                     <>
-                        <li className='list containerImage' onClick={(e) => this.CollectID(
-                                product.id
-                            )}>
-                            <a href=".">
-                                <div className="card-group gap-5">
-                                    <div className="text-center">
-                                        <img src="https://via.placeholder.com/110" className="card-img-center rounded-pill" alt="..." />
-                                        <div className="card-body">
-                                        <h6 className="card-title"  key={index}>{product.product_name}</h6>
-                                        </div>
+                    <li key={index} onClick={(e) => this.collectId(product.id,e)}>
+                        <a href="#">
+                            <div className="card-group gap-5">
+                                <div className="text-center">
+                                    <img src="https://via.placeholder.com/110" className="card-img-center rounded-pill" alt="..." />
+                                    <div className="card-body">
+                                    <h6 className="card-title">{product.product_name}</h6>
                                     </div>
                                 </div>
-                            </a>
-                        </li>    
+                            </div>
+                        </a>
+                    </li>    
                     </>
                     )})
                 }

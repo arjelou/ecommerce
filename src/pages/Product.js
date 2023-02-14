@@ -6,8 +6,21 @@ constructor(props) {
   this.state = {
     design: [],
     userID: null,
+    productId: props.productId
   }
 }
+
+componentDidMount() {
+console.log(this.productId);
+  fetch('http://localhost:4002/')
+  .then((res) => res.json())
+  .then((response) => {
+    this.setState({ 
+      productList: [...response]
+    })
+  })
+}
+
 quotationForm =(e) =>{
   e.preventDefault();
   let userID = document.cookie.split(';')[0].split('=')[1];
@@ -49,14 +62,15 @@ render() {
       <div className='container mt-5'>
         <div className='row'>
           <div className='col-lg-8 d-flex gap-3'>
-            <img src='.' alt='produc-img' height={500}/>
-            <img src='.' alt='produc-img' height={200}/>
+            <img src='https://via.placeholder.com/150x200' alt='produc-img' height={500}/>
+            <img src='https://via.placeholder.com/150x200' alt='produc-img' height={200}/>
             
           </div>
           <div className='col-lg-4  product'>
             <div className='mt-3'>
                     <form onSubmit={this.quotationForm}>
                       <h4>Gala Bed Chiropractic Spring Mattress</h4>
+
                       <button className='btnDefault mb-4 mt-4'>GET YOUR FREE SAMPLE</button> 
                       <span className=''>You can sent message here!</span><br />
                       <label htmlFor='design' className='mt-2'>Design</label>
