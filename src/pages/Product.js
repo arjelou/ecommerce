@@ -4,19 +4,20 @@ export default class Product extends React.Component {
 constructor(props) {
   super(props);
   this.state = {
-    design: [],
-    userID: null,
-    productId: props.productId
+    product_name: '',
+    id: window.location.href.split('/')[4]
   }
 }
 
-componentDidMount() {
-console.log(this.productId);
-  fetch('http://localhost:4002/')
+componentDidMount = () => {
+
+console.log(this.state.id);
+
+  fetch('http://localhost:4002/product/'+ this.state.id)
   .then((res) => res.json())
   .then((response) => {
     this.setState({ 
-      productList: [...response]
+      product_name: [...response]
     })
   })
 }
@@ -24,7 +25,6 @@ console.log(this.productId);
 quotationForm =(e) =>{
   e.preventDefault();
   let userID = document.cookie.split(';')[0].split('=')[1];
-
   if(userID == null){
     alert('You must login first!')
     window.location.href ='/login';
@@ -40,19 +40,6 @@ quotationForm =(e) =>{
     console.log(response);
   });
   }
-
-
-  // axios.post('http://localhost:4002/quotation',{
-  //     userID: userID,
-  //     design: e.target.design.value,
-  //     quantity: e.target.quatity.value,
-  //     description: e.target.description.value
-  // },alert('Your Quotation was successfully sent!'),
-  //   window.location.href ='/'
-  // ).then((response) =>{
-  //   console.log(response);
-  // });
-
 }
 
 
@@ -68,8 +55,9 @@ render() {
           </div>
           <div className='col-lg-4  product'>
             <div className='mt-3'>
+            <h4>Helo</h4>
                     <form onSubmit={this.quotationForm}>
-                      <h4>Gala Bed Chiropractic Spring Mattress</h4>
+                      
 
                       <button className='btnDefault mb-4 mt-4'>GET YOUR FREE SAMPLE</button> 
                       <span className=''>You can sent message here!</span><br />

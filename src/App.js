@@ -19,16 +19,16 @@ function App() {
     <>   
       <Routes>
         <Route path=''  element={<Index />} />
-        <Route path='designs'  element={<Home />}>
+        <Route path='/designs'  element={<Home />}>
           <Route path='inquiries'  element={<Inquiries />} />
         </Route>
         
-        <Route path='product'  element={<Product />} />
-        <Route path='alldesign'  element={<Pickyourstyle />} />
-        <Route path='login'  element={<Login />} />
-        <Route path='signup'  element={<Signup />} />
+        <Route path='/product/:id'  element={<Product />} />
+        <Route path='/alldesign'  element={<Pickyourstyle />} />
+        <Route path='/login'  element={<Login />} />
+        <Route path='/signup'  element={<Signup />} />
         
-        <Route path='dashboard' element={<Dashboard />}>
+        <Route path='/dashboard' element={<Dashboard />}>
           <Route path='categories' element={<Categories />} />
           <Route path='alldesigns' element={<AllDesigns />} />
           <Route path='listofinvoice' element={<ListOfInvoice />} />

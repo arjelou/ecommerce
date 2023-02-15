@@ -10,7 +10,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-    fetch('http://localhost:4002/')
+    fetch('http://localhost:4002/product/')
     .then((res) => res.json())
     .then((response) => {
       this.setState({ 
@@ -23,10 +23,9 @@ collectId(e){
     const productId = e
     alert(productId);
     // window.location.href = '/product'
-    axios.get('http://localhost:4002/',{
-
-        id: productId
-    },window.location.href = '/product')
+    axios.get('http://localhost:4002/product/',{
+        // id: productId
+    },window.location.href = '/product/'+productId)
     .then((response) =>{
         console.log(response);
     });

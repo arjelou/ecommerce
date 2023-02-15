@@ -12,7 +12,7 @@ export default class allDesigns extends React.Component  {
   }
 
   componentDidMount() {
-    fetch('http://localhost:4002/')
+    fetch('http://localhost:4002/product/')
     .then((res) => res.json())
     .then((response) => {
       this.setState({ 
