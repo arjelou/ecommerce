@@ -13,6 +13,7 @@ import ListOfEstimates from './pages/Dashboard/components/listOfEstimates';
 import ListOfCustomers from './pages/Dashboard/components/listOfCustomers';
 import Notification from './pages/Dashboard/components/notification';
 import Inquiries from './pages/u/inquiries';
+import PageNotFound from './pages/pageNotFound';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='listofcustomers' element={<ListOfCustomers />} />
           <Route path='notification' element={<Notification />} />          
         </Route>
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </>
   );
