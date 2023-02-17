@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Products from "../assets/Products.jpg";
 import Ai from "../assets/ai.png";
 import Support from "../assets/support.png";
+import Support2 from "../assets/support2.png";
 
 export default class index extends React.Component {
   constructor(props) {
@@ -266,7 +267,7 @@ export default class index extends React.Component {
         <div className="container-fluid text-center powerful_technology_2">
           <div className="row">
             <div className="col-sm-6">
-              <img src={Support} alt="" className="img-responsive" />
+              <img src={Support2} alt="" className="img-responsive" />
             </div>
             <div className="col-sm-6 align-self-center">
               <div className="text-start">
