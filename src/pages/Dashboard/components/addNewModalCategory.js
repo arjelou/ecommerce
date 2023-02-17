@@ -1,27 +1,3 @@
-// import React from 'react';
-// import '../../../global.css';
-// import axios from 'axios';
-
-// export default class addNewModalCategory extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             props: {},
-//         }
-//     }
-//     addCategory = (e) => {
-//         axios.post('http://localhost:4002/add-new-category', {
-//             cname: e.target.cname.value,
-//             cdescription: e.target.cdescription.value,
-//             }, 
-//             alert('NEW CATEGORY ADDED SUCCESSFULY!'
-//             ))
-//             .then(res => {
-//             console.log(res);
-//             console.log(res.data);
-//         })
-       
-//     }    
 import React from 'react';
 import { useFormik } from 'formik';
 import CategoriesSchema from '../../../schemas/categoriesSchema';
@@ -31,15 +7,15 @@ import axios from 'axios';
 const onSubmit =(values, actions) => {
     // alert(values.cname);
     axios.post('http://localhost:4002/add-new-category', {
-                    cname: values.cname,
-                    cdescription: values.cdescription,
-                    }, 
-                    alert('NEW CATEGORY ADDED SUCCESSFULY!')
-                    )
-                    .then(res => {
-                    console.log(res);
-                    console.log(res.data);
-                })
+    cname: values.cname,
+    cdescription: values.cdescription,
+    }, 
+    alert('NEW CATEGORY ADDED SUCCESSFULY!')
+    )
+    .then(res => {
+    console.log(res);
+    console.log(res.data);
+})
               
 }
 
