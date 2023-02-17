@@ -225,13 +225,22 @@
 }
 /*A powerful technology platform that solves manufacturing */
 .powerful_technology {
+  padding-bottom: 100px;
+  height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
+}
+.powerful_technology_2 {
+  padding-top: 100px;
   height: 100vh;
   width: 100vw;
   background-color: aliceblue;
 }
 .support_everything {
+  padding-top: 100px;
   height: 100vh;
   width: 100vw;
+  margin: auto;
 }
 .support {
   margin-top: 65px;
