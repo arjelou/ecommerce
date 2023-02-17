@@ -12,7 +12,6 @@ import ListOfInvoice from './pages/Dashboard/components/listOfInvoice';
 import ListOfEstimates from './pages/Dashboard/components/listOfEstimates';
 import ListOfCustomers from './pages/Dashboard/components/listOfCustomers';
 import Notification from './pages/Dashboard/components/notification';
-import Inquiries from './pages/u/inquiries';
 import PageNotFound from './pages/pageNotFound';
 
 function App() {
@@ -20,10 +19,7 @@ function App() {
     <>   
       <Routes>
         <Route path=''  element={<Index />} />
-        <Route path='/designs'  element={<Home />}>
-          <Route path='inquiries'  element={<Inquiries />} />
-        </Route>
-        
+        <Route path='/designs'  element={<Home />} />  
         <Route path='/product/:id'  element={<Product />} />
         <Route path='/alldesign'  element={<Pickyourstyle />} />
         <Route path='/login'  element={<Login />} />

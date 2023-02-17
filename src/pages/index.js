@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLayoutEffect, useRef } from 'react';
 import { BsCircleSquare,BsPerson,BsChevronRight } from 'react-icons/bs';
 import Footer from "../components/Footer";
 import { NavLink } from 'react-router-dom';
@@ -9,82 +8,62 @@ import Support from '../assets/support.png';
 
 
 export default class index extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            productList: []
-        }
+constructor(props) {
+    super(props);
+    this.state = {
+        productList: []
     }
-    useLayoutEffect = () => {
-        console.log(this.div);
-        const divAnimate = this.div.current.getBoundingClientRect().top;
-        console.log(divAnimate);
-        const onScroll = () => {
-          if (divAnimate < window.scrollY) {
-            console.log("ok");
-            this.div.current.style.position = "fixed";
-            this.div.current.style.top = 0;
-            this.div.current.style.left = 0;
-          } else {
-            this.div.current.style.position = "relative";
-          }
-        };
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-      }
-
-    componentDidMount() {
-        fetch('http://localhost:4002/product/')
-        .then((res) => res.json())
-        .then((response) => {
-          this.setState({ 
-            productList: [...response]
-          })
+}
+componentDidMount() {
+    fetch('http://localhost:4002/product/')
+    .then((res) => res.json())
+    .then((response) => {
+        this.setState({ 
+        productList: [...response]
         })
-    }
+    })
+}
     
-
-    render() {
-        return (
-            <>
-            <div>
-      <nav className="navbar navbar-expand-lg homeNav container-fluid">
+render() {
+    return (
+<>
+<div>
+    <nav className="navbar navbar-expand-lg homeNav container-fluid">
         <div className="container ">
-          <a className="navbar-brand homeNavFont" href=".">ACMADE MAGSIGE</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <a className="navbar-brand homeNavFont" href=".">ACMADE MAGSIGE</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="offcanvas offcanvas-end" tabIndex="1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <ul className="navbar-nav justify-content-start">
-              <li className="nav-item dropdown unactive-category-btn">
+        </button>
+        <div className="offcanvas offcanvas-end" tabIndex="1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <ul className="navbar-nav justify-content-start">
+            <li className="nav-item dropdown unactive-category-btn">
                 <a className="nav-link dropdown-toggle homeNavFont" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Company
+                Company
                 </a>
                 <ul className="dropdown-menu">
-                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/listofcustomers'>About Us</NavLink>
-                  <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateCustomer">Contact Us</NavLink>
-                  <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateCustomer">Join Our Team</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/listofcustomers'>About Us</NavLink>
+                <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateCustomer">Contact Us</NavLink>
+                <NavLink className="unactive_category_dropdown" data-bs-toggle="modal" data-bs-target="#addNewModalCreateCustomer">Join Our Team</NavLink>
                 </ul>
-              </li>
-              <li className="nav-item dropdown unactive-category-btn">
+            </li>
+            <li className="nav-item dropdown unactive-category-btn">
                 <a className="nav-link dropdown-toggle homeNavFont" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Other Services
+                Other Services
                 </a>
                 <ul className="dropdown-menu">
-                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/alldesigns'>Labor</NavLink>
-                  <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Agriculture</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/alldesigns'>Labor</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active_category_dropdown" : "unactive_category_dropdown"} to='/dashboard/categories'>Agriculture</NavLink>
                 </ul>
-              </li>
-            </ul>
-          </div>
-          <div>
+            </li>
+        </ul>
+        </div>
+        <div>
             <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/login'><BsPerson size={30} title='Login' color='white' /></NavLink>
             <NavLink className='signup_btn homeNavFont' to='/signup'>Sign up</NavLink>
-          </div>
         </div>
-        
-      </nav>
-    </div>
+        </div>
+    </nav>
+</div>
 <div className="container-fluid hero">
     <div className='row'>
         <div className='col-sm-6 d-flex align-self-center'>
@@ -244,7 +223,6 @@ export default class index extends React.Component {
     <div className="item">
         <img src='https://via.placeholder.com/1366x300' alt='art' />
         <div className="carousel-caption">
-        
         </div>      
     </div>
 </div>

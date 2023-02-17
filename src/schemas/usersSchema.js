@@ -1,6 +1,5 @@
 import * as yup from "yup";
 
-
 const usersSchema = yup.object().shape({
     fullname: yup.string().required('Required'),
     email: yup.string().email('Please enter a valid email!').required('Required'),
@@ -10,6 +9,5 @@ const usersSchema = yup.object().shape({
     password: yup.string().min(5).max(32).required('Required'),
     confirmpassword: yup.string().oneOf([yup.ref('password'), null],'Password did not match!').required('required'),
 })
-
 
 export default usersSchema;

@@ -4,9 +4,7 @@ import { useFormik } from 'formik';
 import Users from '../schemas/usersSchema';
 import axios from 'axios';
 
-
 const onSubmit = (values, actions) =>{
-    
     axios.post('http://localhost:4002/signup', {
         fullname: values.fullname,
         email: values.email,
@@ -24,7 +22,6 @@ const onSubmit = (values, actions) =>{
         console.log(res);
         console.log(res.data);
     })
-
   }
 const SignupNew = () =>{   
 const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik({
@@ -39,10 +36,8 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
     },
     validationSchema: Users,
     onSubmit,
-    
 });    
- 
-    return (
+return (
 <>
     <div className="container">
         <div className='row justify-content-md-center'>
@@ -60,7 +55,6 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='John Smith' 
                     className={errors.fullname && touched.fullname ? 'inpuInactive input-error' : 'inpuInactive' }
-
                     />
                     {errors.fullname && touched.fullname && <p className='error'>{errors.fullname}</p>}
                     <label htmlFor='email'>Email Address <span className='important'>*</span></label>
@@ -73,7 +67,6 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='john@example.com' 
                     className={errors.email && touched.email ? 'inpuInactive input-error' : 'inpuInactive' }
-
                     />
                     {errors.email && touched.email && <p className='error'>{errors.email}</p>}
                     <label htmlFor='company'>Company (optional)</label>
@@ -86,7 +79,6 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='MAGSIGE MPC' 
                     className='inpuInactive'
-
                     />
                     <label htmlFor='totalEmployee'>Total Employee (optional)</label>
                     <input 
@@ -98,10 +90,8 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='500' 
                     className={errors.totalEmployee && touched.totalEmployee ? 'inpuInactive input-error' : 'inpuInactive' }
-                                                        
                     />
                     {errors.totalEmployee && touched.totalEmployee && <p className='error'>{errors.totalEmployee}</p>}
-
                     <label htmlFor='zipcode'>Zip Code <span className='important'>*</span></label>
                     <input 
                     type='text'
@@ -112,10 +102,8 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='Davao del Sur, 8000' 
                     className={errors.zipcode && touched.zipcode ? 'inpuInactive input-error' : 'inpuInactive' }
-
                     />
                     {errors.zipcode && touched.zipcode && <p className='error'>{errors.zipcode}</p>}
-
                     <label htmlFor='password'>Password <span className='important'>*</span></label>
                     <input 
                     type='password' 
@@ -126,7 +114,6 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='*********' 
                     className={errors.password && touched.password ? 'inpuInactive input-error' : 'inpuInactive' }
-
                     />
                     {errors.password && touched.password && <p className='error'>{errors.password}</p>}
 
@@ -140,7 +127,6 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
                     onBlur={handleBlur} 
                     placeholder='*********' 
                     className={errors.confirmpassword && touched.confirmpassword ? 'inpuInactive input-error' : 'inpuInactive' }
-
                     />
                     {errors.confirmpassword && touched.confirmpassword && <p className='error'>{errors.confirmpassword}</p>}
 

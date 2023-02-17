@@ -21,8 +21,6 @@ componentDidMount() {
 
 collectId(e){
     const productId = e
-    alert(productId);
-    // window.location.href = '/product'
     axios.get('http://localhost:4002/product/',{
         // id: productId
     },window.location.href = '/product/'+productId)
