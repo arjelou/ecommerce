@@ -151,3 +151,97 @@
     color: red;
     font-size: 12px;
 }
+
+/* HOME PAGE CSS */
+.hero{
+    background-image: url('../src/assets/Home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh
+}
+.mt{
+    margin-top: 100px;
+}
+.homeNav{
+    background-color: transparent;
+}
+.homeNavFont{
+    color: white;
+}
+.caption_hero{
+    font-size: 3rem;
+    color: #2B3A55;
+    font-weight: bold;
+}
+.hero_image_product img{
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.btn_get_started{
+    padding: 18px 35px;
+    background-color: #2B3A55;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #F2E5E5;
+    font-weight: bold;
+}
+.btn_get_started:hover{
+    padding: 18px 35px;
+    background-color: #2B3A55;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #F2E5E5;
+    font-weight: bold;
+}
+.btn_Book_Demon{
+    padding: 18px 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-color: #2B3A55;
+    border-width: 3px;
+    background-color: transparent;
+    margin-top: 45px;
+    color: #2B3A55;
+}
+.btn_signupnow{
+    padding: 18px 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: groove;
+    box-sizing: border-box;
+    border-color: #2B3A55;
+    background-color: transparent;
+    margin-top: 45px;
+    color: #2B3A55;
+}
+.btn_signupnow:hover{
+    padding: 18px 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: groove;
+    box-sizing: border-box;
+    border-color: #2B3A55;
+    background-color: transparent;
+    margin-top: 45px;
+    color: #2B3A55;
+}
+/*A powerful technology platform that solves manufacturing */
+.powerful_technology{
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+}
+.support_everything{
+    height: 100vh;
+    width: 100vw;
+}
+.support{
+    margin-top: 65px;
+}
+.ai{
+    font-size: 3rem;
+}
+

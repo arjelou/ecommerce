@@ -22,6 +22,12 @@ componentDidMount() {
     })
 }
 
+//onFileChanged
+onFileChange = (e) => {
+    this.setState({image: e.target.files[0]})
+}
+
+//add new design
 addProduct = (e) => {
     axios.post('http://localhost:4002/addnew', {
         dname: e.target.dname.value,
@@ -49,21 +55,22 @@ render() {
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div className="modal-body">
+                    <input type="file" className="inpuInactive" name='profileImage' onChange={this.onFileChange}/>
                     <label>Product Name</label>
                     <input type="text" className="inpuInactive" name='dname' placeholder="Product Name"/>
                     <label className=''>Regular Price</label>
                     <input type="number" className="inpuInactive" name='dprice' placeholder="Regular Price"/>
                     <label className=''>Category</label>
                     <select className="inpuInactive" name='dcategory'>
-                        {
-                            this.state.category.map((category, inder) => {
-                                return (
-                                    <>
-                                    <option value={category.product_category}>{category.product_category}</option>
-                                    </>
-                                )
-                            })
-                        }
+                    {
+                    this.state.category.map((category, inder) => {
+                        return (
+                            <>
+                            <option value={category.product_category}>{category.product_category}</option>
+                            </>
+                        )
+                    })
+                    }
                     </select>
                     <label className=''>Product Details</label>
                     <textarea type="text" className="textareaInputs" name='ddescription' placeholder="Product Details" /> 

@@ -7,6 +7,26 @@ constructor(props) {
         productList: [],
     }
 }
+
+
+componentDidMount() {
+    const usersId = document.cookie.split(';')[0].split('=')[1];
+    console.log(usersId);
+    console.log(document.cookie);
+    if(usersId === null) {
+      alert('Please login first!');
+      window.location.href = '/login';
+    }else{
+      fetch(`http://localhost:4002/allnotification?id=${usersId}`)
+      .then((res) => res.json())
+      .then((response) => {
+          this.setState({ 
+          productList: [...response]
+        })
+      })
+    }
+  }
+
 render() {
   return (
 <>

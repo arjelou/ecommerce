@@ -10,10 +10,8 @@ constructor(props) {
 }
 
 componentDidMount = () => {
-
 console.log(this.state.id);
-
-  fetch('http://localhost:4002/product/'+ this.state.id)
+  fetch(`http://localhost:4002/product?id=${this.state.id}`)
   .then((res) => res.json())
   .then((response) => {
     this.setState({ 
@@ -56,9 +54,8 @@ render() {
           <div className='col-lg-4  product'>
             <div className='mt-3'>
             <h4>Helo</h4>
+          
                     <form onSubmit={this.quotationForm}>
-                      
-
                       <button className='btnDefault mb-4 mt-4'>GET YOUR FREE SAMPLE</button> 
                       <span className=''>You can sent message here!</span><br />
                       <label htmlFor='design' className='mt-2'>Design</label>
