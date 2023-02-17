@@ -24,7 +24,6 @@ function App() {
         <Route path='/alldesign'  element={<Pickyourstyle />} />
         <Route path='/login'  element={<Login />} />
         <Route path='/signup'  element={<Signup />} />
-        
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='categories' element={<Categories />} />
           <Route path='alldesigns' element={<AllDesigns />} />
