@@ -84,7 +84,7 @@ if(logoutUser) {
           </div>
           <li className="nav-item dropdown unactive-category-btn">
               <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               <BsPersonCircle size={30} />
+               <BsPersonCircle size={30} className='icons_profile' />
                {document.cookie.split(';')[1].split('=')[1]}
               </a>
               <ul className="dropdown-menu">
