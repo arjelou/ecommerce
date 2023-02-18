@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import AddNewModal from './addNewModal';
 import AddNewModalCreateInvoice from './addNewModalCreateInvoice';
 import AddNewModalCreateCustomer from './addNewModalCreateCustomer';
-// import { BsPerson} from 'react-icons/bs';
+import { BsPersonCircle ,BsPerson, BsGear, BsBoxArrowLeft} from 'react-icons/bs';
 import '../../../global.css';
 
 export default class navbar extends React.Component  {
@@ -84,13 +84,13 @@ if(logoutUser) {
           </div>
           <li className="nav-item dropdown unactive-category-btn">
               <a className="nav-link dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               {/* <BsPerson size={30} /> */}
+               <BsPersonCircle size={30} />
                {document.cookie.split(';')[1].split('=')[1]}
               </a>
               <ul className="dropdown-menu">
-                <NavLink className='unactive_category_dropdown'>{document.cookie.split(';')[1].split('=')[1]}</NavLink>
-                <NavLink className='unactive_category_dropdown'>Settings</NavLink>
-                <NavLink className='unactive_category_dropdown' onClick={this.logoutUserProfile}>Log out</NavLink>
+                <NavLink className='unactive_category_dropdown'><BsPerson size={20} />  Profile</NavLink>
+                <NavLink className='unactive_category_dropdown'><BsGear size={20} />  Settings</NavLink>
+                <NavLink className='unactive_category_dropdown' onClick={this.logoutUserProfile}><BsBoxArrowLeft size={20} />  Log out</NavLink>
               </ul>
           </li>
         </div>
