@@ -154,7 +154,7 @@ export default class index extends React.Component {
           <div className="row">
             <div className="col-6 text-center">
               <NavLink className="btn_get_started" to="/login">
-                Get Started <BsChevronRight color="white" size={15} />
+                GET STARTED <BsChevronRight color="white" size={15} />
               </NavLink>
             </div>
             <div className="col-sm-4 hero_image_product mt"></div>
