@@ -6,6 +6,7 @@ import Products from '../assets/Products.jpg';
 import Ai from '../assets/ai.png';
 import Support from '../assets/support.png';
 import Forecast from '../assets/forecast.png';
+import Sayabout from '../assets/sayabout.jpg';
 
 
 export default class index extends React.Component {
@@ -23,15 +24,6 @@ componentDidMount() {
         productList: [...response]
         })
     })
-}
-demo =(Calendly) => {
-    alert('helo')
-   Calendly.initInlineWidget({
-        url: 'https://calendly.com/carampatana/30min',
-        parentElement: document.getElementById('SAMPLEdivID'),
-        prefill: {},
-        utm: {}
-       });
 }
 
 render() {
@@ -96,7 +88,7 @@ render() {
     </div>
 </div>
 
-<div className="container text-center mt-5">    
+{/* <div className="container text-center mt-5">    
     <h3>What We Do</h3><br />
     <div className="row">
         <section>
@@ -118,7 +110,7 @@ render() {
             </ul> 
         </section>
     </div>
-</div>
+</div> */}
 {/* A powerful technology platform that solves manufacturing */}
 <div className="container-fluid text-center powerful_technology" >    
     <div className="row" >
@@ -143,7 +135,7 @@ render() {
                     <p>Chat in real-time with suppliers directly.</p>
                 </div>
                 <div id='SAMPLEdivID'>
-                    <button className='btn_Book_Demon' onClick={this.demo}>Book a Demo <BsChevronRight color='black' size={15} /></button>
+                    <button className='btn_Book_Demon'>Book a Demo <BsChevronRight color='black' size={15} /></button>
                 </div>
             </div>
         </div>
@@ -153,9 +145,9 @@ render() {
 <div className="container-fluid text-center support_everything" >    
     <div className="row" >
         <div className="col-sm-6">
-            <img src={Support} alt='' className="img-responsive" />
+            <img src={Support} alt='' className="img-responsive ssuport" />
         </div>
-        <div className="col-sm-6 align-self-center"> 
+        <div className="col-sm-6 align-self-center ssuport"> 
             <div className='text-start'>
                 <h4>We support everything from Design to Delivery</h4>
                 <br />
@@ -181,10 +173,10 @@ render() {
 {/* Forecast Driven Designs */}
 <div className="container-fluid text-center powerful_technology" >    
     <div className="row" >
-        <div className="col-sm-6">
+        <div className="col-sm-6 ssuport">
             <img src={Forecast} alt='' className="img-responsive" />
         </div>
-        <div className="col-sm-6 align-self-center"> 
+        <div className="col-sm-6 align-self-center ssuport"> 
             <div className='text-start'>
                 <h4>Forecast Driven Designs</h4>
                 <br />
@@ -208,9 +200,9 @@ render() {
     </div>
 </div>
 
-<div className="container text-center mt-5">    
-    <h3>What our partners say about us</h3><br />
-    <div className="row">
+<div className="container text-center mt-5 partners">    
+    <h3 className='partnersss'>What our partners say about us</h3><br />
+    <div className="row mtb">
         <div className="col-sm-8">
             <div className='text-start'>
                 <h5>MAGSIGE MPC</h5>
@@ -224,18 +216,18 @@ render() {
             </div>
         </div>
         <div className="col-sm-4"> 
-        <img src='https://via.placeholder.com/350x350' alt='' className="img-responsive" />
+        <img src={Sayabout} alt='' className="img-responsive" />
     </div>
     </div>
 </div>
 
-<div className="container text-center mt-5">
+{/* <div className="container text-center mt-5">
     <div className="item">
         <img src='https://via.placeholder.com/1366x300' alt='art' />
         <div className="carousel-caption">
         </div>      
     </div>
-</div>
+</div> */}
             <hr />
             <Footer />
         </>

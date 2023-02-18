@@ -237,14 +237,30 @@
     width: 100vw;
     background-color: aliceblue;
 }
+.partnersx{
+    height: 100vh;
+    width: 100vw;
+}
+.partnersx{
+    margin-top: 100px;
+}
+.partnersss{
+    margin-top: 100px;
+}
 .support_everything{
     height: 100vh;
     width: 100vw;
+}
+.ssuport{
+    margin-top: 180px;
 }
 .support{
     margin-top: 65px;
 }
 .ai{
     font-size: 3rem;
+}
+.mtb{
+    margin-bottom: 250px;
 }
 
