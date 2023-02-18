@@ -174,6 +174,7 @@
   border-radius: 10px;
   border-bottom-right-radius: 30px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  margin-left: 120px;
 }
 .btn_get_started {
   padding: 18px 35px;
