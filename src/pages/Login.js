@@ -5,7 +5,7 @@ import loginSchema from '../schemas/loginSchema';
 import axios from 'axios';
 
 const onSubmit = (values,actions) => {
-    axios.post('https://mighty-olives-guess-180-194-109-23.loca.lt/login', {
+    axios.post('https://mean-candies-double-180-194-109-23.loca.lt/login', {
         email: values.email,
         password: values.password,
         })
