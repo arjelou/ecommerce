@@ -6,6 +6,7 @@ import Products from "../assets/Products.jpg";
 import Ai from "../assets/ai.png";
 import Support from "../assets/support.png";
 import Support2 from "../assets/support2.png";
+import kristina from "../assets/kristina.png";
 
 export default class index extends React.Component {
   constructor(props) {
@@ -319,18 +320,13 @@ export default class index extends React.Component {
               </div>
             </div>
             <div className="col-sm-4">
-              <img
-                src="https://via.placeholder.com/350x350"
-                alt=""
-                className="img-responsive"
-              />
+              <img src={kristina} alt="" className="img-responsive" />
             </div>
           </div>
         </div>
 
         <div className="container text-center mt-5">
           <div className="item">
-            <img src="https://via.placeholder.com/1366x300" alt="art" />
             <div className="carousel-caption"></div>
           </div>
         </div>

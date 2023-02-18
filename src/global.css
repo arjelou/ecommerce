@@ -158,7 +158,7 @@
   margin-top: 100px;
 }
 .homeNav {
-  background-color: transparent;
+  background-color: url("../src//assets/Products.jpg");
 }
 .homeNavFont {
   color: white;
