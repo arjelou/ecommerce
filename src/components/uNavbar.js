@@ -62,9 +62,9 @@ logoutUserProfile = () =>{
                {document.cookie.split(';')[1].split('=')[1]}
               </a>
               <ul className="dropdown-menu">
-                <NavLink className='unactive_category_dropdown'><BsPerson size={20} />Profile</NavLink>
-                <NavLink className='unactive_category_dropdown'><BsGear size={20} />Settings</NavLink>
-                <NavLink className='unactive_category_dropdown' onClick={this.logoutUserProfile}><BsBoxArrowLeft size={20} />Log out</NavLink>
+                <NavLink className='unactive_category_dropdown'><BsPerson size={20} className='icons_profile'/>Profile</NavLink>
+                <NavLink className='unactive_category_dropdown'><BsGear size={20} className='icons_profile'/>Settings</NavLink>
+                <NavLink className='unactive_category_dropdown' onClick={this.logoutUserProfile}><BsBoxArrowLeft size={20} className='icons_profile'/>Log out</NavLink>
               </ul>
           </li>
         </div>
