@@ -140,7 +140,7 @@ export default class index extends React.Component {
         </div>
         <div className="container-fluid hero">
           <div className="row">
-            <div className="col-sm-6 d-flex align-self-center">
+            <div className="col-6 d-flex align-self-center">
               <h2 className="text-center caption_hero">
                 Tech-enabled manufacturing platform for Unique Brands
               </h2>
@@ -152,7 +152,7 @@ export default class index extends React.Component {
             <div className="col-sm-2 mt"></div>
           </div>
           <div className="row">
-            <div className="col-sm-6 text-center">
+            <div className="col-6 text-center">
               <NavLink className="btn_get_started" to="/login">
                 Get Started <BsChevronRight color="white" size={15} />
               </NavLink>
