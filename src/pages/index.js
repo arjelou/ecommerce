@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import Products from '../assets/Products.jpg';
 import Ai from '../assets/ai.png';
 import Support from '../assets/support.png';
+import Forecast from '../assets/forecast.png';
 
 
 export default class index extends React.Component {
@@ -23,7 +24,16 @@ componentDidMount() {
         })
     })
 }
-    
+demo =(Calendly) => {
+    alert('helo')
+   Calendly.initInlineWidget({
+        url: 'https://calendly.com/carampatana/30min',
+        parentElement: document.getElementById('SAMPLEdivID'),
+        prefill: {},
+        utm: {}
+       });
+}
+
 render() {
     return (
 <>
@@ -132,8 +142,8 @@ render() {
                     <BsCircleSquare size={20} color='#2B3A55'/> 
                     <p>Chat in real-time with suppliers directly.</p>
                 </div>
-                <div>
-                    <button className='btn_Book_Demon'>Book a Demo <BsChevronRight color='black' size={15} /></button>
+                <div id='SAMPLEdivID'>
+                    <button className='btn_Book_Demon' onClick={this.demo}>Book a Demo <BsChevronRight color='black' size={15} /></button>
                 </div>
             </div>
         </div>
@@ -172,7 +182,7 @@ render() {
 <div className="container-fluid text-center powerful_technology" >    
     <div className="row" >
         <div className="col-sm-6">
-            <img src={Support} alt='' className="img-responsive" />
+            <img src={Forecast} alt='' className="img-responsive" />
         </div>
         <div className="col-sm-6 align-self-center"> 
             <div className='text-start'>
