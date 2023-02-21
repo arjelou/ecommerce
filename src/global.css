@@ -73,6 +73,10 @@
 }
 
 /* dashboard navigation */
+.dashboard{
+    background-color: rgba(227, 233, 232, 0.3);
+    border-top-left-radius: 20px;
+}
 .active-category-btn{
     
     padding: 10px;

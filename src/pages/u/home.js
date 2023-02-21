@@ -4,7 +4,6 @@ import Pickyourstyle from '../../components/pickyourstyle';
 import UNavbar from '../../components/uNavbar';
 import { Outlet } from 'react-router-dom';
 import InquiriesCanvas from './inquiriesCanvas';
-
 export default class home extends React.Component {
 render() {
 return (
@@ -13,10 +12,9 @@ return (
 <Outlet />
 <InquiriesCanvas />
 <Pickyourstyle />
-    <hr />
-    <Footer />
+<hr />
+<Footer />
 </>
-        )
-    }
+)}
 }
  
