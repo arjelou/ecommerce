@@ -13,10 +13,12 @@ import ListOfEstimates from './pages/Dashboard/components/listOfEstimates';
 import ListOfCustomers from './pages/Dashboard/components/listOfCustomers';
 import Notification from './pages/Dashboard/components/notification';
 import PageNotFound from './pages/pageNotFound';
+import { ReactNotifications } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
 
 function App() {
   return (
-    <>   
+    <>   <ReactNotifications />
       <Routes>
         <Route path=''  element={<Index />} />
         <Route path='/designs'  element={<Home />} />  

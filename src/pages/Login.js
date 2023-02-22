@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import { NavLink } from 'react-router-dom';
 import loginSchema from '../schemas/loginSchema';
 import axios from 'axios';
+import { Store } from 'react-notifications-component';
 
 const onSubmit = (values,actions) => {
     axios.post('http://localhost:4002/login', {
@@ -13,19 +14,63 @@ const onSubmit = (values,actions) => {
             document.cookie = res.data.id > 0 ? `user = ${res.data.id}` : "";
             document.cookie = res.data.id > 0 ? `email = ${res.data.fullname}` : "";
         if(res.data === ''){
-            alert('Incorrect username or password!')
             actions.resetForm();
+            invalidUserNameOrPassword()
         }
         else if(res.data.email === 'arjelou.jelou@gmail.com')
         {
-            alert('You are logged in as administrator!')
+            administrator()
             window.location.href = '/dashboard'
         }
         else{
-            alert('You are logged in successfully')
+            validLogin()
             window.location.href = '/designs'
         }
     })
+}
+
+const invalidUserNameOrPassword = () =>{
+    Store.addNotification({
+        title: "Invalid username or password!",
+        type: "danger",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 2000,
+          onScreen: true
+        }
+      });
+}
+const administrator = () =>{
+    Store.addNotification({
+        title: "You are logged in as administrator",
+        type: "success",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true
+        }
+      });
+      
+}
+const validLogin = () =>{
+    Store.addNotification({
+        title: "You are logged in successfully",
+        type: "success",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 2000,
+          onScreen: true
+        }
+      });
 }
 
 const Login = () => {

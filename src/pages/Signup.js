@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { useFormik } from 'formik';
 import Users from '../schemas/usersSchema';
 import axios from 'axios';
+import { Store } from 'react-notifications-component';
+
 
 const onSubmit = (values, actions) =>{
     axios.post('http://localhost:4002/signup', {
@@ -14,15 +16,30 @@ const onSubmit = (values, actions) =>{
         password: values.password,
         confirmpassword: values.confirmpassword,
         }, 
-        alert('THANK YOU FOR SIGN UP, ENJOY...',
+        validSignup(),
         actions.resetForm(),
         window.location.href = '/login'
-        ))
+        )
         .then(res => {
         console.log(res);
         console.log(res.data);
     })
-  }
+}
+const validSignup = () =>{
+Store.addNotification({
+    title: "Thank you for signing up",
+    message: "Your account was created",
+    type: "success",
+    insert: "top",
+    container: "top-right",
+    animationIn: ["animate__animated", "animate__fadeIn"],
+    animationOut: ["animate__animated", "animate__fadeOut"],
+    dismiss: {
+        duration: 4000,
+        onScreen: true
+    }
+    });
+} 
 const SignupNew = () =>{   
 const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik({
     initialValues: {
@@ -36,7 +53,8 @@ const {values,handleChange,handleBlur,handleSubmit,errors, touched} = useFormik(
     },
     validationSchema: Users,
     onSubmit,
-});    
+});
+   
 return (
 <>
     <div className="container">

@@ -2,23 +2,34 @@ import React from 'react';
 import { useFormik } from 'formik';
 import CategoriesSchema from '../../../schemas/categoriesSchema';
 import axios from 'axios';
-
+import { Store } from 'react-notifications-component';
 
 const onSubmit =(values, actions) => {
-    // alert(values.cname);
     axios.post('http://localhost:4002/add-new-category', {
     cname: values.cname,
     cdescription: values.cdescription,
-    }, 
-    alert('NEW CATEGORY ADDED SUCCESSFULY!')
+    },
+    addCategory()
     )
     .then(res => {
     console.log(res);
     console.log(res.data);
-})
-              
+})         
 }
-
+const addCategory = () =>{
+    Store.addNotification({
+        title: "New category was added",
+        type: "success",
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+            duration: 2000,
+            onScreen: true
+        }
+    });
+}
 const AddNewCategory = () => {
 const {values, handleBlur, handleChange,handleSubmit,touched,errors} = useFormik({
     initialValues:{
@@ -27,11 +38,9 @@ const {values, handleBlur, handleChange,handleSubmit,touched,errors} = useFormik
     },
     validationSchema: CategoriesSchema,
     onSubmit,
-
 });
 
-// render() {
-    return (
+return (
 <>
 <div className="modal fade" id="addNewModalCategory" tabindex="-1" aria-labelledby="addNewModalCategoryLabel" aria-hidden="true">
     <form onSubmit={handleSubmit}>
@@ -74,33 +83,7 @@ const {values, handleBlur, handleChange,handleSubmit,touched,errors} = useFormik
         </div>
     </form>
     </div>
-    {/* <div className="modal fade" id="addNewModalCategory" tabindex="-1" aria-labelledby="addNewModalCategoryLabel" aria-hidden="true">
-    <form onSubmit={this.addCategory}>
-        <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-            <div className="modal-header">
-                <h1 className="modal-title fs-5" id="addNewModalCategoryLabel">Add New Category</h1>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div className="modal-body">
-              
-                    <label>Category Name</label>
-                    <input type="text" className="inpuInactive" name='cname' id='cname' placeholder="Category Name"/>
-                    <label className=''>Description</label>
-                    <textarea type="text" className="inpuInactive" name='cdescription' placeholder="Description"/>
-               
-            </div>
-            <div className="modal-footer">
-                <button type="submit" className="btnDefault">ADD NEW CATEGORY</button>
-            </div>
-            </div>
-        </div>
-    </form>
-    </div>              */}
-
 </>
-// )}
-// }
-    ) }
+)}
 
     export default AddNewCategory;

@@ -44,7 +44,7 @@ addProduct = (e) => {
 }
 
 render() {
-    return (
+return (
 <>
 <div className="modal fade" id="addNewModal" tabIndex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
     <form onSubmit={this.addProduct}>
