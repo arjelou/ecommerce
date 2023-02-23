@@ -80,116 +80,72 @@ render() {
     </nav>
 </div>
 
-{/* <div className="container text-center mt-5">    
-    <h3>What We Do</h3><br />
-    <div className="row">
-        <section>
-            <ul className='d-flex gap-3'>
-            { this.state.productList.map((product,index) =>{
-                return (
-                <>
-                <div className="col-sm-4">
-                    <li className='' key={index}>
-                        <a href=".">
-                            <img src="https://via.placeholder.com/150x150" className="card-img-top" alt="ad" />
-                            <h4 className="card-title">{product.product_name}</h4>
-                        </a>
-                    </li> 
-                </div>   
-                </>
-                )})
-            }
-            </ul> 
-        </section>
-    </div>
-</div> */}
 {/* A powerful technology platform that solves manufacturing */}
-<div className="container-fluid text-center powerful_technology" >    
-    <div className="row" >
-    <h3 className='text-center mt-5 mb-5 ai'>A powerful technology platform that <br /> solves manufacturing</h3><br />
-        <div className="col-sm-6">
-            <img src={Ai} alt='' className="img-responsive" />
+<div className="powerful_technology">    
+    <h3 className='text-center mt-2 ai'>A powerful technology platform that solves manufacturing</h3>
+    <img src={Ai} alt='A powerful technology platform that solves manufacturing' />
+    <section>
+        <h4>Using AI and Data Science to change the way brands source products!</h4>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>AI to match the best of the vetted suppliers.</p>
         </div>
-        <div className="col-sm-6 align-self-center"> 
-            <div className='text-start'>
-                <h4>Using AI and Data Science to change the way brands source products!</h4>
-                <br />
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>AI to match the best of the vetted suppliers.</p>
-                </div>
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>Fast and flexible supply chain.</p>
-                </div>
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>Chat in real-time with suppliers directly.</p>
-                </div>
-                <div id='SAMPLEdivID'>
-                    <button className='btn_Book_Demon'>Book a Demo <BsChevronRight color='black' size={15} /></button>
-                </div>
-            </div>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>Fast and flexible supply chain.</p>
         </div>
-    </div>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>Chat in real-time with suppliers directly.</p>
+        </div>
+        <div id='SAMPLEdivID'>
+            <button className='btn_Book_Demon'>Book a Demo <BsChevronRight color='black' size={15} /></button>
+        </div>
+    </section>
 </div>
 {/* We support everything from Design to Delivery */}
-<div className="container-fluid text-center support_everything" >    
-    <div className="row" >
-        <div className="col-sm-6">
-            <img src={Support} alt='' className="img-responsive ssuport" />
+<div className="powerful_technology">    
+    <img src={Support} alt='We support everything from Design to Delivery' />
+    <section>
+        <h4>We support everything from Design to Delivery.</h4>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>Create customised designs and tech packs.</p>
         </div>
-        <div className="col-sm-6 align-self-center ssuport"> 
-            <div className='text-start'>
-                <h4>We support everything from Design to Delivery</h4>
-                <br />
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>Create customised designs and tech packs.</p>
-                </div>
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>End-to-end production to merchandising support.</p>
-                </div>
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>Dedicated Customer Success Manager.</p>
-                </div>
-                <div>
-                    <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Sign up now <BsChevronRight color='black' size={15} /></button> </NavLink>
-                </div>
-            </div>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>End-to-end production to merchandising support.</p>
         </div>
-    </div>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>Chat in real-time with suppliers directly.</p>
+        </div>
+        <div id='SAMPLEdivID'>
+            <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Sign up now <BsChevronRight color='black' size={15} /></button> </NavLink>
+        </div>
+    </section>
 </div>
 {/* Forecast Driven Designs */}
-<div className="container-fluid text-center powerful_technology" >    
-    <div className="row" >
-        <div className="col-sm-6 ssuport">
-            <img src={Forecast} alt='' className="img-responsive" />
+<div className="powerful_technology">    
+    <img src={Forecast} alt='Forecast Driven Designs' />
+    <section>
+        <h4>Forecast Driven Designs.</h4>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>Forecast driven designs for designs / fabrics.</p>
         </div>
-        <div className="col-sm-6 align-self-center ssuport"> 
-            <div className='text-start'>
-                <h4>Forecast Driven Designs</h4>
-                <br />
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>Forecast driven designs for designs / fabrics.</p>
-                </div>
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>45 days Turn around time for our designs.</p>
-                </div>
-                <div className='d-flex gap-3'>
-                    <BsCircleSquare size={20} color='#2B3A55'/> 
-                    <p>Easy sample request.</p>
-                </div>
-                <div>
-                    <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Explore designs <BsChevronRight color='black' size={15} /></button> </NavLink>
-                </div>
-            </div>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>45 days Turn around time for our designs.</p>
         </div>
-    </div>
+        <div className='d-flex gap-3'>
+            <BsCircleSquare size={20} color='#2B3A55'/> 
+            <p>Easy sample request.</p>
+        </div>
+        <div id='SAMPLEdivID'>
+            <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Explore designs <BsChevronRight color='black' size={15} /></button> </NavLink>
+        </div>
+    </section>
 </div>
 
 <div className="container text-center mt-5 partners">    
