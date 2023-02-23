@@ -7,6 +7,7 @@ import Ai from '../assets/ai.png';
 import Support from '../assets/support.png';
 import Forecast from '../assets/forecast.png';
 import Sayabout from '../assets/sayabout.jpg';
+import logo from '../assets/acmade.png';
 
 
 export default class index extends React.Component {
@@ -29,6 +30,18 @@ componentDidMount() {
 render() {
     return (
 <>
+<header className="header_hero">
+    <img src={logo} alt='acmade logo' />
+    <article>
+        <h1>Gre Garments Manufacturing</h1>
+        <p>
+        The company prides itself on using only the best materials and employing skilled workers who 
+        are passionate about their craft. MAGSIGE offers a range of services, 
+        from design and prototyping to mass production and delivery.
+        </p>
+    </article>
+</header>
+
 <div>
     <nav className="navbar navbar-expand-lg homeNav container-fluid">
         <div className="container ">
@@ -60,32 +73,11 @@ render() {
         </ul>
         </div>
         <div>
-            <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/login'><BsPerson size={30} title='Login' color='white' /></NavLink>
+            <NavLink className={({isActive}) => isActive ? "active-category-btn" : "unactive-category-btn"} to='/login'><BsPerson size={30} title='Login' color='black' /></NavLink>
             <NavLink className='signup_btn homeNavFont' to='/signup'>Sign up</NavLink>
         </div>
         </div>
     </nav>
-</div>
-<div className="container-fluid hero">
-    <div className='row'>
-        <div className='col-sm-6 d-flex align-self-center'>
-            <h2 className='text-center caption_hero'>Tech-enabled manufacturing platform for Unique Brands</h2><br />
-        </div>
-        <div className='col-sm-4 hero_image_product mt'>
-            <img src={Products} className="card-img-top" alt="ad" />
-        </div>
-        <div className='col-sm-2 mt'>
-        </div>
-    </div>
-    <div className='row'>
-        <div className='col-sm-6 text-center'>
-            <NavLink className='btn_get_started' to='/login'>Get Started <BsChevronRight color='white' size={15} /></NavLink>
-        </div>
-        <div className='col-sm-4 hero_image_product mt'>
-        </div>
-        <div className='col-sm-2 mt'>
-        </div>
-    </div>
 </div>
 
 {/* <div className="container text-center mt-5">    

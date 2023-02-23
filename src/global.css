@@ -170,10 +170,10 @@
     margin-top: 100px;
 }
 .homeNav{
-    background-color: transparent;
+    background-color: #e9e6e6;
 }
 .homeNavFont{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .caption_hero{
     font-size: 3rem;
@@ -268,3 +268,48 @@
     margin-bottom: 250px;
 }
 
+/* Combination of Grid and Flexbox layout */
+/* Mobile responsive */
+.header_hero{
+    background-image: url('./assets/Products.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 10px 2fr 10px;
+    grid-template-rows: .5fr 1fr .5fr;
+    gap: 20px;
+    color: #ccc;
+}
+.header_hero img{
+    justify-self: center;
+    width: 200px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.header_hero article {
+    font-size: 20px;
+    text-align: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+@media screen and (min-width: 700px){
+    .header_hero{
+        gap: 20px;
+        color: #ccc;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: .25fr 1fr .25fr;
+        align-items: center;
+    }
+    .header_hero img{
+        justify-self: center;
+        width: 200px;
+        grid-row: 2 / 3;
+    }
+    .header_hero article {
+        font-size: 20px;
+        text-align: center;
+        grid-column: 3 / 6;
+    }
+}
