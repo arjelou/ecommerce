@@ -1,12 +1,10 @@
 import React from 'react';
-import { BsCircleSquare,BsPerson,BsChevronRight } from 'react-icons/bs';
+import { BsPerson,BsChevronRight } from 'react-icons/bs';
 import Footer from "../components/Footer";
 import { NavLink } from 'react-router-dom';
-import Products from '../assets/Products.jpg';
 import Ai from '../assets/ai.png';
 import Support from '../assets/support.png';
 import Forecast from '../assets/forecast.png';
-import Sayabout from '../assets/sayabout.jpg';
 import logo from '../assets/acmade.png';
 
 
@@ -79,76 +77,69 @@ render() {
         </div>
     </nav>
 </div>
-
-{/* A powerful technology platform that solves manufacturing */}
-<div className="powerful_technology">    
-    <h3 className='text-center mt-2 ai'>A powerful technology platform that solves manufacturing</h3>
-    <img src={Ai} alt='A powerful technology platform that solves manufacturing' />
-    <section>
-        <h4>Using AI and Data Science to change the way brands source products!</h4>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>AI to match the best of the vetted suppliers.</p>
-        </div>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>Fast and flexible supply chain.</p>
-        </div>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>Chat in real-time with suppliers directly.</p>
-        </div>
-        <div id='SAMPLEdivID'>
-            <button className='btn_Book_Demon'>Book a Demo <BsChevronRight color='black' size={15} /></button>
-        </div>
+<div className='container'>
+    <section className='vision'>
+        <article>
+            {/* <h3>A powerful technology platform that solves manufacturing</h3> */}
+            <h3>MAGSIGE MPC</h3>
+            <p>
+            Company that specializes in producing high-quality garments 
+            for various markets. With years of experience in the industry, 
+            MAGSIGE has become known for its attention to detail and commitment 
+            to delivering products that meet the highest standards of quality.
+            </p>
+        </article>
+        <ul className='visionList'>
+            <li>
+                <img src={Ai} alt='Using AI and Data Science to change the way brands source products' />
+                <h4>Using AI and Data Science to change the way brands source products</h4>
+                <p>
+                I to match the best of the vetted suppliers.
+                Fast and flexible supply chain.
+                Chat in real-time with suppliers directly.
+                </p>
+            </li>
+            <li>
+                <img src={Support} alt='Using AI and Data Science to change the way brands source products' />
+                <h4>We support everything from Design to Delivery</h4>
+                <p>
+                Create customised designs and tech packs.
+                End-to-end production to merchandising support.
+                Chat in real-time with suppliers directly.
+                </p>
+                <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Sign up now <BsChevronRight color='black' size={15} /></button> </NavLink>
+            </li>
+            <li>
+                <img src={Forecast} alt='Using AI and Data Science to change the way brands source products' />
+                <h4>Forecast Driven Designs</h4>
+                <p>
+                Forecast driven designs for designs / fabrics.
+                45 days Turn around time for our designs.
+                Easy sample request.
+                </p>
+                <NavLink role='button' to='/login'> <button className='btn_signupnow'>Explore designs <BsChevronRight color='black' size={15} /></button> </NavLink>
+            </li>
+        </ul>
     </section>
 </div>
-{/* We support everything from Design to Delivery */}
-<div className="powerful_technology">    
-    <img src={Support} alt='We support everything from Design to Delivery' />
-    <section>
-        <h4>We support everything from Design to Delivery.</h4>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>Create customised designs and tech packs.</p>
-        </div>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>End-to-end production to merchandising support.</p>
-        </div>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>Chat in real-time with suppliers directly.</p>
-        </div>
-        <div id='SAMPLEdivID'>
-            <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Sign up now <BsChevronRight color='black' size={15} /></button> </NavLink>
-        </div>
-    </section>
+<div className='container-fluid consultation'>
+    <h3>Consultation</h3>
+    <p>
+    The first step in the customer experience of garment manufacturing is usually a consultation with the customer. 
+    During this stage, the garment manufacturer will listen to the customer's needs and preferences, 
+    and discuss design options, materials, and production timelines.
+    </p>
 </div>
-{/* Forecast Driven Designs */}
-<div className="powerful_technology">    
-    <img src={Forecast} alt='Forecast Driven Designs' />
-    <section>
-        <h4>Forecast Driven Designs.</h4>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>Forecast driven designs for designs / fabrics.</p>
-        </div>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>45 days Turn around time for our designs.</p>
-        </div>
-        <div className='d-flex gap-3'>
-            <BsCircleSquare size={20} color='#2B3A55'/> 
-            <p>Easy sample request.</p>
-        </div>
-        <div id='SAMPLEdivID'>
-            <NavLink role='button' to='/signup'> <button className='btn_signupnow'>Explore designs <BsChevronRight color='black' size={15} /></button> </NavLink>
-        </div>
-    </section>
+<div className='container-fluid quality'>
+    <h3>Quality</h3>
+    <p>
+    The first step in the customer experience of garment manufacturing is usually a consultation with the customer. 
+    During this stage, the garment manufacturer will listen to the customer's needs and preferences, 
+    and discuss design options, materials, and production timelines.
+    </p>
 </div>
 
-<div className="container text-center mt-5 partners">    
+{/* <div className="container text-center mt-5 partners">    
     <h3 className='partnersss'>What our partners say about us</h3><br />
     <div className="row mtb">
         <div className="col-sm-8">
@@ -167,7 +158,7 @@ render() {
         <img src={Sayabout} alt='' className="img-responsive" />
     </div>
     </div>
-</div>
+</div> */}
 
 {/* <div className="container text-center mt-5">
     <div className="item">

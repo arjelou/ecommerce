@@ -316,6 +316,96 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
+
+/* FOR THE VISION */
+.vision article{
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+.vision article h3{
+   font-size: 30px;
+   font-weight: bold;
+   font-family: 'verdana';
+   color: #2B3A55;
+}
+.vision article p{
+    border-left: 2px solid rgb(227, 222, 222);
+    padding-left: 10px;
+}
+
+.visionList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    padding-left: 0px;
+}
+.visionList img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+.visionList li{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 1rem;
+    border: solid 1px rgb(241, 241, 239);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  
+}
+.visionList button {
+    display: flex;
+    align-items: center;
+    padding: 6px 7px;
+}
+.visionList button:hover{
+    align-items: center;
+    padding: 6px 7px;
+}
+.consultation{
+    margin-top: 20px;
+    background-image: url('./assets/consultation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 10px;
+}
+.consultation h3, .consultation p {
+    color: white
+}
+.consultation h3 {
+    font-size: 25px;
+    font-family: verdana;
+    font-weight: bold;
+}
+.consultation p{
+    border-left: 2px solid rgb(227, 222, 222);
+    padding-left: 10px;
+}
+.quality{
+    background-image: url('./assets/quality-control.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.quality h3, .quality p {
+    color: white
+}
+.quality h3 {
+    font-size: 25px;
+    font-family: verdana;
+    font-weight: bold;
+}
+.quality p{
+    border-left: 2px solid rgb(227, 222, 222);
+    padding-left: 10px;
+}
 @media screen and (min-width: 768px){
     .header_hero{
         gap: 20px;
@@ -355,5 +445,49 @@
         font-size: 20px;
         text-align: center;
         grid-column: 4 / 6;
+    }
+    /* VISION */
+    .vision article{
+        margin-top: 170px;
+        margin-bottom: 60px;
+        min-width: 700px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .vision article p{
+        border-left: 2px solid rgb(227, 222, 222);
+        padding-left: 10px;
+    }
+    .vision article h3 {
+        margin-right: 1rem;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'verdana';
+        color: #2B3A55;
+    }
+    /* setion  */
+    .consultation{
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .consultation p{
+        max-width: 700px;
+    }
+    .consultation h3{
+        padding-right: 10px;
+    }
+    .quality{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .quality p{
+        max-width: 700px;
+    }
+    .quality h3{
+        padding-right: 10px;
     }
 }
