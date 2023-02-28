@@ -6,6 +6,12 @@ import Ai from '../assets/ai.png';
 import Support from '../assets/support.png';
 import Forecast from '../assets/forecast.png';
 import logo from '../assets/acmade.png';
+import GTKUS1 from '../assets/gtkus1.jpeg';
+import GTKUS2 from '../assets/gtkus2.jpeg';
+import GTKUS3 from '../assets/gtkus3.jpeg';
+import GTKUS4 from '../assets/gtkus4.jpg';
+import GTKUS5 from '../assets/gtkus5.jpg';
+
 
 
 export default class index extends React.Component {
@@ -80,7 +86,6 @@ render() {
 <div className='container'>
     <section className='vision'>
         <article>
-            {/* <h3>A powerful technology platform that solves manufacturing</h3> */}
             <h3>MAGSIGE MPC</h3>
             <p>
             Company that specializes in producing high-quality garments 
@@ -129,6 +134,23 @@ render() {
     During this stage, the garment manufacturer will listen to the customer's needs and preferences, 
     and discuss design options, materials, and production timelines.
     </p>
+</div>
+{/* ##### Get to know us #####*/}
+<div className='container gtkus'>
+    <section className='get_to_know_us'>
+        <h3>Get to know us</h3>
+        <ul className='get_to_know_us_images'>
+            <li><img src={GTKUS1} alt='...'/></li>
+            <li><img src={GTKUS2} alt='...'/></li>
+            <li><img src={GTKUS3} alt='...'/></li>
+            <li><img src={GTKUS4} alt='...'/></li>
+            <li><img src={GTKUS5} alt='...'/></li>
+        </ul>
+        <p>
+            Since its establishment, MAGSIGE MPC grew into one of the top-performing cooperatives in the Davao region and in the Philippines. From 86 members, the cooperative has increased to more than 18,000 members and continuously growing.
+            MAGSIGE MPC expanded to different areas in Mindanao with five (5) satellite offices located in Matalam, North Cotabato; Tboli, South Cotabato; Tagbina, Surigao del Sur; and the main Davao City offices. 
+        </p>
+    </section>
 </div>
 <div className='container-fluid quality'>
     <h3>Quality</h3>
