@@ -1,60 +1,60 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { BsFacebook,BsInstagram,BsYoutube } from 'react-icons/bs';
+import { BsFacebook,BsInstagram,BsYoutube,BsTwitter } from 'react-icons/bs';
 export default class Footer extends React.Component {
-  render() {
-   
-    return (
-        <>
-            <div className="container mb-2 footer">
-                <div className="row justify-content-md-between mt-3">
-                    <div className="col">
-                        <h2>ACMADE</h2>
-                    </div>
-                    <div className="col">
-                        <div className="list-category">
-                            <ul>
-                            <h5>Design</h5>
-                            <li><a href=".">Dress</a></li>
-                            <li><a href=".">Knitwear</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="list-category">
-                            <ul>
-                            <h5>Company</h5>
-                                <li><a href=".">About Us</a></li>
-                                <li><a href=".">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="list-category">
-                            <ul className="">
-                                <h5>Social</h5>
-                                <div className="d-flex gap-3">
-                                    <a href="."><BsFacebook size={25} color="blue"/></a>
-                                    <a href="."><BsInstagram size={25} color="orange"/></a>
-                                    <a href="."><BsYoutube size={30} color="red"/></a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
+render() {
+return (
+<>
+<div className="contact">
+    <section className="container-fluid container_footer">
+        <article>
+            <h3>Got questions? Get in touch</h3>
+            <p>
+            If you'd like more information about any of our services, please reach out and we will 
+            contact you promptly. And while you're at it, signup for our newsletter to stay informed on all the 
+            latest services and products, research and awesome designs that we've captured along the way.
+            </p>
+            <form>
+                <input type="email" name="get_in_touch" />
+                <button type="submit" htmlFor="get_in_touch">Subscribe</button>
+            </form>
+        </article>
+    </section>
+    <section className="container-fluid social_footer">
+        <article>
+            <h3>Let's be social - connect with us!</h3>
+                <div className="icons_footer text-center">
+                    <BsFacebook className='icon' title="Facebook"/>
+                    <BsInstagram className='icon' title="Instagram"/>
+                    <BsYoutube className='icon' title="YouTube"/>
+                    <BsTwitter className='icon' title="Twitter"/>
                 </div>
-                <div className="container-fluid mt-5">
-                    <div className="row d-flex justify-content-md-between">
-                        <div className="col">
-                            <NavLink className="">Copyright 2022 by ACMADE Data. All Rights Reserved.</NavLink>   
-                        </div>
-                        <div className="col d-flex gap-4">   
-                            <NavLink to="">Privacy Policy</NavLink>
-                            <NavLink to="">Term & Condition</NavLink>
-                        </div>
-                    </div>
-                </div>
+        </article>
+    </section>
+</div>
+{/* <div className="container-fluid social_footer">
+    <article>
+        <h3>Let's be social - connect with us!</h3>
+            <div className="icons_footer text-center">
+                <BsFacebook className='icon' title="Facebook"/>
+                <BsInstagram className='icon' title="Instagram"/>
+                <BsYoutube className='icon' title="YouTube"/>
+                <BsTwitter className='icon' title="Twitter"/>
             </div>
-        </>
-    );
-  }
+    </article>
+</div> */}
+<div className="container-fluid contact_footer">
+    <article>
+        <h3>Contact Information</h3>
+            <p>Phone: 0976 395 9021</p>
+            <p>Email: main@magsige.com</p>
+            <p>Address: Calinan, Davao City, 8000</p>
+    </article>
+</div>
+
+<div className="container-fluid copyright_footer">
+    <span>ACMADE MAGSIGE@2023</span>
+</div>
+</>
+)
+}
 }

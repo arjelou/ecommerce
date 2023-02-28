@@ -368,7 +368,7 @@
 }
 .consultation{
     margin-top: 20px;
-    background-image: url('./assets/consultation.jpg');
+    background-image: url('./assets/consultation.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -376,7 +376,7 @@
     padding: 10px;
 }
 .consultation h3, .consultation p {
-    color: white
+    color: rgb(255, 255, 255)
 }
 .consultation h3 {
     font-size: 25px;
@@ -388,7 +388,7 @@
     padding-left: 10px;
 }
 .quality{
-    background-image: url('./assets/quality-control.jpg');
+    background-image: url('./assets/quality-control.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

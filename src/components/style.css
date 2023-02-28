@@ -126,5 +126,106 @@ li{
     background-color: white;
 }
 
+/* Responsive design --- FOOTER*/
+.container_footer{
+    background-color: #2B3A55;
+    padding: 15px;
+}
+.container_footer h3{
+    color: #F2E5E5;
+    font-size: 30px;
+}
+.container_footer p{
+    color: #F2E5E5;
+}
+.container_footer input{
+    padding: 8px 20px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container_footer button{
+    color: #2B3A55;
+    font-weight: bold;
+    border: none;
+    padding: 8px 9px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.social_footer{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #5476b7;
+}
+.social_footer h3{
+    color: #F2E5E5;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+.icon{
+    margin-left: 20px;
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+}
+.icon:hover{
+    color: #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.contact_footer{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #5476b7;
+}
+.contact_footer h3{
+    color: #F2E5E5;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+.contact_footer p{
+    color: #F2E5E5;
+}
+.copyright_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2E5E5;
+    padding: 5px;
+}
+.copyright_footer span {
+    font-weight:400;
+    color: #2B3A55;
+}
+@media screen and (min-width: 768px){
+    .contact{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .container_footer{
+        grid-column: 1 / 4;
+        padding-bottom: 30px;
+    }
+    .contact_footer h3,.contact_footer p{
+        max-width: 700px;
+    } 
+    .social_footer{
+        grid-column: 4 / 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact_footer{
+        background-color: #c1cfe9;
+    }
+    .contact_footer p, .contact_footer h3{
+        color: #2B3A55;
+    }
+}
+
 
 

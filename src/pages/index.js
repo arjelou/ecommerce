@@ -138,39 +138,9 @@ render() {
     and discuss design options, materials, and production timelines.
     </p>
 </div>
-
-{/* <div className="container text-center mt-5 partners">    
-    <h3 className='partnersss'>What our partners say about us</h3><br />
-    <div className="row mtb">
-        <div className="col-sm-8">
-            <div className='text-start'>
-                <h5>MAGSIGE MPC</h5>
-                <h6>‘Very clear when it came to tracking the order’s progress’</h6>
-                <p>ACMADE is helping brands like us to upscale 
-                and focus more on to sales rather 
-                than putting our time for sourcing. We are getting detailed input for our order 
-                by which we can plan our order smoothly.</p>
-                <h6>Kristina Garrison,</h6>
-                <h6>Head of Purchasing</h6>
-            </div>
-        </div>
-        <div className="col-sm-4"> 
-        <img src={Sayabout} alt='' className="img-responsive" />
-    </div>
-    </div>
-</div> */}
-
-{/* <div className="container text-center mt-5">
-    <div className="item">
-        <img src='https://via.placeholder.com/1366x300' alt='art' />
-        <div className="carousel-caption">
-        </div>      
-    </div>
-</div> */}
-            <hr />
-            <Footer />
-        </>
-        )
-    }
+<Footer className='mt-5'/>
+</>
+)
+}
 }
  
