@@ -31,17 +31,6 @@ return (
         </article>
     </section>
 </div>
-{/* <div className="container-fluid social_footer">
-    <article>
-        <h3>Let's be social - connect with us!</h3>
-            <div className="icons_footer text-center">
-                <BsFacebook className='icon' title="Facebook"/>
-                <BsInstagram className='icon' title="Instagram"/>
-                <BsYoutube className='icon' title="YouTube"/>
-                <BsTwitter className='icon' title="Twitter"/>
-            </div>
-    </article>
-</div> */}
 <div className="container-fluid contact_footer">
     <article>
         <h3>Contact Information</h3>
