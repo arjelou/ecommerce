@@ -138,7 +138,7 @@ render() {
 {/* ##### Get to know us #####*/}
 <div className='container gtkus'>
     <section className='get_to_know_us'>
-        <h3>Get to know us</h3>
+        <h3>About us</h3>
         <ul className='get_to_know_us_images'>
             <li><img src={GTKUS1} alt='...'/></li>
             <li><img src={GTKUS2} alt='...'/></li>
