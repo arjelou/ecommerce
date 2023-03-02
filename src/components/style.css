@@ -141,16 +141,12 @@ li{
 .container_footer input{
     padding: 8px 20px;
     border: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 .container_footer button{
     color: #2B3A55;
     font-weight: bold;
     border: none;
     padding: 8px 9px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 .social_footer{
     display: flex;
@@ -200,6 +196,42 @@ li{
     font-weight:400;
     color: #2B3A55;
 }
+/* ##### Contact form ##### */
+.contact_form form{
+    display: grid;
+}
+.contact_form textarea{
+    height: 5.5rem;
+}
+.contact_form form input{
+    border: solid 1px rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.contact_form label{
+    color: #F2E5E5;
+    font-weight: 500;
+}
+.preferred_method{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 1fr);
+}
+.preferred_method p{
+    grid-column: span 3;
+}
+div.signup_newsletter{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contact_form form button{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
 @media screen and (min-width: 768px){
     .contact{
         margin-top: 20px;
@@ -224,6 +256,15 @@ li{
     }
     .contact_footer p, .contact_footer h3{
         color: #2B3A55;
+    }
+    /* ##### contact form ##### */
+    .contact_form{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+    .contact_form form{
+        grid-column: 2 / 3;
     }
 }
 
