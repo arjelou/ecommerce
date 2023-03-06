@@ -7,7 +7,7 @@ import { Store } from 'react-notifications-component';
 
 
 const onSubmit = (values, actions) =>{
-    axios.post('http://localhost:4002/signup', {
+    axios.post('https://tame-gray-tortoise-kit.cyclic.app/signup', {
         fullname: values.fullname,
         email: values.email,
         company: values.company,
@@ -18,7 +18,7 @@ const onSubmit = (values, actions) =>{
         }, 
         validSignup(),
         actions.resetForm(),
-        window.location.href = '/login'
+        // window.location.href = '/login'
         )
         .then(res => {
         console.log(res);
