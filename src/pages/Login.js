@@ -6,7 +6,7 @@ import axios from 'axios';
 import { Store } from 'react-notifications-component';
 
 const onSubmit = (values,actions) => {
-    axios.post('https://clear-weeks-swim-124-107-182-208.local.lt/login', {
+    axios.post('https://wild-cups-show-124-107-182-208.loca.lt/login', {
         email: values.email,
         password: values.password,
         })
