@@ -11,7 +11,6 @@ const onSubmit = (values,actions) => {
         password: values.password,
         })
         .then(res => {
-            console.log(process.env.REACT_APP_URL);
             document.cookie = res.data.id > 0 ? `user = ${res.data.id}` : "";
             document.cookie = res.data.id > 0 ? `email = ${res.data.fullname}` : "";
         if(res.data === ''){
