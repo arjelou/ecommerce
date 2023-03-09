@@ -14,7 +14,6 @@ componentDidMount() {
       console.log('Customer!',response);
       this.setState({ 
         listofcustomer: [...response]
-
       })
     })
 }
