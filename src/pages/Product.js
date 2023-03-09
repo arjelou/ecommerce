@@ -10,7 +10,7 @@ constructor(props) {
 }
 componentDidMount = () => {
 console.log(this.state.id);
-  fetch(`http://localhost:4002/product?id=${this.state.id}`)
+  fetch(`${process.env.REACT_APP_URL}/product?id=${this.state.id}`)
   .then((res) => res.json())
   .then((response) => {
     this.setState({ 
@@ -25,7 +25,7 @@ quotationForm =(e) =>{
     alert('You must login first!')
     window.location.href ='/login';
   }else{
-    axios.post('http://localhost:4002/quotation',{
+    axios.post(`${process.env.REACT_APP_URL}/quotation`,{
       userID: userID,
       design: e.target.design.value,
       quantity: e.target.quatity.value,

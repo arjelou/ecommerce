@@ -22,7 +22,7 @@ constructor(props) {
     }
 }
 componentDidMount() {
-    fetch('http://localhost:4002/product/')
+    fetch(`${process.env.REACT_APP_URL}/product`)
     .then((res) => res.json())
     .then((response) => {
         this.setState({ 
