@@ -6,11 +6,12 @@ import axios from 'axios';
 import { Store } from 'react-notifications-component';
 
 const onSubmit = (values,actions) => {
-    axios.post(`${process.env.REACT_APP_URL}/login`, {
+    axios.post(`${process.env.REACT_APP_URL}+login`, {
         email: values.email,
         password: values.password,
         })
         .then(res => {
+            console.log(process.env.REACT_APP_URL);
             document.cookie = res.data.id > 0 ? `user = ${res.data.id}` : "";
             document.cookie = res.data.id > 0 ? `email = ${res.data.fullname}` : "";
         if(res.data === ''){
