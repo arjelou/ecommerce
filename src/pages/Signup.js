@@ -7,7 +7,7 @@ import { Store } from 'react-notifications-component';
 
 
 const onSubmit = (values, actions) =>{
-    axios.post('https://containers-us-west-74.railway.app/signup', {
+    axios.post('https://wild-cups-show-124-107-182-208.loca.lt/signup', {
         fullname: values.fullname,
         email: values.email,
         company: values.company,
