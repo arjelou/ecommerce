@@ -25,7 +25,7 @@ quotationForm =(e) =>{
     alert('You must login first!')
     window.location.href ='/login';
   }else{
-    axios.post(`${process.env.REACT_APP_URL}/quotation`,{
+    axios.post(`https://quick-grapes-stare-124-107-182-208.loca.lt/quotation`,{
       userID: userID,
       design: e.target.design.value,
       quantity: e.target.quatity.value,

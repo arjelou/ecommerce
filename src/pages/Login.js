@@ -8,7 +8,7 @@ import { Store } from 'react-notifications-component';
 
 const onSubmit = (values,actions) => {
 
-    axios.post(`https://twelve-bananas-pick-124-107-182-208.loca.lt/login`, {
+    axios.post(`https://quick-grapes-stare-124-107-182-208.loca.lt/login`, {
         email: values.email,
         password: values.password,
         })

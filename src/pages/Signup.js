@@ -7,7 +7,7 @@ import { Store } from 'react-notifications-component';
 
 
 const onSubmit = (values, actions) =>{
-    axios.post(`${process.env.REACT_APP_URL}/signup`, {
+    axios.post(`https://quick-grapes-stare-124-107-182-208.loca.lt/signup`, {
         fullname: values.fullname,
         email: values.email,
         company: values.company,
